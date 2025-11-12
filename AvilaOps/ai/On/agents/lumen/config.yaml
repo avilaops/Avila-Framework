@@ -1,0 +1,14 @@
+agent_name: Lumen
+area: Pesquisa e IA aplicada
+significado: Clareza, insight
+status: ativo
+model: gpt-4o
+memory_path: ../../data/lumen_memory.json
+description: Agente especializado em pesquisa e ia aplicada (clareza, insight).
+version: 1.0.0
+permissions:
+  read:
+  - ../../data/knowledge_base
+  write:
+  - ../../logs
+  sync: true

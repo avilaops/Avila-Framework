@@ -1,0 +1,35 @@
+# ÁVILA REPORT FRAMEWORK - DEPENDÊNCIAS
+# =====================================
+# Arquivo de dependências do Python
+
+# Core dependencies
+pandas>=1.5.0
+openpyxl>=3.0.0
+xlsxwriter>=3.0.0
+
+# Email
+secure-smtplib>=0.1.1
+
+# Monitoring
+sentry-sdk>=1.32.0
+
+# Agents integration
+pyyaml>=6.0  # Para ler config.yaml dos agentes On
+
+# GUI (tkinter já incluído no Python)
+# tkinter (built-in)
+
+# Optional: Para funcionalidades avançadas
+# requests>=2.31.0          # Para APIs REST
+# python-dotenv>=1.0.0      # Para variáveis de ambiente
+# schedule>=1.2.0           # Para agendamento automático
+# pywhatkit>=5.4            # Para WhatsApp automatizado
+# win10toast>=0.9          # Para notificações Windows
+
+# Development
+pytest>=7.0.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Nota: Instale apenas conforme necessário
+# pip install pandas openpyxl sentry-sdk

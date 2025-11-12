@@ -1,0 +1,42 @@
+[
+    {
+        "action": "Aprovar plano de contratação e budget de R$ 110k/mês para time inicial",
+        "owner": "CEO",
+        "deadline": "Esta semana"
+    },
+    {
+        "action": "Criar job descriptions finais para COO e Head Analytics e publicar no LinkedIn",
+        "owner": "CEO",
+        "deadline": "Próximos 7 dias"
+    },
+    {
+        "action": "Preparar cases técnicos para cada posição (analytics, operations, growth)",
+        "owner": "CEO",
+        "deadline": "Próximos 10 dias"
+    },
+    {
+        "action": "Começar sourcing ativo de COO via LinkedIn e networking (meta: 20 candidatos)",
+        "owner": "CEO",
+        "deadline": "Próximos 14 dias"
+    },
+    {
+        "action": "Estruturar processo de onboarding de 30 dias com checklist e materiais",
+        "owner": "CEO",
+        "deadline": "Mês 1"
+    },
+    {
+        "action": "Definir OKRs para cada posição (métricas de sucesso primeiros 90 dias)",
+        "owner": "CEO/COO",
+        "deadline": "Antes das primeiras contratações"
+    },
+    {
+        "action": "Criar conteúdo de employer branding no LinkedIn (cultura, valores, missão)",
+        "owner": "CEO",
+        "deadline": "Próximos 30 dias"
+    },
+    {
+        "action": "Configurar pipeline de recrutamento (Notion/Airtable) para tracking de candidatos",
+        "owner": "CEO",
+        "deadline": "Próximos 7 dias"
+    }
+]

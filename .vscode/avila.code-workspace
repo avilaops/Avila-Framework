@@ -1,0 +1,69 @@
+{
+  "folders": [
+    {
+      "name": "?? Ávila Inc (Institucional)",
+    "path": "AvilaInc"
+    },
+    {
+      "name": "?? Ávila Ops (Técnico)",
+      "path": "AvilaOps"
+    },
+    {
+      "name": "?? Documentação",
+      "path": "Docs"
+    },
+    {
+      "name": "?? Logs",
+      "path": "Logs"
+    },
+    {
+  "name": "?? Scripts",
+      "path": "Scripts"
+    },
+    {
+    "name": "? Setup",
+   "path": "Setup"
+    },
+    {
+      "name": "?? Shared",
+      "path": "Shared"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true,
+      "**/.venv": true,
+      "**/__pycache__": true,
+      "**/*.pyc": true,
+ "**/.DS_Store": true,
+      "**/node_modules": true,
+      "**/.pytest_cache": true,
+      "**/*.log": false
+    },
+    "search.exclude": {
+      "**/.venv": true,
+      "**/__pycache__": true,
+      "**/node_modules": true,
+      "**/*.log": true
+  },
+    "files.watcherExclude": {
+      "**/.venv/**": true,
+      "**/node_modules/**": true,
+    "**/__pycache__/**": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "ms-vscode.powershell",
+      "github.copilot",
+      "github.copilot-chat",
+      "esbenp.prettier-vscode",
+  "dbaeumer.vscode-eslint",
+      "redhat.vscode-yaml",
+      "yzhang.markdown-all-in-one",
+      "davidanson.vscode-markdownlint"
+    ]
+  }
+}

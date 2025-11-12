@@ -1,0 +1,65 @@
+{
+  "smtp": {
+    "server": "smtp.gmail.com",
+    "port": 587,
+    "sender_email": "reports@avilaops.com",
+    "password_configured": true
+  },
+  "recipients": {
+    "email": [
+      "nicolas@avila.inc",
+      "board@avila.inc"
+    ],
+    "weekly": [
+      "nicolas@avila.inc",
+      "board@avila.inc"
+    ],
+    "board": [
+      "nicolas@avila.inc",
+      "board@avila.inc",
+      "investors@avila.inc"
+    ]
+  },
+  "company": {
+    "name": "Ávila Framework",
+    "logo": "https://avatars.githubusercontent.com/avilaops",
+    "colors": {
+      "primary": "#1d1d1f",
+      "secondary": "#0066cc",
+      "accent": "#007aff"
+    }
+  },
+  "paths": {
+    "workspace": "c:/Users/nicol/OneDrive/Avila/AvilaOps",
+    "output": "./output",
+    "backup": "./output/backup"
+  },
+  "features": {
+    "charts": true,
+    "ai_insights": true,
+    "mobile_template": true,
+    "dark_mode": false,
+    "real_time_data": true
+  },
+  "monitoring": {
+    "log_level": "INFO",
+    "alert_on_failure": true,
+    "metrics_collection": true
+  },
+  "email_settings": {
+    "subject_prefix": "🏛️ Ávila Framework",
+    "priority": "high",
+    "read_receipt": false,
+    "delivery_notification": true
+  },
+  "backup": {
+    "enabled": true,
+    "retention_days": 30
+  },
+  "schedule": {
+    "daily_report_time": "08:00",
+    "weekly_summary_time": "monday_09:00",
+    "monthly_analysis_time": "first_day_10:00"
+  },
+  "timezone": "America/Sao_Paulo"
+}

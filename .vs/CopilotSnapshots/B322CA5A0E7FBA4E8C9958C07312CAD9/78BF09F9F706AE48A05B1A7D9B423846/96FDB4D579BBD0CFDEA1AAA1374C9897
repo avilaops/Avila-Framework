@@ -1,0 +1,154 @@
+﻿{
+  // ========================================
+  // CONFIGURACOES VS CODE - AVILA FRAMEWORK
+  // ========================================
+  
+  // EDITOR
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.rulers": [80, 120],
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  
+  // ARQUIVOS
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  
+  // EXCLUSOES
+  "files.exclude": {
+    "**/.git": true,
+    "**/.venv": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/.pytest_cache": true,
+    "**/*.sqlite": true,
+  "**/*.db": true
+  },
+  
+  // PESQUISA
+  "search.exclude": {
+    "**/.venv": true,
+    "**/__pycache__": true,
+    "**/node_modules": true,
+    "**/*.log": true,
+    "**/Logs/Archive/**": true
+  },
+  
+  // PYTHON
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": [
+    "--max-line-length=120",
+    "--ignore=E501,W503"
+  ],
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": [
+    "--line-length=120"
+  ],
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+ "source.organizeImports": "explicit"
+    }
+  },
+  
+  // POWERSHELL
+  "powershell.codeFormatting.preset": "OTBS",
+  "powershell.codeFormatting.alignPropertyValuePairs": true,
+  "powershell.codeFormatting.useConstantStrings": true,
+  "[powershell]": {
+  "editor.defaultFormatter": "ms-vscode.powershell",
+    "editor.formatOnSave": true
+  },
+  
+  // JAVASCRIPT / TYPESCRIPT
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+ "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  
+  // MARKDOWN
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on"
+  },
+  "markdownlint.config": {
+    "MD013": false,
+    "MD033": false,
+    "MD041": false
+  },
+  
+  // YAML
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.insertSpaces": true,
+"editor.tabSize": 2
+  },
+  
+  // GIT
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.postCommitCommand": "none",
+  "git.defaultBranchName": "main",
+  
+  // GITHUB COPILOT
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": false,
+    "markdown": true,
+    "python": true,
+    "javascript": true,
+ "typescript": true,
+    "powershell": true
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+  
+  // TERMINAL
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  "terminal.integrated.fontSize": 13,
+  
+  // WORKSPACE
+  "workbench.colorTheme": "Visual Studio Dark",
+  "workbench.iconTheme": "vs-seti",
+  "workbench.startupEditor": "readme",
+  
+  // AVILA SPECIFIC
+  "avila.workspaceRoot": "C:\\Users\\nicol\\OneDrive\\Avila",
+  "avila.docsPath": "Docs",
+  "avila.logsPath": "Logs",
+"avila.scriptsPath": "Scripts",
+  
+  // BREADCRUMBS
+  "breadcrumbs.enabled": true,
+  "breadcrumbs.filePath": "on",
+  "breadcrumbs.symbolPath": "on"
+}

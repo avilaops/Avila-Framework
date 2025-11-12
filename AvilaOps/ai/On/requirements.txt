@@ -1,0 +1,6 @@
+pyyaml
+openai
+requests
+rich
+tqdm
+pathlib

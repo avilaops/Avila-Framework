@@ -1,0 +1,15 @@
+agent_name: Echo
+area: Comunicação / Branding
+significado: Replica a mensagem da marca
+status: ativo
+model: gpt-4o
+memory_path: ../../data/echo_memory.json
+description: Agente especializado em comunicação / branding (replica a mensagem da
+  marca).
+version: 1.0.0
+permissions:
+  read:
+  - ../../data/knowledge_base
+  write:
+  - ../../logs
+  sync: true

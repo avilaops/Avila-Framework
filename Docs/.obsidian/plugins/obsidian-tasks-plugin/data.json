@@ -1,0 +1,17 @@
+{
+  "globalFilter": "",
+  "removeGlobalFilter": false,
+  "setDoneDate": true,
+  "autoSuggestInEditor": true,
+  "provideAccessKeys": true,
+  "useFilenameAsScheduledDate": false,
+  "filenameAsScheduledDateFormat": "YYYY-MM-DD",
+  "defaultTaskCompletionInLocalTime": false,
+  "descendingOrder": false,
+  "showTaskCount": true,
+  "enableStatusBar": true,
+  "debugSettings": {
+    "showTasksDebugModal": false,
+    "ignoreCacheWhenDebugTasksModal": false
+  }
+}

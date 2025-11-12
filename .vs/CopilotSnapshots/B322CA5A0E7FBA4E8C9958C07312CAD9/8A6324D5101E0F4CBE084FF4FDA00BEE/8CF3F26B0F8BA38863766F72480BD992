@@ -1,0 +1,171 @@
+﻿# 📤 GUIA RÁPIDO: Exportar Conversa do Copilot
+
+## ⚡ 3 Passos Simples
+
+### 1️⃣ Exportar no Copilot Chat
+
+```
+┌─────────────────────────────────┐
+│  GitHub Copilot Chat            │
+│  ┌──────────────────────────┐   │
+│  │           │ │
+│  │  Sua conversa aqui...    │   │
+│  │   │   │
+│  └──────────────────────────┘   │
+│       ⋮  │ ← Clique aqui (três pontos)
+└─────────────────────────────────┘
+
+📋 Menu:
+  - Export Chat
+  - Save Chat
+  - Share (depende da versão)
+```
+
+**Escolha formato:**
+- ✅ **JSON** (estruturado, para processamento)
+- ✅ **Markdown** (legível, para documentação)
+
+---
+
+### 2️⃣ Mover para Pasta Padrão
+
+**Opção A: Script Automático**
+```powershell
+# Na raiz do projeto Ávila
+python Shared/scripts/salvar_conversa_copilot.py "Downloads/chat_export.json"
+```
+
+**Opção B: Manual**
+```powershell
+Move-Item -Path "$env:USERPROFILE\Downloads\chat_export_*.md" -Destination "Docs/Relatorios/Conversas/"
+```
+
+---
+
+### 3️⃣ Renomear (Opcional)
+
+```powershell
+# Padrão recomendado:
+Rename-Item -Path "Docs/Relatorios/Conversas/chat_export.md" -NewName "CONVERSA_ANALISE_PROJETO_v2025-11-10.md"
+```
+
+---
+
+## 🎯 Métodos Alternativos
+
+### Método 1: Copiar/Colar
+
+```
+1. Selecionar conversa (Ctrl+A ou arrastar mouse)
+2. Copiar (Ctrl+C)
+3. Abrir notepad: notepad "Docs/Relatorios/Conversas/CONVERSA_2025-11-10.md"
+4. Colar (Ctrl+V)
+5. Salvar (Ctrl+S)
+```
+
+### Método 2: Screenshot
+
+```powershell
+# Windows Snipping Tool
+Win + Shift + S
+
+# Salvar em:
+Docs/Relatorios/Conversas/Capturas/TEMA_2025-11-10.png
+```
+
+### Método 3: Print via PowerShell
+
+```powershell
+# Capturar conteúdo do clipboard (se copiado)
+Get-Clipboard | Out-File -FilePath "Docs/Relatorios/Conversas/CONVERSA_2025-11-10.md" -Encoding UTF8
+```
+
+---
+
+## ✅ Checklist
+
+Antes de salvar:
+
+- [ ] Conversa é relevante? (não trivial)
+- [ ] Sem informações sensíveis? (sem API keys, senhas)
+- [ ] Nome segue padrão? (`CONVERSA_TEMA_vDATA.md`)
+- [ ] Pasta correta? (`Docs/Relatorios/Conversas/`)
+- [ ] Formato adequado? (Markdown preferível)
+
+---
+
+## 📊 Localização Final
+
+```
+Docs/
+└── Relatorios/
+    └── Conversas/
+        ├── CONVERSA_ANALISE_PROJETO_v2025-11-10.md  ← Sua conversa
+   ├── CONVERSA_TROUBLESHOOTING_v2025-11-11.md
+    └── Capturas/
+            └── ARQUITETURA_2025-11-10.png
+```
+
+---
+
+## 🔍 Verificar se Salvou
+
+```powershell
+# Listar conversas salvas
+Get-ChildItem -Path "Docs/Relatorios/Conversas" -Filter "*.md"
+
+# Ver mais recente
+Get-ChildItem -Path "Docs/Relatorios/Conversas" -Filter "*.md" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+```
+
+---
+
+## 💡 Dica Pro
+
+**Automatize com alias PowerShell:**
+
+```powershell
+# Adicionar ao seu $PROFILE
+function Save-CopilotChat {
+    param([string]$File)
+    python Shared/scripts/salvar_conversa_copilot.py $File
+}
+
+# Uso:
+Save-CopilotChat "Downloads/chat_export.json"
+```
+
+---
+
+## ❓ Troubleshooting
+
+### Erro: "Botão de export não aparece"
+- **Solução:** Atualizar GitHub Copilot extension
+- Versão mínima: v1.1.0+ (verificar no VS Code Extensions)
+
+### Erro: "Script não encontrado"
+```powershell
+# Verificar se script existe
+Test-Path "Shared/scripts/salvar_conversa_copilot.py"
+
+# Se não existir, está na pasta errada ou precisa criar
+```
+
+### Erro: "Encoding UTF-8"
+```powershell
+# Forçar UTF-8 ao salvar manualmente
+$Conteudo = Get-Clipboard
+$Conteudo | Out-File -FilePath "CONVERSA.md" -Encoding UTF8
+```
+
+---
+
+**Pronto!** 🎉
+
+Sua conversa agora está salva na estrutura padrão Ávila!
+
+---
+
+**Criado por:** Ávila Ops  
+**Data:** 2025-11-10  
+**Versão:** 1.0

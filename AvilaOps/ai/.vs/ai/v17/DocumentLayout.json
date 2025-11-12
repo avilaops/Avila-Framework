@@ -1,0 +1,251 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\docs\\AVILA_PHILOSOPHY_AND_ARCHITECTURE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\AVILA_PHILOSOPHY_AND_ARCHITECTURE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\docs\\security_policies\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\observability\\grafana-dashboards\\on-core-overview.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:On\\observability\\grafana-dashboards\\on-core-overview.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-07476356-b3a0-4e4e-8c3c-558efc09e78a.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\observability\\grafana-datasources.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:On\\observability\\grafana-datasources.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\core\\on_metrics.py||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:On\\core\\on_metrics.py||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\core\\on_core.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:On\\core\\on_core.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\observability\\grafana-dashboards\\multinational-operations.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:On\\observability\\grafana-dashboards\\multinational-operations.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\core\\on_global_monitor.py||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:On\\core\\on_global_monitor.py||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\core\\on_alerts.py||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:On\\core\\on_alerts.py||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\core\\on_governance.py||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:On\\core\\on_governance.py||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\docs\\MONITORING_IDEAS_AND_METRICS.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\MONITORING_IDEAS_AND_METRICS.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\observability\\grafana-dashboards\\dashboards.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:On\\observability\\grafana-dashboards\\dashboards.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 216,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cde3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "dashboards.yaml",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\observability\\grafana-dashboards\\dashboards.yaml",
+              "RelativeDocumentMoniker": "On\\observability\\grafana-dashboards\\dashboards.yaml",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\observability\\grafana-dashboards\\dashboards.yaml",
+              "RelativeToolTip": "On\\observability\\grafana-dashboards\\dashboards.yaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-11-12T00:02:44.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MONITORING_IDEAS_AND_METRICS.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\docs\\MONITORING_IDEAS_AND_METRICS.md",
+              "RelativeDocumentMoniker": "docs\\MONITORING_IDEAS_AND_METRICS.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\docs\\MONITORING_IDEAS_AND_METRICS.md",
+              "RelativeToolTip": "docs\\MONITORING_IDEAS_AND_METRICS.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-12T00:02:32.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AVILA_PHILOSOPHY_AND_ARCHITECTURE.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\docs\\AVILA_PHILOSOPHY_AND_ARCHITECTURE.md",
+              "RelativeDocumentMoniker": "docs\\AVILA_PHILOSOPHY_AND_ARCHITECTURE.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\docs\\AVILA_PHILOSOPHY_AND_ARCHITECTURE.md",
+              "RelativeToolTip": "docs\\AVILA_PHILOSOPHY_AND_ARCHITECTURE.md",
+              "ViewState": "AgIAALcBAAAAAAAAAAAAABYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-12T00:00:40.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "on_governance.py",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\core\\on_governance.py",
+              "RelativeDocumentMoniker": "On\\core\\on_governance.py",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\core\\on_governance.py",
+              "RelativeToolTip": "On\\core\\on_governance.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-11-11T23:58:30.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\docs\\security_policies\\README.md",
+              "RelativeDocumentMoniker": "..\\docs\\security_policies\\README.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\docs\\security_policies\\README.md",
+              "RelativeToolTip": "..\\docs\\security_policies\\README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-11T23:57:06.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "on_alerts.py",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\core\\on_alerts.py",
+              "RelativeDocumentMoniker": "On\\core\\on_alerts.py",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\core\\on_alerts.py",
+              "RelativeToolTip": "On\\core\\on_alerts.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-11-11T23:51:26.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "on_global_monitor.py",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\core\\on_global_monitor.py",
+              "RelativeDocumentMoniker": "On\\core\\on_global_monitor.py",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\core\\on_global_monitor.py",
+              "RelativeToolTip": "On\\core\\on_global_monitor.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-11-11T23:50:37.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "multinational-operations.json",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\observability\\grafana-dashboards\\multinational-operations.json",
+              "RelativeDocumentMoniker": "On\\observability\\grafana-dashboards\\multinational-operations.json",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\observability\\grafana-dashboards\\multinational-operations.json",
+              "RelativeToolTip": "On\\observability\\grafana-dashboards\\multinational-operations.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-11T23:49:32.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "on_core.py",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\core\\on_core.py",
+              "RelativeDocumentMoniker": "On\\core\\on_core.py",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\core\\on_core.py",
+              "RelativeToolTip": "On\\core\\on_core.py",
+              "ViewState": "AgIAAPsAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-11-11T23:48:28.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "on_metrics.py",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\core\\on_metrics.py",
+              "RelativeDocumentMoniker": "On\\core\\on_metrics.py",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\core\\on_metrics.py",
+              "RelativeToolTip": "On\\core\\on_metrics.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-11-11T23:47:18.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "on-core-overview.json",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\observability\\grafana-dashboards\\on-core-overview.json",
+              "RelativeDocumentMoniker": "On\\observability\\grafana-dashboards\\on-core-overview.json",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\observability\\grafana-dashboards\\on-core-overview.json",
+              "RelativeToolTip": "On\\observability\\grafana-dashboards\\on-core-overview.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-11T23:46:54.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "grafana-datasources.yaml",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\observability\\grafana-datasources.yaml",
+              "RelativeDocumentMoniker": "On\\observability\\grafana-datasources.yaml",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\ai\\On\\observability\\grafana-datasources.yaml",
+              "RelativeToolTip": "On\\observability\\grafana-datasources.yaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-11-11T23:46:31.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "plan-07476356-b3a0-4e4e-8c3c-558efc09e78a.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-07476356-b3a0-4e4e-8c3c-558efc09e78a.md",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-07476356-b3a0-4e4e-8c3c-558efc09e78a.md",
+              "ToolTip": "C:\\Users\\nicol\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-07476356-b3a0-4e4e-8c3c-558efc09e78a.md",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-07476356-b3a0-4e4e-8c3c-558efc09e78a.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-11T23:45:17.969Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

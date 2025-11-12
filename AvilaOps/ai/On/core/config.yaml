@@ -1,0 +1,17 @@
+on_core:
+  version: "1.0.0"
+  base_path: "C:/Users/nicol/OneDrive/AvilaOps/backend/on"
+  vault_path: "C:/Users/nicol/OneDrive/Obsidian Vault"
+  language_model: "gpt-4o"
+  embed_model: "text-embedding-3-large"
+  auto_index: true
+  sync_target: "onedrive"
+
+agents_path: "./agents"
+data_path: "./data"
+logs_path: "./logs"
+
+permissions:
+  read: ["./agents/*/config.yaml", "./data/"]
+  write: ["./logs/"]
+  sync: true

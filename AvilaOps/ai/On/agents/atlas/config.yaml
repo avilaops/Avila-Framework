@@ -1,0 +1,15 @@
+agent_name: Atlas
+area: Estratégia / Corporativo
+significado: Sustenta a base da operação
+status: ativo
+model: gpt-4o
+memory_path: ../../data/atlas_memory.json
+description: Agente especializado em estratégia / corporativo (sustenta a base da
+  operação).
+version: 1.0.0
+permissions:
+  read:
+  - ../../data/knowledge_base
+  write:
+  - ../../logs
+  sync: true

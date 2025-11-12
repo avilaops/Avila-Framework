@@ -1,0 +1,14 @@
+agent_name: Forge
+area: Produção / Indústria
+significado: Forja, criação e manufatura
+status: ativo
+model: gpt-4o
+memory_path: ../../data/forge_memory.json
+description: Agente especializado em produção / indústria (forja, criação e manufatura).
+version: 1.0.0
+permissions:
+  read:
+  - ../../data/knowledge_base
+  write:
+  - ../../logs
+  sync: true

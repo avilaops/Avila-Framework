@@ -1,0 +1,62 @@
+[
+    {
+        "user_id": "usr_a1b2c3d4",
+        "signup_date": "2025-10-15T14:30:00Z",
+        "last_login": "2025-11-10T09:15:00Z",
+        "days_since_signup": 26,
+        "features_used": [
+            "dashboard",
+            "reports",
+            "api_integration"
+        ],
+        "total_sessions": 15,
+        "avg_session_duration_min": 12.5,
+        "support_tickets_open": 1,
+        "support_tickets_resolved": 2,
+        "onboarding_status": "active",
+        "ttv_days": 3,
+        "cohort": "2025-10",
+        "region": "americas",
+        "plan": "pro"
+    },
+    {
+        "user_id": "usr_e5f6g7h8",
+        "signup_date": "2025-10-20T10:00:00Z",
+        "last_login": "2025-10-22T11:00:00Z",
+        "days_since_signup": 22,
+        "features_used": [
+            "dashboard"
+        ],
+        "total_sessions": 2,
+        "avg_session_duration_min": 3.2,
+        "support_tickets_open": 3,
+        "support_tickets_resolved": 0,
+        "onboarding_status": "at_risk",
+        "ttv_days": null,
+        "cohort": "2025-10",
+        "region": "europe",
+        "plan": "starter"
+    },
+    {
+        "user_id": "usr_i9j0k1l2",
+        "signup_date": "2025-09-01T08:00:00Z",
+        "last_login": "2025-11-11T07:45:00Z",
+        "days_since_signup": 71,
+        "features_used": [
+            "dashboard",
+            "reports",
+            "api_integration",
+            "automations",
+            "integrations"
+        ],
+        "total_sessions": 45,
+        "avg_session_duration_min": 18.7,
+        "support_tickets_open": 0,
+        "support_tickets_resolved": 5,
+        "onboarding_status": "champion",
+        "ttv_days": 2,
+        "cohort": "2025-09",
+        "region": "asia_pacific",
+        "plan": "enterprise"
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "description": "Custo mensal de R$ 110k para time de 5 pessoas requer receita mínima de R$ 200k/mês - precisamos de 4-5 clientes ativos",
+        "owner": "CEO/CFO",
+        "severity": "high"
+    },
+    {
+        "description": "Contratação de COO é bloqueio crítico para escala - sem liderança operacional, CEO fica sobrecarregado",
+        "owner": "CEO",
+        "severity": "high"
+    },
+    {
+        "description": "Processo seletivo rigoroso (case técnico + cultural) pode levar 2-3 semanas por vaga - começar sourcing agora",
+        "owner": "CEO/COO",
+        "severity": "medium"
+    },
+    {
+        "description": "Fit cultural é tão importante quanto habilidades técnicas - não comprometer nos valores Ávila",
+        "owner": "Todos os entrevistadores",
+        "severity": "high"
+    },
+    {
+        "description": "Employer branding ainda inexistente - dificulta atração de talentos top tier (soluções: LinkedIn ativo, cases públicos)",
+        "owner": "Growth/CEO",
+        "severity": "medium"
+    }
+]

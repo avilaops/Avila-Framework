@@ -1,0 +1,1 @@
+export interface DataLayerEvent { event: string; env: string; account_id: string; persona?: string; vertical?: string; plan?: string; [key: string]: any; } export function pushToDataLayer(data: DataLayerEvent) { window.dataLayer = window.dataLayer || []; window.dataLayer.push(data); }

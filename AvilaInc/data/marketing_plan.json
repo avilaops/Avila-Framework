@@ -1,0 +1,23 @@
+{
+    "periodo": "Plano Estratégico Marketing 2025",
+    "receita_incremental": 0,
+    "custos_otimizados": 0,
+    "margem_projetada": 0,
+    "frt_medio": 0,
+    "resolucao_24h": 0,
+    "csat": 0,
+    "nps": 0,
+    "execucao_plano": 0,
+    "leads_qualificados": 0,
+    "win_rate": 0,
+    "cac": 0,
+    "ltv": 0,
+    "insights": [
+        "PLANO COMPLETO DE MARKETING & BRANDING ÁVILA",
+        "Estratégia 360° para consultoria de otimização",
+        "Framework testado para B2B SaaS e consultoria"
+    ],
+    "link_dashboard": "https://github.com/avilaops/Avila-Framework/tree/main/AvilaInc/marketing",
+    "destinatario": "Nicolas Ávila",
+    "assinatura": "GitHub Copilot - Estrategista Marketing"
+}

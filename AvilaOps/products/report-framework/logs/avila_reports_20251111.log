@@ -1,0 +1,27 @@
+[2025-11-11 17:21:27,702] [WARNING] ⚠️ Falha ao inicializar Sentry: Unsupported scheme ''
+[2025-11-11 17:21:27,707] [INFO] ✅ Sistema de logging inicializado
+[2025-11-11 17:21:35,867] [INFO] Teste de log INFO
+[2025-11-11 17:21:35,893] [INFO] ✅ Teste de log SUCCESS
+[2025-11-11 17:21:35,918] [WARNING] ⚠️ Teste de log WARNING
+[2025-11-11 17:21:35,988] [INFO] 📤 Exportação markdown: arquivo - started
+[2025-11-11 17:21:36,009] [INFO] ✅ Exportação markdown: exports\teste_markdown.md - completed
+[2025-11-11 17:21:36,031] [INFO] 📤 Exportação excel: arquivo - started
+[2025-11-11 17:21:36,232] [INFO] ✅ Exportação excel: exports\teste_excel.xlsx - completed
+[2025-11-11 17:58:18,656] [WARNING] ⚠️ Falha ao inicializar Sentry: Unsupported scheme ''
+[2025-11-11 17:58:18,661] [INFO] ✅ Sistema de logging inicializado
+[2025-11-11 17:58:47,715] [INFO] 🚀 Ávila Report Framework iniciado
+[2025-11-11 17:58:47,741] [INFO] 🚀 Interface gráfica iniciada
+[2025-11-11 17:59:37,962] [INFO] Interface atualizada
+[2025-11-11 17:59:53,211] [INFO] ✅ Dados de exemplo gerados com sucesso
+[2025-11-11 17:59:59,430] [INFO] 📤 Exportação whatsapp: +5517997811471 - started
+[2025-11-11 17:59:59,770] [INFO] ✅ Exportação whatsapp: +5517997811471 - completed
+[2025-11-11 18:00:04,277] [INFO] 📤 Exportação whatsapp: +5517997811471 - started
+[2025-11-11 18:00:04,325] [INFO] ✅ Exportação whatsapp: +5517997811471 - completed
+[2025-11-11 18:00:43,851] [INFO] Interface atualizada
+[2025-11-11 18:02:05,162] [INFO] 📤 Exportação email: nicolas@avila.inc - started
+[2025-11-11 18:02:08,828] [INFO] 📤 Exportação excel: arquivo - started
+[2025-11-11 18:02:12,461] [INFO] ✅ Exportação excel: exports\avila_report_weekly_20251111_180211.xlsx - completed
+[2025-11-11 18:02:21,309] [INFO] 🛑 Interface gráfica encerrada
+[2025-11-11 19:07:26,430] [WARNING] ⚠️ Falha ao inicializar Sentry: Unsupported scheme ''
+[2025-11-11 19:07:26,436] [INFO] ✅ Sistema de logging inicializado
+[2025-11-11 19:07:26,893] [INFO] Agentes carregados: 8

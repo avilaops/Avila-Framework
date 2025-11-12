@@ -1,0 +1,109 @@
+# ============================================
+# CONFIGURAÇÃO DO SISTEMA DE GESTÃO DE CONHECIMENTO
+# ============================================
+
+# Caminhos
+paths:
+  vault_root: "c:\\Users\\nicol\\OneDrive\\Documentos\\Obsidian Vault"
+  output_dir: "_system"
+  scripts_dir: "scripts"
+
+  # Pastas a ignorar no processamento
+  exclude_folders:
+    - "_system"
+    - "scripts"
+    - ".obsidian"
+    - ".trash"
+
+# OpenAI API
+openai:
+  api_key: "${OPENAI_API_KEY}" # Ler de variável de ambiente
+  model: "gpt-4o-mini" # Modelo para análise
+  embedding_model: "text-embedding-3-small"
+  temperature: 0.3
+  max_tokens: 4000
+
+# Detecção de Duplicatas
+duplicates:
+  similarity_threshold: 0.85 # 85% de similaridade = duplicata
+  auto_remove_identical: false # false = pedir confirmação
+  min_content_length: 100 # Ignorar arquivos muito curtos
+
+# Categorização
+categorization:
+  auto_tag: true # Adicionar tags automáticas
+  use_existing_tags: true # Preservar tags existentes
+  max_tags_per_file: 5
+
+  # Categorias principais (auto-detectadas se vazio)
+  main_categories:
+    - "Trabalho"
+    - "Aprendizado"
+    - "Projetos"
+    - "Ferramentas"
+    - "Referência"
+    - "Ideias"
+
+# Clustering
+clustering:
+  method: "hierarchical" # hierarchical ou hdbscan
+  n_clusters: "auto" # ou número específico
+  levels: 3 # Níveis de hierarquia
+  min_cluster_size: 3 # Mínimo de documentos por cluster
+
+# Grafo de Conhecimento
+knowledge_graph:
+  layout: "force_directed" # force_directed, hierarchical, circular
+  min_edge_weight: 0.3 # Peso mínimo para criar conexão
+  show_orphans: true # Mostrar documentos sem conexões
+  interactive: true # Gráfico interativo (HTML)
+
+  # Cores por categoria
+  colors:
+    Trabalho: "#3b82f6" # Azul
+    Aprendizado: "#f59e0b" # Laranja
+    Projetos: "#10b981" # Verde
+    Ferramentas: "#8b5cf6" # Roxo
+    Referência: "#6b7280" # Cinza
+    Ideias: "#ec4899" # Rosa
+    Uncategorized: "#d1d5db" # Cinza claro
+
+# Geração de Prompts Contextuais
+prompts:
+  lookback_days: 14 # Considerar últimas 2 semanas
+  include_todos: true
+  include_links: true
+  max_context_tokens: 2000
+
+  # Templates de prompt por categoria
+  templates:
+    Trabalho: "work_context.md"
+    Aprendizado: "learning_context.md"
+    Projetos: "projects_context.md"
+
+# Agendamento
+schedule:
+  enabled: true
+  day: "sunday" # Dia da semana
+  time: "00:00" # Horário (HH:MM)
+
+# Relatórios
+reporting:
+  generate_weekly_summary: true
+  generate_stats: true
+  notify_on_completion: false # Email/notificação (futuro)
+
+# Logs
+logging:
+  level: "INFO" # DEBUG, INFO, WARNING, ERROR
+  file: "_system/logs/knowledge_manager.log"
+  max_size_mb: 10
+  backup_count: 5
+
+# Performance
+performance:
+  batch_size: 50 # Processar arquivos em lotes
+  use_cache: true
+  cache_embeddings: true
+  parallel_processing: true
+  max_workers: 4

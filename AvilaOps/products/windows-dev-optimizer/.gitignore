@@ -1,0 +1,65 @@
+# Windows Dev Optimizer - .gitignore
+# Seguindo padrões de segurança Avila Framework
+
+# Arquivos de ambiente (NUNCA versionar!)
+.env
+*.env
+!.env.example
+
+# Logs e dados temporários
+logs/
+*.log
+reports/*.html
+reports/*.json
+reports/*.csv
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.pytest_cache/
+
+# Ambiente virtual
+.venv/
+venv/
+env/
+ENV/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Dados sensíveis (NUNCA versionar!)
+*.key
+*.pem
+*.p12
+*.pfx
+credentials.json
+secrets.json
+
+# Backups e temporários
+*.bak
+*.tmp
+*.temp
+*.old
+*~
+
+# Análises específicas
+edge_cache/
+browser_data/
+temp_history.db
+temp_cookies.db
+
+# Relatórios pessoais
+reports/personal/
+exports/

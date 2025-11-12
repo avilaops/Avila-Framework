@@ -1,0 +1,117 @@
+# GitHub Repository Settings - Avila Framework
+# Configuracao para GitHub Pro/Enterprise
+# Aplicar via: Settings app ou manualmente
+
+repository:
+  # Informacoes Basicas
+  name: avila
+  description: "Avila Framework - Governanca corporativa, agentes IA e automacao empresarial"
+  homepage: ""  # PREENCHER: URL do site se houver
+  topics:
+    - governance
+    - automation
+    - ai-agents
+    - corporate-framework
+    - python
+    - powershell
+    - azure
+    - enterprise
+  
+  # Visibilidade
+  private: false  # AJUSTAR: true se privado, false se publico
+  
+  # Features
+  has_issues: true
+  has_projects: true
+  has_wiki: false  # Usar Docs/ ao inves de Wiki
+  has_downloads: true
+  
+  # Configuracoes Avancadas
+  default_branch: main
+  allow_squash_merge: true
+  allow_merge_commit: false
+  allow_rebase_merge: true
+  delete_branch_on_merge: true
+  enable_automated_security_fixes: true
+  enable_vulnerability_alerts: true
+
+# Branch Protection (main)
+branches:
+  - name: main
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+        dismiss_stale_reviews: true
+        require_code_owner_reviews: false  # AJUSTAR: true se tiver CODEOWNERS
+      required_status_checks:
+        strict: true
+        contexts:
+          - "Validacao Estrutura Avila"
+  - "Lint Python"
+ enforce_admins: false
+      required_linear_history: true
+      restrictions: null
+
+# Colaboradores (PREENCHER)
+collaborators:
+  # Exemplo:
+  # - username: nicolas-avila
+  #   permission: admin
+  # - username: colaborador
+  #permission: write
+
+# Teams (se GitHub Organization/Enterprise)
+teams:
+  # Exemplo:
+  # - name: avila-core
+  #   permission: admin
+  # - name: avila-contributors
+  #   permission: write
+
+# Labels
+labels:
+  - name: bug
+    color: d73a4a
+  description: "Algo nao esta funcionando"
+  
+  - name: enhancement
+  color: a2eeef
+    description: "Nova funcionalidade ou requisicao"
+  
+  - name: documentation
+    color: 0075ca
+    description: "Melhorias na documentacao"
+  
+  - name: governance
+    color: 7057ff
+    description: "Relacionado a governanca"
+  
+  - name: archivus
+    color: fbca04
+    description: "Agente Archivus"
+  
+  - name: avila-ops
+    color: 0e8a16
+    description: "Setor AvilaOps"
+  
+  - name: avila-inc
+    color: 1d76db
+    description: "Setor AvilaInc"
+  
+  - name: priority-high
+    color: d93f0b
+    description: "Alta prioridade"
+  
+  - name: security
+    color: ee0701
+    description: "Vulnerabilidade de seguranca"
+
+# Milestones (exemplo)
+milestones:
+  - title: "v1.0 - Setup Inicial"
+    description: "Configuracao base do framework"
+  state: open
+  
+  - title: "v1.1 - Agentes Completos"
+    description: "Todos agentes implementados"
+    state: open

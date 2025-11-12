@@ -1,0 +1,23 @@
+{
+    "periodo": "10 nov 2025",
+    "receita_incremental": 18500.0,
+    "custos_otimizados": 9200.0,
+    "margem_projetada": 29.2,
+    "frt_medio": 2.8,
+    "resolucao_24h": 91.0,
+    "csat": 94,
+    "nps": 68,
+    "execucao_plano": 92,
+    "leads_qualificados": 8,
+    "win_rate": 35.0,
+    "cac": 1650.0,
+    "ltv": 8420.0,
+    "insights": [
+        "Pico de atendimento às 14h — considerar reforço de equipe",
+        "5 novos leads qualificados via LinkedIn",
+        "Tempo médio de resposta caiu 15% vs ontem"
+    ],
+    "link_dashboard": "https://intranet.avila/dashboard/daily",
+    "destinatario": "time operacional",
+    "assinatura": "Sistema Ávila Analytics"
+}

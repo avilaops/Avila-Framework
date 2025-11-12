@@ -1,0 +1,293 @@
+{% extends "base.html" %}
+
+{% block title %}{{ app_name }} - Início{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <!-- Header -->
+        <div class="hero-section bg-gradient-primary text-white rounded-3 p-5 mb-4">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">
+                        <i class="bi bi-gear-wide-connected me-3"></i>
+                        Windows Dev Optimizer
+                    </h1>
+                    <p class="lead mb-4">
+                        Framework completo para análise e otimização de sistemas Windows focado em desenvolvimento.
+                        Identifique gargalos, remova bloatware e configure seu ambiente para máxima produtividade.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="/analysis" class="btn btn-light btn-lg">
+                            <i class="bi bi-search me-2"></i>
+                            Iniciar Análise
+                        </a>
+                        <a href="/optimization" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-speedometer2 me-2"></i>
+                            Otimizar Sistema
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="bi bi-laptop text-white" style="font-size: 8rem; opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-6 col-xl-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <div class="text-primary mb-3">
+                            <i class="bi bi-cpu" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="card-title">Análise Completa</h5>
+                        <p class="card-text text-muted">
+                            Sistema, programas, Edge e detecção de bloatware
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <div class="text-success mb-3">
+                            <i class="bi bi-speedometer2" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="card-title">Otimização Inteligente</h5>
+                        <p class="card-text text-muted">
+                            Configurações específicas para desenvolvimento
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <div class="text-warning mb-3">
+                            <i class="bi bi-file-earmark-spreadsheet" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="card-title">Relatórios Detalhados</h5>
+                        <p class="card-text text-muted">
+                            Exportação em MD, Excel, Email e WhatsApp
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <div class="text-info mb-3">
+                            <i class="bi bi-shield-check" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="card-title">Segurança</h5>
+                        <p class="card-text text-muted">
+                            Remoção segura e backups automáticos
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="row g-5 mb-5">
+            <div class="col-lg-6">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-gradient rounded-3 p-3 me-3">
+                                <i class="bi bi-search text-white" style="font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-1">Análise Profunda</h4>
+                                <p class="text-muted mb-0">Diagnóstico completo do sistema</p>
+                            </div>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                Análise de programas instalados e uso
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                Histórico e produtividade do Microsoft Edge
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                Detecção automática de bloatware
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                Informações detalhadas do hardware
+                            </li>
+                        </ul>
+                        <a href="/analysis" class="btn btn-primary">
+                            <i class="bi bi-arrow-right me-2"></i>
+                            Executar Análise
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-success bg-gradient rounded-3 p-3 me-3">
+                                <i class="bi bi-speedometer2 text-white" style="font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-1">Otimização Avançada</h4>
+                                <p class="text-muted mb-0">Configuração para desenvolvedores</p>
+                            </div>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                Ativação do modo desenvolvedor
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                Instalação de ferramentas (Chocolatey, Git)
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                Otimização do Visual Studio
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                Configurações de performance
+                            </li>
+                        </ul>
+                        <a href="/optimization" class="btn btn-success">
+                            <i class="bi bi-arrow-right me-2"></i>
+                            Otimizar Agora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Export Options -->
+        <div class="card border-0 shadow mb-5">
+            <div class="card-body p-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-warning bg-gradient rounded-3 p-3 me-3">
+                                <i class="bi bi-download text-white" style="font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-1">Relatórios e Exportação</h4>
+                                <p class="text-muted mb-0">Múltiplos formatos de saída para seus relatórios</p>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-file-earmark-text text-primary me-2"></i>
+                                    <span>Markdown</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-file-earmark-spreadsheet text-success me-2"></i>
+                                    <span>Excel</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-envelope text-info me-2"></i>
+                                    <span>Email</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-whatsapp text-success me-2"></i>
+                                    <span>WhatsApp</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="/export" class="btn btn-warning btn-lg">
+                            <i class="bi bi-download me-2"></i>
+                            Exportar Relatórios
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-play-circle text-primary mb-3" style="font-size: 3rem;"></i>
+                        <h5 class="card-title">Início Rápido</h5>
+                        <p class="card-text">Execute uma análise completa do sistema em poucos cliques.</p>
+                        <button class="btn btn-primary" hx-post="/api/analysis/system" hx-target="#quick-results"
+                            hx-swap="innerHTML">
+                            <i class="bi bi-play me-2"></i>
+                            Analisar Agora
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-lightbulb text-warning mb-3" style="font-size: 3rem;"></i>
+                        <h5 class="card-title">Recomendações</h5>
+                        <p class="card-text">Obtenha sugestões personalizadas para seu sistema.</p>
+                        <button class="btn btn-warning" hx-get="/api/analysis/recommendations"
+                            hx-target="#quick-results" hx-swap="innerHTML">
+                            <i class="bi bi-lightbulb me-2"></i>
+                            Ver Sugestões
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-journal-text text-info mb-3" style="font-size: 3rem;"></i>
+                        <h5 class="card-title">Logs em Tempo Real</h5>
+                        <p class="card-text">Monitore o sistema e operações em tempo real.</p>
+                        <a href="/logs" class="btn btn-info">
+                            <i class="bi bi-arrow-right me-2"></i>
+                            Ver Logs
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Results -->
+        <div class="mt-5">
+            <div id="quick-results" class="d-none">
+                <!-- Results will be loaded here via HTMX -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Show quick results when they are loaded
+    document.addEventListener('htmx:afterSwap', function (event) {
+        if (event.target.id === 'quick-results') {
+            event.target.classList.remove('d-none');
+            event.target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,105 @@
+<!-- System Status Cards Partial -->
+<div class="bg-white overflow-hidden shadow rounded-lg">
+    <div class="p-5">
+        <div class="flex items-center">
+            <div class="flex-shrink-0">
+                {% if system_status.on_integration.connected %}
+                <div class="w-8 h-8 bg-green-500 rounded-md flex items-center justify-center">
+                    <i class="fas fa-server text-white"></i>
+                </div>
+                {% else %}
+                <div class="w-8 h-8 bg-yellow-500 rounded-md flex items-center justify-center">
+                    <i class="fas fa-server text-white"></i>
+                </div>
+                {% endif %}
+            </div>
+            <div class="ml-5 w-0 flex-1">
+                <dl>
+                    <dt class="text-sm font-medium text-gray-500 truncate">System Status</dt>
+                    <dd class="text-lg font-medium text-gray-900">
+                        {% if system_status.on_integration.connected %}
+                        <span class="text-green-600">Online</span>
+                        {% else %}
+                        <span class="text-yellow-600">Standalone</span>
+                        {% endif %}
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white overflow-hidden shadow rounded-lg">
+    <div class="p-5">
+        <div class="flex items-center">
+            <div class="flex-shrink-0">
+                <div class="w-8 h-8 bg-blue-500 rounded-md flex items-center justify-center">
+                    <i class="fas fa-tasks text-white"></i>
+                </div>
+            </div>
+            <div class="ml-5 w-0 flex-1">
+                <dl>
+                    <dt class="text-sm font-medium text-gray-500 truncate">Active Tasks</dt>
+                    <dd class="text-lg font-medium text-gray-900">{{ system_status.system.active_optimizations }}</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if system_status.on_integration.enabled %}
+<div class="bg-white overflow-hidden shadow rounded-lg">
+    <div class="p-5">
+        <div class="flex items-center">
+            <div class="flex-shrink-0">
+                {% if system_status.on_integration.connected %}
+                <div class="w-8 h-8 bg-purple-500 rounded-md flex items-center justify-center">
+                    <i class="fas fa-robot text-white"></i>
+                </div>
+                {% else %}
+                <div class="w-8 h-8 bg-gray-500 rounded-md flex items-center justify-center">
+                    <i class="fas fa-robot text-white"></i>
+                </div>
+                {% endif %}
+            </div>
+            <div class="ml-5 w-0 flex-1">
+                <dl>
+                    <dt class="text-sm font-medium text-gray-500 truncate">ON Agents</dt>
+                    <dd class="text-lg font-medium text-gray-900">
+                        {% if system_status.on_integration.connected %}
+                        <span class="text-green-600">{{ system_status.on_integration.active_optimizations }}
+                            Active</span>
+                        {% else %}
+                        <span class="text-gray-600">Disconnected</span>
+                        {% endif %}
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<div class="bg-white overflow-hidden shadow rounded-lg">
+    <div class="p-5">
+        <div class="flex items-center">
+            <div class="flex-shrink-0">
+                <div class="w-8 h-8 bg-green-500 rounded-md flex items-center justify-center">
+                    <i class="fas fa-shield-alt text-white"></i>
+                </div>
+            </div>
+            <div class="ml-5 w-0 flex-1">
+                <dl>
+                    <dt class="text-sm font-medium text-gray-500 truncate">Privacy Mode</dt>
+                    <dd class="text-lg font-medium text-gray-900">
+                        {% if system_status.telemetry.privacy_mode %}
+                        <span class="text-green-600">Active</span>
+                        {% else %}
+                        <span class="text-yellow-600">Inactive</span>
+                        {% endif %}
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>

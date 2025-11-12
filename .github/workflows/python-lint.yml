@@ -1,0 +1,59 @@
+name: Python Lint and Test
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - '**.py'
+      - 'requirements.txt'
+      - 'pyproject.toml'
+  pull_request:
+    branches: [ main ]
+    paths:
+   - '**.py'
+
+jobs:
+  lint:
+name: Lint Python
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Python
+      uses: actions/setup-python@v5
+ with:
+   python-version: '3.13'
+        
+    - name: Install dependencies
+    run: |
+        python -m pip install --upgrade pip
+        pip install flake8 black
+        
+    - name: Lint with flake8
+      run: |
+        # Ignorar .venv e __pycache__
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics --exclude=.venv,__pycache__,node_modules
+      flake8 . --count --max-line-length=120 --statistics --exclude=.venv,__pycache__,node_modules
+        
+    - name: Check formatting with black
+      run: |
+ black --check --line-length=120 --exclude="\.venv|__pycache__|node_modules" .
+
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Run Bandit Security Scanner
+      run: |
+    pip install bandit
+        bandit -r . -f json -o bandit-report.json --exclude .venv,__pycache__,node_modules || true
+        
+- name: Upload Security Report
+  uses: actions/upload-artifact@v4
+      with:
+        name: bandit-security-report
+    path: bandit-report.json

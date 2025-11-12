@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ON - Onboarding Dashboard | Ávila Inc.</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .metric-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .metric-change {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .metric-change.positive {
+            color: #4ade80;
+        }
+
+        .metric-change.negative {
+            color: #f87171;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 20px;
+        }
+
+        .chart-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .chart-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        .status-indicator.live {
+            background: #4ade80;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .update-time {
+            text-align: center;
+            margin-top: 30px;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .metric-value {
+                font-size: 2rem;
+            }
+
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 ON Dashboard</h1>
+            <p class="subtitle">
+                <span class="status-indicator live"></span>
+                Métricas em Tempo Real | Ávila Inc.
+            </p>
+        </header>
+
+        <div class="metrics-grid" id="metrics-grid">
+            <!-- Será preenchido via JavaScript -->
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-card">
+                <h3 class="chart-title">📊 Distribuição de Status</h3>
+                <canvas id="statusChart"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h3 class="chart-title">📈 Tendência TTV (7 dias)</h3>
+                <canvas id="ttvChart"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h3 class="chart-title">💰 MRR por Plano</h3>
+                <canvas id="mrrChart"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h3 class="chart-title">🎯 Health Score Médio</h3>
+                <canvas id="healthChart"></canvas>
+            </div>
+        </div>
+
+        <p class="update-time" id="update-time">Última atualização: --:--:--</p>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:8000';
+        const WS_URL = 'ws://localhost:8000/ws/metrics';
+
+        let ws;
+        let charts = {};
+
+        // Conectar WebSocket
+        function connectWebSocket() {
+            ws = new WebSocket(WS_URL);
+
+            ws.onopen = () => {
+                console.log('✅ WebSocket conectado');
+            };
+
+            ws.onmessage = (event) => {
+                const metrics = JSON.parse(event.data);
+                updateDashboard(metrics);
+            };
+
+            ws.onerror = (error) => {
+                console.error('❌ WebSocket erro:', error);
+            };
+
+            ws.onclose = () => {
+                console.log('🔄 Reconectando WebSocket...');
+                setTimeout(connectWebSocket, 3000);
+            };
+        }
+
+        // Atualizar dashboard
+        function updateDashboard(metrics) {
+            updateMetricCards(metrics);
+            updateCharts(metrics);
+            updateTimestamp();
+        }
+
+        // Atualizar cards de métricas
+        function updateMetricCards(metrics) {
+            const grid = document.getElementById('metrics-grid');
+
+            const cards = [
+                {
+                    label: 'Usuários Totais',
+                    value: metrics.total_users,
+                    change: '+12% vs. ontem',
+                    positive: true
+                },
+                {
+                    label: 'Usuários Ativos',
+                    value: metrics.active_users,
+                    change: `${(metrics.active_users / metrics.total_users * 100).toFixed(1)}% do total`,
+                    positive: true
+                },
+                {
+                    label: 'TTV Médio',
+                    value: `${metrics.avg_ttv_days} dias`,
+                    change: metrics.avg_ttv_days < 7 ? '✅ Meta atingida' : '⚠️ Acima da meta',
+                    positive: metrics.avg_ttv_days < 7
+                },
+                {
+                    label: 'Taxa de Conclusão',
+                    value: `${metrics.completion_rate}%`,
+                    change: '+5.2% vs. semana',
+                    positive: true
+                },
+                {
+                    label: 'Champions',
+                    value: metrics.champion_count,
+                    change: `${(metrics.champion_count / metrics.total_users * 100).toFixed(1)}% dos usuários`,
+                    positive: true
+                },
+                {
+                    label: 'Em Risco',
+                    value: metrics.churn_risk_count,
+                    change: metrics.churn_risk_count > 0 ? '⚠️ Atenção necessária' : '✅ Tudo OK',
+                    positive: metrics.churn_risk_count === 0
+                },
+                {
+                    label: 'Signups Hoje',
+                    value: metrics.daily_signups,
+                    change: '+25% vs. média',
+                    positive: true
+                },
+                {
+                    label: 'MRR',
+                    value: `$${metrics.revenue_mrr.toLocaleString()}`,
+                    change: '+18% vs. mês anterior',
+                    positive: true
+                }
+            ];
+
+            grid.innerHTML = cards.map(card => `
+                <div class="metric-card">
+                    <div class="metric-label">${card.label}</div>
+                    <div class="metric-value">${card.value}</div>
+                    <div class="metric-change ${card.positive ? 'positive' : 'negative'}">
+                        ${card.change}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Atualizar gráficos
+        function updateCharts(metrics) {
+            // Chart 1: Status Distribution
+            if (!charts.status) {
+                const ctx = document.getElementById('statusChart').getContext('2d');
+                charts.status = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Champions', 'Completos', 'Em Progresso', 'Em Risco'],
+                        datasets: [{
+                            data: [
+                                metrics.champion_count,
+                                Math.floor(metrics.total_users * 0.3),
+                                Math.floor(metrics.total_users * 0.4),
+                                metrics.churn_risk_count
+                            ],
+                            backgroundColor: ['#4ade80', '#60a5fa', '#fbbf24', '#f87171']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: { labels: { color: '#fff' } }
+                        }
+                    }
+                });
+            } else {
+                charts.status.data.datasets[0].data = [
+                    metrics.champion_count,
+                    Math.floor(metrics.total_users * 0.3),
+                    Math.floor(metrics.total_users * 0.4),
+                    metrics.churn_risk_count
+                ];
+                charts.status.update();
+            }
+
+            // Chart 2: TTV Trend (simulado)
+            if (!charts.ttv) {
+                const ctx = document.getElementById('ttvChart').getContext('2d');
+                charts.ttv = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['D-6', 'D-5', 'D-4', 'D-3', 'D-2', 'Ontem', 'Hoje'],
+                        datasets: [{
+                            label: 'TTV Médio (dias)',
+                            data: [8.2, 7.5, 6.8, 5.9, 5.2, 4.8, metrics.avg_ttv_days],
+                            borderColor: '#4ade80',
+                            backgroundColor: 'rgba(74, 222, 128, 0.1)',
+                            fill: true,
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: { ticks: { color: '#fff' }, grid: { color: 'rgba(255,255,255,0.1)' } },
+                            x: { ticks: { color: '#fff' }, grid: { color: 'rgba(255,255,255,0.1)' } }
+                        },
+                        plugins: {
+                            legend: { labels: { color: '#fff' } }
+                        }
+                    }
+                });
+            }
+
+            // Chart 3: MRR por plano
+            if (!charts.mrr) {
+                const ctx = document.getElementById('mrrChart').getContext('2d');
+                charts.mrr = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Starter', 'Pro', 'Enterprise'],
+                        datasets: [{
+                            label: 'MRR ($)',
+                            data: [
+                                Math.floor(metrics.revenue_mrr * 0.2),
+                                Math.floor(metrics.revenue_mrr * 0.4),
+                                Math.floor(metrics.revenue_mrr * 0.4)
+                            ],
+                            backgroundColor: ['#60a5fa', '#8b5cf6', '#ec4899']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: { ticks: { color: '#fff' }, grid: { color: 'rgba(255,255,255,0.1)' } },
+                            x: { ticks: { color: '#fff' }, grid: { color: 'rgba(255,255,255,0.1)' } }
+                        },
+                        plugins: {
+                            legend: { labels: { color: '#fff' } }
+                        }
+                    }
+                });
+            }
+
+            // Chart 4: Health Score
+            if (!charts.health) {
+                const ctx = document.getElementById('healthChart').getContext('2d');
+                charts.health = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00', 'Agora'],
+                        datasets: [{
+                            label: 'Health Score Médio',
+                            data: [72, 74, 76, 78, 81, 83, metrics.health_score_avg],
+                            borderColor: '#fbbf24',
+                            backgroundColor: 'rgba(251, 191, 36, 0.1)',
+                            fill: true,
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                min: 0,
+                                max: 100,
+                                ticks: { color: '#fff' },
+                                grid: { color: 'rgba(255,255,255,0.1)' }
+                            },
+                            x: { ticks: { color: '#fff' }, grid: { color: 'rgba(255,255,255,0.1)' } }
+                        },
+                        plugins: {
+                            legend: { labels: { color: '#fff' } }
+                        }
+                    }
+                });
+            }
+        }
+
+        // Atualizar timestamp
+        function updateTimestamp() {
+            const now = new Date();
+            document.getElementById('update-time').textContent =
+                `Última atualização: ${now.toLocaleTimeString('pt-BR')}`;
+        }
+
+        // Inicializar
+        connectWebSocket();
+
+        // Fallback: buscar via REST se WebSocket falhar
+        async function fallbackFetch() {
+            try {
+                const response = await fetch(`${API_URL}/api/metrics`);
+                const metrics = await response.json();
+                updateDashboard(metrics);
+            } catch (error) {
+                console.error('Erro ao buscar métricas:', error);
+            }
+        }
+
+        // Fallback a cada 5s
+        setInterval(fallbackFetch, 5000);
+    </script>
+</body>
+
+</html>

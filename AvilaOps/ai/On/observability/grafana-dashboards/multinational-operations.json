@@ -1,0 +1,193 @@
+{
+  "dashboard": {
+    "title": "Ávila Ops - Monitoramento Multinacional",
+    "timezone": "UTC",
+    "schemaVersion": 16,
+    "version": 1,
+    "refresh": "10s",
+    "tags": ["avila", "multinacional", "global"],
+    "panels": [
+      {
+        "id": 1,
+        "title": "Operações por Região Geográfica",
+        "type": "geomap",
+        "gridPos": {"x": 0, "y": 0, "w": 12, "h": 10},
+        "targets": [
+          {
+            "expr": "sum by (region, country) (on_regional_operations_total)",
+            "legendFormat": "{{country}}"
+          }
+        ],
+        "options": {
+          "view": {
+            "id": "zero",
+            "lat": 0,
+            "lon": 0,
+            "zoom": 2
+          }
+        }
+      },
+      {
+        "id": 2,
+        "title": "Clientes Ativos por País (Top 10)",
+        "type": "bargauge",
+        "gridPos": {"x": 12, "y": 0, "w": 12, "h": 10},
+        "targets": [
+          {
+            "expr": "topk(10, on_customers_active)",
+            "legendFormat": "{{country}}"
+          }
+        ],
+        "options": {
+          "orientation": "horizontal",
+          "displayMode": "gradient"
+        }
+      },
+      {
+        "id": 3,
+        "title": "SLA Compliance por Agente (%)",
+        "type": "gauge",
+        "gridPos": {"x": 0, "y": 10, "w": 8, "h": 8},
+        "targets": [
+          {
+            "expr": "on_sla_compliance_ratio * 100",
+            "legendFormat": "{{agent}}"
+          }
+        ],
+        "options": {
+          "showThresholdLabels": true,
+          "showThresholdMarkers": true
+        },
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"value": 0, "color": "red"},
+                {"value": 90, "color": "yellow"},
+                {"value": 95, "color": "green"}
+              ]
+            },
+            "min": 0,
+            "max": 100,
+            "unit": "percent"
+          }
+        }
+      },
+      {
+        "id": 4,
+        "title": "Utilização de Recursos (%)",
+        "type": "stat",
+        "gridPos": {"x": 8, "y": 10, "w": 8, "h": 8},
+        "targets": [
+          {
+            "expr": "on_resource_utilization",
+            "legendFormat": "{{resource}}"
+          }
+        ],
+        "options": {
+          "colorMode": "background",
+          "graphMode": "area",
+          "orientation": "auto"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "steps": [
+                {"value": 0, "color": "green"},
+                {"value": 70, "color": "yellow"},
+                {"value": 90, "color": "red"}
+              ]
+            },
+            "unit": "percent"
+          }
+        }
+      },
+      {
+        "id": 5,
+        "title": "Tamanho da Fila de Mensagens",
+        "type": "graph",
+        "gridPos": {"x": 16, "y": 10, "w": 8, "h": 8},
+        "targets": [
+          {
+            "expr": "on_queue_size",
+            "legendFormat": "Mensagens pendentes"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Taxa de Erros por Severidade",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 18, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "sum by (severity) (rate(on_errors_total[5m]))",
+            "legendFormat": "{{severity}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "smooth",
+              "fillOpacity": 10
+            }
+          }
+        }
+      },
+      {
+        "id": 7,
+        "title": "Latência de Processamento (p95)",
+        "type": "graph",
+        "gridPos": {"x": 12, "y": 18, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.95, rate(on_processing_duration_seconds_bucket[5m]))",
+            "legendFormat": "{{agent}}"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Distribuição de Operações por Tipo",
+        "type": "piechart",
+        "gridPos": {"x": 0, "y": 26, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "sum by (operation) (on_regional_operations_total)"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Status dos Agentes (Live)",
+        "type": "table",
+        "gridPos": {"x": 12, "y": 26, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "on_agent_heartbeat",
+            "format": "table",
+            "instant": true
+          }
+        ],
+        "transformations": [
+          {
+            "id": "organize",
+            "options": {
+              "excludeByName": {},
+              "indexByName": {},
+              "renameByName": {
+                "agent": "Agente",
+                "Value": "Status"
+              }
+            }
+          }
+        ],
+        "options": {
+          "showHeader": true
+        }
+      }
+    ]
+  }
+}

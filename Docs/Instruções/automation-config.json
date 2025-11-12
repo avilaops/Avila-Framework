@@ -1,0 +1,84 @@
+{
+    "workspace_path": "C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Instruções",
+    "output_path": ".\\output",
+    "backup_path": ".\\backup",
+    "email": {
+        "enabled": true,
+        "smtp_server": "smtp-mail.outlook.com",
+        "smtp_port": 587,
+        "sender_email": "sistema@empresa.com",
+        "sender_password": "SUA_SENHA_DE_APP_AQUI",
+        "recipients": [
+            "gerente@empresa.com",
+            "ti@empresa.com",
+            "diretoria@empresa.com"
+        ]
+    },
+    "teams": {
+        "enabled": true,
+        "webhook_url": "https://outlook.office.com/webhook/SUA_WEBHOOK_URL_AQUI"
+    },
+    "processing": {
+        "auto_cleanup": true,
+        "create_backup": true,
+        "deep_analysis": true,
+        "max_file_size_mb": 50,
+        "file_extensions": [
+            ".md",
+            ".txt",
+            ".json",
+            ".yml",
+            ".yaml",
+            ".py",
+            ".ps1",
+            ".sql",
+            ".js",
+            ".ts"
+        ]
+    },
+    "exclusions": {
+        "patterns": [
+            "*.tmp",
+            "*.log",
+            "*.cache",
+            "*backup*",
+            "*temp*",
+            "*~",
+            "*.swp",
+            "*.bak"
+        ],
+        "directories": [
+            "node_modules",
+            "__pycache__",
+            ".git",
+            "backup",
+            "cache",
+            "logs",
+            "output",
+            ".vscode",
+            "bin",
+            "obj"
+        ]
+    },
+    "schedule": {
+        "enabled": true,
+        "frequency": "Daily",
+        "time": "02:00"
+    },
+    "notifications": {
+        "include_statistics": true,
+        "include_file_list": false,
+        "max_summary_length": 500
+    },
+    "security": {
+        "encrypt_sensitive_data": false,
+        "anonymize_file_paths": false,
+        "exclude_sensitive_patterns": [
+            "*password*",
+            "*secret*",
+            "*key*",
+            "*.pem",
+            "*.p12"
+        ]
+    }
+}

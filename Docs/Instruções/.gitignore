@@ -1,0 +1,78 @@
+# Arquivo de exclusão para documentos consolidados
+
+# Arquivos temporários do Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Arquivos temporários do PowerShell
+*.ps1~
+*.tmp
+
+# Logs de processamento
+processing-log-*.txt
+error-log-*.txt
+
+# Backup de arquivos processados
+backup/
+processed/
+
+# Arquivos de configuração pessoal (manter apenas os templates)
+*-personal.json
+*-local.ps1
+
+# Relatórios antigos (manter apenas o mais recente)
+RELATÓRIO_CORPORATIVO_*.md
+!RELATÓRIO_CORPORATIVO_CONSOLIDADO.md
+
+# Arquivos específicos já processados
+azure.instructions.md
+tools.instructions.md
+DEPLOY_INSTRUCTIONS.md
+Pipeline*.md
+OpenAI.md
+
+# Arquivos de desenvolvimento VS Code
+.vscode/
+*.vsix
+
+# Arquivos de sistema
+.DS_Store
+*.swp
+*.swo
+
+# Documentos duplicados ou temporários
+*-backup.*
+*-temp.*
+*-copy.*
+duplicate-*
+temp-*
+
+# Arquivos de análise intermediários
+analysis-*.json
+embeddings-*.vector
+chunks-*.txt
+
+# Relatórios parciais
+*-partial.md
+*-draft.md
+*-working.md
+
+# Cache de processamento
+.cache/
+cache/
+*.cache
+
+# Arquivos de dados sensíveis
+*.key
+*.secret
+*.token
+api-keys.*
+credentials.*
+
+# Outputs de ferramentas externas
+node_modules/
+__pycache__/
+.pytest_cache/
+.coverage
+*.pyc

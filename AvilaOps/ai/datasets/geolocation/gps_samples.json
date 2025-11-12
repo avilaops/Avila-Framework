@@ -1,0 +1,47 @@
+[
+    {
+        "sample_id": "gps_001",
+        "user_hash": "hash_abc123",
+        "latitude": -23.550520,
+        "longitude": -46.633308,
+        "accuracy_meters": 10.5,
+        "timestamp": "2025-11-11T10:30:00Z",
+        "source": "mobile_app",
+        "consent_id": "consent_2025_11_001",
+        "retention_until": "2026-02-09",
+        "geohash5": "6gycf",
+        "municipality": "São Paulo",
+        "state": "SP",
+        "country": "BR"
+    },
+    {
+        "sample_id": "gps_002",
+        "user_hash": "hash_def456",
+        "latitude": 38.736946,
+        "longitude": -9.142685,
+        "accuracy_meters": 15.2,
+        "timestamp": "2025-11-11T11:00:00Z",
+        "source": "web_browser",
+        "consent_id": "consent_2025_11_002",
+        "retention_until": "2026-02-09",
+        "geohash5": "eyckk",
+        "municipality": "Lisboa",
+        "state": null,
+        "country": "PT"
+    },
+    {
+        "sample_id": "gps_003",
+        "user_hash": "hash_ghi789",
+        "latitude": -22.906847,
+        "longitude": -43.172896,
+        "accuracy_meters": 8.3,
+        "timestamp": "2025-11-11T12:15:00Z",
+        "source": "mobile_app",
+        "consent_id": "consent_2025_11_003",
+        "retention_until": "2026-02-09",
+        "geohash5": "75cm2",
+        "municipality": "Rio de Janeiro",
+        "state": "RJ",
+        "country": "BR"
+    }
+]

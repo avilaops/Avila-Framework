@@ -1,0 +1,8 @@
+{
+  "formatType": "normal",
+  "showRibbonIcon": true,
+  "bindEnter": true,
+  "bindTab": true,
+  "normalizeIndentation": true,
+  "leftMarginChars": " \t"
+}

@@ -1,0 +1,182 @@
+{
+  "workspaces": {
+    "Principal": {
+      "main": {
+        "id": "f63fbf20a1b95f80",
+        "type": "split",
+        "children": [
+          {
+            "id": "3d919df617be79ab",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "6f9cac525ea70602",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Clippings/microsoftsemantic-kernel Integrate cutting-edge LLM technology quickly and easily into your apps.md",
+                    "mode": "preview",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "microsoftsemantic-kernel Integrate cutting-edge LLM technology quickly and easily into your apps"
+                }
+              }
+            ],
+            "stacked": true
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "d74a9864f15e69f6",
+        "type": "split",
+        "children": [
+          {
+            "id": "f293613a138918d3",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "3f182c4b02edad31",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "Explorador de arquivos"
+                }
+              },
+              {
+                "id": "c6f0c0251d3800b2",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  },
+                  "icon": "lucide-search",
+                  "title": "Procurar"
+                }
+              },
+              {
+                "id": "b9a50ba2bc36e18a",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {},
+                  "icon": "lucide-bookmark",
+                  "title": "Marcadores"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 216.5
+      },
+      "right": {
+        "id": "7d5631f1dbbda900",
+        "type": "split",
+        "children": [
+          {
+            "id": "5b9595626cd224ad",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "68c028fff97233e6",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-coming-in",
+                  "title": "Backlinks"
+                }
+              },
+              {
+                "id": "b85ee87164844231",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-going-out",
+                  "title": "Links de saída"
+                }
+              },
+              {
+                "id": "63eafae0cf35dd64",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-tags",
+                  "title": "Tags"
+                }
+              },
+              {
+                "id": "3dd247e6b93e8434",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "Sem título.base",
+                    "followCursor": false,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-list",
+                  "title": "Sumário de Sem título"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300,
+        "collapsed": true
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "switcher:Abrir a troca rápida": false,
+          "graph:Abrir visualização em gráfico": false,
+          "canvas:Criar novo canvas": false,
+          "daily-notes:Abrir a nota de hoje": false,
+          "templates:Inserir modelo": false,
+          "command-palette:Abrir paleta de comandos": false,
+          "bases:Criar nova base": false,
+          "workspaces:Gerenciar leiautes da área de trabalho": false,
+          "audio-recorder:Começar/parar a gravação de áudio": false,
+          "markdown-importer:Abrir importador Markdown": false,
+          "random-note:Abrir nota aleatória": false
+        }
+      },
+      "active": "3f182c4b02edad31",
+      "mtime": "2025-11-09T23:41:46-03:00"
+    }
+  },
+  "active": "Principal"
+}

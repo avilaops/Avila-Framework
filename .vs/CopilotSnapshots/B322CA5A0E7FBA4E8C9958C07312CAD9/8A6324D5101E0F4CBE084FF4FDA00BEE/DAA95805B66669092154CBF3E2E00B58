@@ -1,0 +1,283 @@
+﻿# -*- coding: utf-8 -*-
+"""
+Script para salvar conversas do GitHub Copilot Chat - Visual Studio 2022
+Uso: 
+    python salvar_conversa_copilot.py <arquivo_exportado.md>
+    python salvar_conversa_copilot.py --clipboard
+    python salvar_conversa_copilot.py --clipboard --tipo outputlog
+"""
+
+import json
+import sys
+from pathlib import Path
+from datetime import datetime
+import argparse
+
+# Configurações
+WORKSPACE_ROOT = Path(__file__).resolve().parents[2]
+PASTA_CONVERSAS = WORKSPACE_ROOT / "Docs" / "Relatorios" / "Conversas"
+
+# Criar estrutura se não existir
+PASTA_CONVERSAS.mkdir(parents=True, exist_ok=True)
+(PASTA_CONVERSAS / "OutputLogs").mkdir(exist_ok=True)
+
+
+def obter_clipboard():
+ """Obtém conteúdo do clipboard do Windows"""
+    try:
+        import win32clipboard
+        win32clipboard.OpenClipboard()
+        try:
+        data = win32clipboard.GetClipboardData(win32clipboard.CF_UNICODETEXT)
+    return data
+        finally:
+            win32clipboard.CloseClipboard()
+    except ImportError:
+        # Fallback usando PowerShell
+        import subprocess
+     result = subprocess.run(
+         ['powershell', '-command', 'Get-Clipboard'],
+         capture_output=True,
+            text=True,
+    encoding='utf-8'
+        )
+        return result.stdout if result.returncode == 0 else None
+
+
+def formatar_conversa_vs2022(conteudo: str, tipo: str = "chat") -> str:
+    """Formata conversa do Visual Studio 2022 com header padronizado"""
+    
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    if tipo == "outputlog":
+     header = f"""# 📋 Output Log - GitHub Copilot (Visual Studio 2022)
+
+**Data:** {timestamp}
+**Origem:** Output Window - GitHub Copilot Chat
+**IDE:** Visual Studio 2022
+**Workspace:** Projeto Ávila
+
+---
+
+## 📝 Log Completo
+
+"""
+    else:
+        header = f"""# 💬 Conversa GitHub Copilot - Visual Studio 2022
+
+**Data:** {timestamp}
+**Origem:** Copilot Chat Window
+**IDE:** Visual Studio 2022
+**Workspace:** Projeto Ávila
+
+---
+
+## 💬 Conversa
+
+"""
+    
+    footer = f"""
+
+---
+
+**Capturado via:** Clipboard (Ctrl+C)
+**Gerado automaticamente por:** `Shared/scripts/salvar_conversa_copilot.py`
+**IDE:** Visual Studio 2022
+"""
+    
+    return header + conteudo + footer
+
+
+def converter_json_para_markdown(json_path: Path) -> str:
+    """Converte JSON do Copilot Chat para Markdown legível (VS Code format)"""
+    
+    with open(json_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    
+    # Header
+    markdown = f"""# 💬 Conversa GitHub Copilot
+
+**Data:** {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+**Origem:** {json_path.name}
+**Workspace:** Projeto Ávila
+
+---"""
+
+    # Processar mensagens
+    messages = data.get('messages', [])
+    
+    for i, msg in enumerate(messages, 1):
+   role = msg.get('role', 'unknown')
+        content = msg.get('content', '')
+  timestamp = msg.get('timestamp', '')
+        
+  # Ícone baseado no role
+        icon = "👤" if role == "user" else "🤖" if role == "assistant" else "⚙️"
+      
+        markdown += f"## {icon} Mensagem {i} ({role.capitalize()})\n\n"
+        
+        if timestamp:
+  markdown += f"*{timestamp}*\n\n"
+
+        markdown += f"{content}\n\n"
+        markdown += "---\n\n"
+    
+    # Footer
+    markdown += f"""
+---
+
+**Total de mensagens:** {len(messages)}
+**Gerado automaticamente por:** `Shared/scripts/salvar_conversa_copilot.py`
+"""
+  
+    return markdown
+
+
+def salvar_conversa(arquivo_origem: Path = None, do_clipboard: bool = False, tipo: str = "chat"):
+    """Salva conversa na pasta padrão"""
+    
+    if do_clipboard:
+        # Obter do clipboard
+        conteudo = obter_clipboard()
+        
+        if not conteudo or not conteudo.strip():
+            print(f"❌ Erro: Clipboard vazio ou inválido")
+  print(f"💡 Dica: Copie a conversa primeiro (Ctrl+C no Chat Window)")
+            return False
+        
+    # Formatar com header VS2022
+        markdown_content = formatar_conversa_vs2022(conteudo, tipo)
+        extensao_destino = '.md'
+  
+print(f"✅ Conteúdo capturado do clipboard ({len(conteudo)} caracteres)")
+        
+    elif arquivo_origem:
+        if not arquivo_origem.exists():
+        print(f"❌ Erro: Arquivo não encontrado: {arquivo_origem}")
+            return False
+      
+        # Detectar formato
+        extensao = arquivo_origem.suffix.lower()
+
+  if extensao == '.json':
+          # Converter JSON para Markdown (VS Code format)
+       markdown_content = converter_json_para_markdown(arquivo_origem)
+         extensao_destino = '.md'
+  elif extensao == '.md':
+       # Já é Markdown, formatar com header VS2022
+     with open(arquivo_origem, 'r', encoding='utf-8') as f:
+             conteudo = f.read()
+     markdown_content = formatar_conversa_vs2022(conteudo, tipo)
+        extensao_destino = '.md'
+        else:
+         print(f"⚠️  Formato não suportado: {extensao}")
+ return False
+    else:
+     print(f"❌ Erro: Nenhuma fonte especificada (arquivo ou --clipboard)")
+      return False
+    
+    # Nome padronizado
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
+    
+    if tipo == "outputlog":
+  nome_destino = f"OUTPUT_COPILOT_v{timestamp}{extensao_destino}"
+        pasta_destino = PASTA_CONVERSAS / "OutputLogs"
+    else:
+ nome_destino = f"CONVERSA_VS2022_v{timestamp}{extensao_destino}"
+  pasta_destino = PASTA_CONVERSAS
+    
+    caminho_destino = pasta_destino / nome_destino
+    
+  # Salvar
+    try:
+        with open(caminho_destino, 'w', encoding='utf-8') as f:
+    f.write(markdown_content)
+     
+        tamanho_kb = caminho_destino.stat().st_size / 1024
+        caminho_relativo = caminho_destino.relative_to(WORKSPACE_ROOT)
+        
+        print(f"\n✅ Conversa salva com sucesso!")
+ print(f"📁 Local: {caminho_relativo}")
+ print(f"📊 Tamanho: {tamanho_kb:.2f} KB")
+        print(f"🕒 Data: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+      
+        return True
+
+    except Exception as e:
+        print(f"❌ Erro ao salvar: {e}")
+        return False
+
+
+def main():
+    """Função principal"""
+    
+    parser = argparse.ArgumentParser(
+        description='Salvar conversas do GitHub Copilot Chat - Visual Studio 2022',
+     formatter_class=argparse.RawDescriptionHelpFormatter,
+      epilog="""
+Exemplos de uso:
+
+  # Salvar do clipboard (Visual Studio 2022)
+  python salvar_conversa_copilot.py --clipboard
+
+  # Salvar Output Window log
+  python salvar_conversa_copilot.py --clipboard --tipo outputlog
+
+  # Salvar de arquivo MD/JSON (VS Code export)
+  python salvar_conversa_copilot.py "Downloads/chat_export.md"
+
+Passos no Visual Studio 2022:
+  1. Abrir GitHub Copilot Chat (Ctrl + /)
+  2. Selecionar conversa (Ctrl + A)
+  3. Copiar (Ctrl + C)
+  4. Executar este script com --clipboard
+      """
+    )
+    
+    parser.add_argument(
+        'arquivo',
+        nargs='?',
+    help='Caminho para arquivo exportado (.json ou .md)'
+  )
+    
+    parser.add_argument(
+     '--clipboard',
+  action='store_true',
+     help='Capturar do clipboard do Windows'
+    )
+    
+    parser.add_argument(
+        '--tipo',
+     choices=['chat', 'outputlog'],
+        default='chat',
+      help='Tipo de conteúdo: chat (padrão) ou outputlog'
+    )
+    
+    args = parser.parse_args()
+    
+    print("""
+========================================
+  ÁVILA - SALVAR CONVERSA COPILOT
+  Visual Studio 2022
+========================================
+    """)
+    
+    if args.clipboard:
+   # Salvar do clipboard
+        salvar_conversa(do_clipboard=True, tipo=args.tipo)
+    elif args.arquivo:
+        # Salvar de arquivo
+        arquivo = Path(args.arquivo)
+        salvar_conversa(arquivo_origem=arquivo, tipo=args.tipo)
+    else:
+      # Mostrar ajuda
+   parser.print_help()
+      print(f"\n📁 Pasta de destino:")
+        print(f"  {PASTA_CONVERSAS.relative_to(WORKSPACE_ROOT)}")
+        print(f"\n💡 Métodos disponíveis:")
+print(f"  1. Clipboard (VS 2022): --clipboard")
+ print(f"  2. Arquivo MD/JSON: <caminho_arquivo>")
+
+
+if __name__ == "__main__":
+    main()

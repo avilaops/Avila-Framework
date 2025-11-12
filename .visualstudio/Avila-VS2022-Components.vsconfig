@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json.schemastore.org/vsconfig",
+  "version": "1.0",
+  "components": [
+    "Microsoft.VisualStudio.Workload.ManagedDesktop",
+    "Microsoft.VisualStudio.Workload.NetWeb",
+    "Microsoft.VisualStudio.Workload.Python",
+ "Microsoft.VisualStudio.Workload.Node",
+    "Microsoft.VisualStudio.Workload.Azure",
+    "Microsoft.VisualStudio.Component.Git",
+    "Microsoft.VisualStudio.Component.GitHub.Copilot",
+    "Component.GitHub.VisualStudio"
+  ],
+  "extensions": [
+    "GitHub.copilot",
+    "GitHub.copilotvs"
+  ]
+}

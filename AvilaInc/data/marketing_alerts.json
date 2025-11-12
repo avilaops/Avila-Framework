@@ -1,0 +1,12 @@
+[
+    {
+        "descricao": "Necessário definir identidade visual e posicionamento de marca",
+        "responsavel": "Marketing",
+        "status": "planejamento"
+    },
+    {
+        "descricao": "Criar funil de aquisição de leads qualificados",
+        "responsavel": "Growth",
+        "status": "desenvolvimento"
+    }
+]

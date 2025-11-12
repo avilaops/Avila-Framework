@@ -1,0 +1,110 @@
+{
+    "taxonomy_version": "1.0",
+    "last_updated": "2025-11-11",
+    "categories": {
+        "technology": {
+            "keywords": [
+                "AI",
+                "cloud",
+                "automation",
+                "API",
+                "SaaS",
+                "integrations"
+            ],
+            "utm_campaigns": [
+                "tech-webinar",
+                "ai-demo",
+                "cloud-migration"
+            ],
+            "tags": [
+                "tech_interest",
+                "developer",
+                "it_decision_maker"
+            ]
+        },
+        "finance": {
+            "keywords": [
+                "budget",
+                "ROI",
+                "pricing",
+                "cost-optimization",
+                "billing"
+            ],
+            "utm_campaigns": [
+                "cfo-guide",
+                "pricing-calculator",
+                "roi-study"
+            ],
+            "tags": [
+                "finance_interest",
+                "procurement",
+                "budget_owner"
+            ]
+        },
+        "operations": {
+            "keywords": [
+                "workflow",
+                "productivity",
+                "efficiency",
+                "onboarding",
+                "training"
+            ],
+            "utm_campaigns": [
+                "ops-efficiency",
+                "workflow-automation",
+                "team-training"
+            ],
+            "tags": [
+                "ops_interest",
+                "operations_manager",
+                "team_lead"
+            ]
+        },
+        "compliance": {
+            "keywords": [
+                "GDPR",
+                "LGPD",
+                "security",
+                "privacy",
+                "audit",
+                "compliance"
+            ],
+            "utm_campaigns": [
+                "compliance-guide",
+                "security-audit",
+                "privacy-webinar"
+            ],
+            "tags": [
+                "compliance_interest",
+                "legal",
+                "security_officer"
+            ]
+        },
+        "marketing": {
+            "keywords": [
+                "analytics",
+                "dashboard",
+                "insights",
+                "reporting",
+                "metrics"
+            ],
+            "utm_campaigns": [
+                "marketing-analytics",
+                "dashboard-demo",
+                "metrics-guide"
+            ],
+            "tags": [
+                "marketing_interest",
+                "analytics_manager",
+                "cmo"
+            ]
+        }
+    },
+    "interest_scores": {
+        "utm_click": 1,
+        "page_view": 0.5,
+        "newsletter_open": 0.3,
+        "whatsapp_tag": 2,
+        "crm_stage_qualified": 3
+    }
+}

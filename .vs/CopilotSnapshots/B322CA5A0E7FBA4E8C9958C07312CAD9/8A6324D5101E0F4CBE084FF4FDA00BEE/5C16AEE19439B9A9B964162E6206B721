@@ -1,0 +1,180 @@
+﻿# 💬 Conversas GitHub Copilot - Projeto Ávila
+
+**Última atualização:** 2025-11-10
+
+---
+
+## 📁 Sobre Esta Pasta
+
+Armazena exportações de conversas importantes do GitHub Copilot Chat, preservando:
+- Análises técnicas
+- Decisões arquiteturais
+- Resoluções de problemas
+- Sessões de brainstorming
+- Orientações de desenvolvimento
+
+---
+
+## 📤 Como Exportar Conversas
+
+### Método 1: Export Nativo (Recomendado)
+
+1. **No Copilot Chat:**
+   - Clique em **`⋮`** (três pontos) no topo direito
+   - Selecione **"Export Chat"**
+ - Escolha formato: **JSON** ou **Markdown**
+
+2. **Salvar na pasta padrão:**
+   ```powershell
+   # Mover do Downloads para pasta padrão
+   python Shared/scripts/salvar_conversa_copilot.py "Downloads/chat_export.json"
+   ```
+
+### Método 2: Copiar Manualmente
+
+```powershell
+# 1. Selecionar e copiar conversa (Ctrl+C)
+# 2. Criar arquivo
+notepad "Docs/Relatorios/Conversas/CONVERSA_MANUAL_2025-11-10.md"
+# 3. Colar (Ctrl+V) e salvar
+```
+
+### Método 3: Screenshot
+
+Para capturas visuais:
+```powershell
+# Windows Snipping Tool
+snippingtool
+
+# Salvar em: Docs/Relatorios/Conversas/Capturas/
+```
+
+---
+
+## 📝 Padrão de Nomenclatura
+
+```
+CONVERSA_COPILOT_vDATA_HORA.extensao
+CONVERSA_MANUAL_TEMA_vDATA.md
+CAPTURA_TEMA_DATA.png
+```
+
+**Exemplos:**
+```
+✅ CONVERSA_COPILOT_v2025-11-10_143022.md
+✅ CONVERSA_MANUAL_ANALISE_PROJETO_v2025-11-10.md
+✅ CAPTURA_ARQUITETURA_2025-11-10.png
+❌ conversa.md (sem padrão)
+```
+
+---
+
+## 🔍 Conversas Disponíveis
+
+*(Será atualizado conforme conversas forem salvas)*
+
+| Data | Arquivo | Tema | Tamanho |
+|------|---------|------|---------|
+| 2025-11-10 | *Nenhuma ainda* | - | - |
+
+---
+
+## 🎯 Quando Salvar uma Conversa?
+
+Salve quando a conversa incluir:
+
+- ✅ **Análises técnicas** importantes
+- ✅ **Decisões arquiteturais** documentadas
+- ✅ **Resoluções de bugs** complexos
+- ✅ **Orientações de implementação**
+- ✅ **Discussões de design patterns**
+- ✅ **Planejamento de features**
+- ✅ **Troubleshooting** de produção
+
+Não precisa salvar:
+- ❌ Perguntas triviais
+- ❌ Testes rápidos
+- ❌ Debugging simples
+- ❌ Conversas duplicadas
+
+---
+
+## 📊 Estrutura de Subpastas
+
+```
+Conversas/
+├── Analises/      # Conversas sobre análises
+├── Arquitetura/   # Decisões arquiteturais
+├── Implementacao/ # Orientações de código
+├── Troubleshooting/ # Resolução de problemas
+├── Planejamento/# Roadmaps e features
+└── Capturas/      # Screenshots de conversas
+```
+
+---
+
+## 🔐 Governança
+
+### Retenção:
+- **Conversas Técnicas:** 1 ano
+- **Decisões Arquiteturais:** 2 anos
+- **Capturas:** 6 meses
+
+### Versionamento:
+- Conversas não são versionadas (imutáveis)
+- Data no nome do arquivo identifica versão temporal
+
+### Privacidade:
+- ⚠️ **NÃO** salvar conversas com:
+  - API Keys
+  - Senhas
+  - Dados pessoais sensíveis
+  - Informações confidenciais
+
+---
+
+## 📖 Scripts Disponíveis
+
+| Script | Uso |
+|--------|-----|
+| `salvar_conversa_copilot.py` | Converte JSON/MD para pasta padrão |
+| `indexar_conversas.py` | Atualiza índice automaticamente (futuro) |
+
+---
+
+## 💡 Dicas
+
+### Buscar em Conversas:
+```powershell
+# Buscar por palavra-chave
+Get-ChildItem -Path "Docs/Relatorios/Conversas" -Filter "*.md" -Recurse | Select-String -Pattern "orquestrador"
+```
+
+### Listar Conversas Recentes:
+```powershell
+Get-ChildItem -Path "Docs/Relatorios/Conversas" -Filter "*.md" | Sort-Object LastWriteTime -Descending | Select-Object -First 10
+```
+
+### Estatísticas:
+```powershell
+# Total de conversas
+(Get-ChildItem -Path "Docs/Relatorios/Conversas" -Filter "*.md").Count
+
+# Tamanho total
+(Get-ChildItem -Path "Docs/Relatorios/Conversas" -Filter "*.md" | Measure-Object -Property Length -Sum).Sum / 1MB
+```
+
+---
+
+## 📞 Suporte
+
+Para dúvidas:
+- **README Principal:** `Docs/Relatorios/README.md`
+- **Script:** `Shared/scripts/salvar_conversa_copilot.py`
+- **Governança:** `AvilaInc/governance_framework/procedimentos/`
+
+---
+
+**Gerado por:** Ávila Ops - Governança  
+**Data:** 2025-11-10  
+**Versão:** 1.0

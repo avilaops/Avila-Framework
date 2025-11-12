@@ -1,0 +1,13 @@
+# Ignorar todos os logs
+*.log
+*.json
+*.ndjson
+*.tar.gz
+*.chatreplay.json
+
+# Manter apenas o README
+!README.md
+
+# Ignorar temporários
+*.tmp
+*.temp

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Resumo executivo semanal — Ávila Inc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            color-scheme: light dark;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: #102030;
+        }
+
+        .wrapper {
+            width: 100%;
+            background-color: #f4f6f8;
+            padding: 32px 0;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 24px rgba(16, 32, 48, 0.08);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1f3c88, #14213d);
+            color: #ffffff;
+            padding: 28px 32px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 22px;
+            letter-spacing: 0.5px;
+        }
+
+        .header p {
+            margin: 6px 0 0;
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        .metadata {
+            margin-top: 18px;
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        .section {
+            padding: 28px 32px 0;
+        }
+
+        .section h2 {
+            margin: 0 0 12px;
+            font-size: 18px;
+            color: #1f3c88;
+        }
+
+        .metrics-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .metrics-list li {
+            margin-bottom: 8px;
+            font-size: 15px;
+            line-height: 1.4;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .card {
+            background-color: #f8f9fb;
+            border-radius: 10px;
+            padding: 18px;
+        }
+
+        .card strong {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: #5b6470;
+            margin-bottom: 6px;
+        }
+
+        .card span {
+            font-size: 18px;
+            font-weight: 600;
+            color: #102030;
+        }
+
+        .list-item {
+            margin-bottom: 10px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            padding: 24px 32px 32px;
+            font-size: 12px;
+            color: #657184;
+            background-color: #f8f9fb;
+            border-top: 1px solid #e3e8ee;
+        }
+
+        a.button {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 12px 20px;
+            background-color: #1f3c88;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 640px) {
+            .section {
+                padding: 24px 20px 0;
+            }
+
+            .header {
+                padding: 24px 20px;
+            }
+
+            .footer {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="header">
+                <h1>Ávila Inc — Pulso Operacional</h1>
+                <p>Consultoria para reduzir custos e aumentar receita com atendimento 100% humano.</p>
+                <div class="metadata">
+                    Semana: {{periodo}} | Data do relatório: {{data_relatorio}}
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Resumo financeiro</h2>
+                <ul class="cards">
+                    <li class="card"><strong>Receita incremental</strong><span>R$ {{receita_incremental}}</span></li>
+                    <li class="card"><strong>Custos otimizados</strong><span>R$ {{custos_otimizados}}</span></li>
+                    <li class="card"><strong>Margem projetada</strong><span>{{margem_projetada}}%</span></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Operação & Atendimento</h2>
+                <ul class="cards">
+                    <li class="card"><strong>FRT médio</strong><span>{{frt_medio}} h</span></li>
+                    <li class="card"><strong>Resolução 24h</strong><span>{{resolucao_24h}}%</span></li>
+                    <li class="card"><strong>CSAT</strong><span>{{csat}}</span></li>
+                    <li class="card"><strong>NPS</strong><span>{{nps}}</span></li>
+                    <li class="card"><strong>Execução 30-60-90</strong><span>{{execucao_plano}}%</span></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Comercial</h2>
+                <ul class="cards">
+                    <li class="card"><strong>Leads qualificados</strong><span>{{leads_qualificados}}</span></li>
+                    <li class="card"><strong>Win-rate</strong><span>{{win_rate}}%</span></li>
+                    <li class="card"><strong>CAC</strong><span>R$ {{cac}}</span></li>
+                    <li class="card"><strong>LTV/CAC</strong><span>{{ltv_cac}}</span></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Insights principais</h2>
+                <p class="list-item">1. {{insight_1}}</p>
+                <p class="list-item">2. {{insight_2}}</p>
+                <p class="list-item">3. {{insight_3}}</p>
+            </div>
+
+            <div class="section">
+                <h2>Riscos & alertas</h2>
+                <p class="list-item">• {{alerta_1}}</p>
+                <p class="list-item">• {{alerta_2}}</p>
+            </div>
+
+            <div class="section">
+                <h2>Próximos passos</h2>
+                <p class="list-item">• {{acao_1}} — {{responsavel_1}} — até {{prazo_1}}</p>
+                <p class="list-item">• {{acao_2}} — {{responsavel_2}} — até {{prazo_2}}</p>
+                <a class="button" href="{{link_dashboard}}">Ver dashboards completos</a>
+            </div>
+
+            <div class="footer">
+                Ávila Inc · consultoria financeira e operacional · atendimento 100% humano<br>
+                contato: <a href="mailto:contato@avila.inc">contato@avila.inc</a> · site: <a
+                    href="https://www.avila.inc">www.avila.inc</a><br>
+                Dados agregados (k≥20). Privacidade-first conforme LGPD/GDPR. Caso não deseje receber, responda com
+                "remover".
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

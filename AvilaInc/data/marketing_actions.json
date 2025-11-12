@@ -1,0 +1,22 @@
+[
+    {
+        "acao": "Definir tom de voz e proposta de valor única",
+        "responsavel": "Nicolas + Marketing",
+        "prazo": "2 semanas"
+    },
+    {
+        "acao": "Criar kit de identidade visual completo",
+        "responsavel": "Design",
+        "prazo": "3 semanas"
+    },
+    {
+        "acao": "Desenvolver 5 templates de outreach LinkedIn",
+        "responsavel": "Marketing",
+        "prazo": "1 semana"
+    },
+    {
+        "acao": "Criar calculadora ROI interativa",
+        "responsavel": "Dev + Marketing",
+        "prazo": "4 semanas"
+    }
+]

@@ -1,0 +1,107 @@
+version: "3.8"
+
+services:
+  # OpenTelemetry Collector - Gateway for all telemetry
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:latest
+    container_name: on-otel-collector
+    command: ["--config=/etc/otel-collector-config.yaml"]
+    volumes:
+      - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml
+    ports:
+      - "4317:4317"   # OTLP gRPC receiver
+      - "4318:4318"   # OTLP HTTP receiver
+      - "9464:9464"   # Prometheus exporter
+    networks:
+      - on-observability
+    restart: unless-stopped
+
+  # Prometheus - Metrics storage and querying
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: on-prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    ports:
+      - "9090:9090"
+    networks:
+      - on-observability
+    restart: unless-stopped
+
+  # Loki - Log aggregation
+  loki:
+    image: grafana/loki:latest
+    container_name: on-loki
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+    volumes:
+      - loki-data:/loki
+    networks:
+      - on-observability
+    restart: unless-stopped
+
+  # Promtail - Log shipper (collects logs from stdout)
+  promtail:
+    image: grafana/promtail:latest
+    container_name: on-promtail
+    volumes:
+      - ./promtail-config.yaml:/etc/promtail/config.yaml
+      - /var/log:/var/log:ro
+    command: -config.file=/etc/promtail/config.yaml
+    networks:
+      - on-observability
+    restart: unless-stopped
+
+  # Tempo - Distributed tracing backend
+  tempo:
+    image: grafana/tempo:latest
+    container_name: on-tempo
+    command: ["-config.file=/etc/tempo.yaml"]
+    volumes:
+      - ./tempo.yaml:/etc/tempo.yaml
+      - tempo-data:/tmp/tempo
+    ports:
+      - "3200:3200"   # Tempo query
+      - "4317"        # OTLP gRPC
+    networks:
+      - on-observability
+    restart: unless-stopped
+
+  # Grafana - Visualization and dashboards
+  grafana:
+    image: grafana/grafana:latest
+    container_name: on-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./grafana-dashboards:/etc/grafana/provisioning/dashboards
+      - ./grafana-datasources.yaml:/etc/grafana/provisioning/datasources/datasources.yaml
+    networks:
+      - on-observability
+    restart: unless-stopped
+    depends_on:
+      - prometheus
+      - loki
+      - tempo
+
+networks:
+  on-observability:
+    driver: bridge
+
+volumes:
+  prometheus-data:
+  loki-data:
+  tempo-data:
+  grafana-data:

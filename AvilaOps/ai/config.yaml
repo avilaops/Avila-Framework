@@ -1,0 +1,177 @@
+# =====================================================
+# Agente Bibliotecário - Archivus
+# Ávila Inc / Ávila Ops
+# =====================================================
+# Função: Curadoria, backup, integridade e governança
+#     de toda documentação, logs e scripts corporativos
+# =====================================================
+
+name: "Archivus"
+version: "1.0.0"
+type: "governance_agent"
+sector: "Biblioteca Institucional"
+status: "active"
+
+# =====================================================
+# CONFIGURAÇÕES GERAIS
+# =====================================================
+settings:
+  workspace_root: "C:\\Users\\nicol\\OneDrive\\Avila"
+  onedrive_sync: true
+  auto_backup: true
+  daily_rotation: true
+  integrity_check: true
+
+# =====================================================
+# PASTAS MONITORADAS
+# =====================================================
+monitored_paths:
+  docs:
+    path: "Docs"
+    actions:
+      - index
+      - validate_structure
+      - create_manifest
+ retention_days: 365
+    
+  logs:
+    path: "Logs"
+    actions:
+      - rotate
+      - compress
+      - archive
+    retention_days: 90
+    archive_after_days: 30
+    
+  scripts:
+  path: "Scripts"
+    actions:
+      - backup
+      - integrity_check
+      - hash_verification
+    retention_days: 730
+    
+  conversas:
+    path: "Docs\\Relatorios\\Conversas"
+    actions:
+      - index
+      - categorize
+      - backup
+retention_days: 365
+
+# =====================================================
+# ESTRUTURA OFICIAL (PADRÃO)
+# =====================================================
+official_structure:
+  Docs:
+    Relatorios:
+      - Conversas
+      - Analises
+    - Auditorias
+      - Comparacoes
+      - Diagnosticos
+      - Performance
+    Templates: []
+    Biblioteca: []
+    
+  Logs:
+    - Daily
+    - Alerts
+    - Archive
+    
+  Scripts:
+    - Backup
+  - Maintenance
+    - Verify
+    
+  Shared:
+ - assets
+    - backups
+    - scripts
+    - templates
+
+# =====================================================
+# ROTINAS AUTOMÁTICAS
+# =====================================================
+scheduled_tasks:
+  daily_cleanup:
+    time: "02:00"
+    actions:
+- validate_structure
+      - remove_non_official
+    - rotate_logs
+      - generate_report
+      
+  weekly_backup:
+    day: "sunday"
+  time: "03:00"
+  actions:
+      - full_backup
+- integrity_check
+      - update_manifest
+      
+  monthly_archive:
+    day: 1
+    time: "04:00"
+    actions:
+      - archive_old_logs
+      - compress_backups
+      - cleanup_temp
+
+# =====================================================
+# INTEGRAÇÃO COM OUTROS AGENTES
+# =====================================================
+integrations:
+  atlas:
+    enabled: true
+    send_reports: true
+    report_frequency: "daily"
+    
+  helix:
+    enabled: true
+    notify_on_issues: true
+    
+  sigma:
+    enabled: false
+
+# =====================================================
+# CONFIGURAÇÕES DE BACKUP
+# =====================================================
+backup:
+  destination: "Shared\\backups\\archivus"
+  format: "zip"
+  naming_pattern: "{type}_backup_{timestamp}"
+  max_backups_per_type: 30
+  
+# =====================================================
+# CONFIGURAÇÕES DE INTEGRIDADE
+# =====================================================
+integrity:
+  algorithm: "sha256"
+  manifest_file: "integrity_manifest.json"
+  auto_verify: true
+  verify_on_startup: true
+  alert_on_mismatch: true
+
+# =====================================================
+# CONFIGURAÇÕES DE RELATÓRIOS
+# =====================================================
+reporting:
+  output_path: "Docs\\Relatorios\\Auditorias"
+  format: "markdown"
+  include_metrics: true
+  auto_send: true
+  recipients:
+    - "atlas"
+    
+# =====================================================
+# MÉTRICAS MONITORADAS
+# =====================================================
+metrics:
+  - total_files
+  - total_size
+  - files_by_type
+  - last_backup_date
+  - integrity_status
+  - non_compliant_items
+  - archived_logs_count

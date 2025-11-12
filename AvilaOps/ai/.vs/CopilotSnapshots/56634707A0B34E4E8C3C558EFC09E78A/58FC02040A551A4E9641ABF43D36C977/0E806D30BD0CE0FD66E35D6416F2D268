@@ -1,0 +1,150 @@
+﻿"""
+ON CORE - Ávila Ops
+Modo produção: inicialização automática, sem menus interativos.
+- Carrega config central
+- Inicializa SQLite
+- Liga telemetria
+- Descobre agentes (pasta ./agents)
+- Abre um turno de trabalho por agente
+- Mantém o processo vivo até receber SIGINT/SIGTERM
+"""
+
+import signal
+import time
+from pathlib import Path
+from typing import List, Dict, Any
+
+import yaml
+from rich.console import Console
+
+from _bootstrap import ensure_on_namespace
+
+ensure_on_namespace()
+
+from on.core.on_storage import init_db
+from on.core.on_logger import AgentLogger
+from on.core.on_bus import EventBus
+from on.core.on_scheduler import Scheduler
+
+console = Console()
+BASE_DIR = Path(__file__).resolve().parents[1]
+CONFIG_PATH = BASE_DIR / "core" / "config.yaml"
+
+
+def load_config() -> Dict[str, Any]:
+    if not CONFIG_PATH.exists():
+        console.print("[red]config.yaml não encontrado em core/[/red]")
+        return {}
+    data = yaml.safe_load(CONFIG_PATH.read_text(encoding="utf-8"))
+    return data or {}
+
+
+def discover_agents(agents_root: Path) -> List[Dict[str, Any]]:
+    """Varre a pasta de agentes e lê config.yaml de cada um."""
+    agents_meta: List[Dict[str, Any]] = []
+
+    if not agents_root.exists():
+        console.print(f"[yellow]Pasta de agentes não encontrada: {agents_root}[/yellow]")
+        return agents_meta
+
+    for agent_dir in agents_root.iterdir():
+        if not agent_dir.is_dir():
+            continue
+
+        cfg_path = agent_dir / "config.yaml"
+        if not cfg_path.exists():
+            continue
+
+        cfg = yaml.safe_load(cfg_path.read_text(encoding="utf-8")) or {}
+        name = cfg.get("agent_name", agent_dir.name)
+        area = cfg.get("area", "Desconhecida")
+        significado = cfg.get("significado", "")
+        shift_min = cfg.get("shift_min", 60)  # padrão: 60 min
+
+        agents_meta.append(
+            {
+                "name": name,
+                "dir": agent_dir,
+                "area": area,
+                "significado": significado,
+                "shift_min": shift_min,
+            }
+        )
+
+    return agents_meta
+
+
+class OnCoreApp:
+    def __init__(self) -> None:
+        self.config: Dict[str, Any] = {}
+        self.logger = AgentLogger("On.Core")
+        self.bus = EventBus()
+        self.schedulers: Dict[str, Scheduler] = {}
+        self.running = True
+
+    def boot(self) -> None:
+        console.rule("[bold blue]ON CORE - ÁVILA OPS (produção)[/bold blue]")
+
+        # 1) Config central
+        self.config = load_config()
+        agents_path_cfg = self.config.get("agents_path", "./agents")
+        agents_root = (BASE_DIR / Path(agents_path_cfg)).resolve()
+
+        # 2) Banco de dados central
+        init_db()
+        self.logger.log("SQLite inicializado.")
+
+        # 3) Descoberta de agentes
+        agents_meta = discover_agents(agents_root)
+        if not agents_meta:
+            self.logger.log("Nenhum agente encontrado em ./agents.")
+        else:
+            self.logger.log(f"{len(agents_meta)} agente(s) detectado(s).")
+
+        # 4) Abre turno de trabalho para cada agente (sem interação)
+        for meta in agents_meta:
+            name = meta["name"]
+            shift_min = meta["shift_min"]
+
+            self.logger.log(
+                f"Agente '{name}' registrado "
+                f"(área={meta['area']}, turno={shift_min} min)."
+            )
+
+            sched = Scheduler(name)
+            sched.start_shift(duration_min=shift_min)
+            self.schedulers[name] = sched
+
+        self.logger.log("On.Core inicializado em modo serviço.")
+
+    def _install_signal_handlers(self) -> None:
+        def _handler(sig, frame):
+            self.logger.log(f"Sinal {sig} recebido. Encerrando On.Core...")
+            self.running = False
+
+        # Ambiente Windows + WSL: SIGINT funciona; SIGTERM depende do host
+        signal.signal(signal.SIGINT, _handler)
+        try:
+            signal.signal(signal.SIGTERM, _handler)
+        except (ValueError, AttributeError):
+            # Nem todos os ambientes suportam SIGTERM
+            pass
+
+    def run_forever(self) -> None:
+        self._install_signal_handlers()
+        self.boot()
+
+        # Loop passivo de serviço
+        while self.running:
+            time.sleep(1)
+
+        self.logger.log("On.Core finalizado.")
+
+
+def main() -> None:
+    app = OnCoreApp()
+    app.run_forever()
+
+
+if __name__ == "__main__":
+    main()

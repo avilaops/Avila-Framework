@@ -1,0 +1,166 @@
+{
+  "Avila: Header Python": {
+    "prefix": "avila-py-header",
+    "body": [
+      "# coding: utf-8",
+  "\"\"\"",
+      "Script: ${1:nome_script.py}",
+      "Funcao: ${2:descricao}",
+   "Autor: Nicolas Avila",
+   "Data: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "Projeto: Avila Inc / Avila Ops",
+      "\"\"\"",
+      "",
+      "from pathlib import Path",
+  "from datetime import datetime",
+      "",
+      "WORKSPACE_ROOT = Path(r'C:\\\\Users\\\\nicol\\\\OneDrive\\\\Avila')",
+ "",
+      "$0"
+],
+    "description": "Header padrao para scripts Python Avila"
+  },
+  
+  "Avila: Header PowerShell": {
+    "prefix": "avila-ps-header",
+    "body": [
+      "# ============================================",
+      "# Script: ${1:NomeScript.ps1}",
+ "# Funcao: ${2:descricao}",
+      "# Autor: Nicolas Avila",
+      "# Data: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "# Projeto: Avila Inc / Avila Ops",
+   "# ============================================",
+      "",
+      "$$WorkspaceRoot = \"C:\\\\Users\\\\nicol\\\\OneDrive\\\\Avila\"",
+      "",
+      "$0"
+    ],
+    "description": "Header padrao para scripts PowerShell Avila"
+  },
+  
+  "Avila: README Template": {
+ "prefix": "avila-readme",
+    "body": [
+   "# ${1:Titulo do Documento}",
+      "",
+      "## Contexto",
+      "${2:Por que este arquivo existe}",
+      "",
+      "## Objetivo",
+      "${3:O que este documento entrega}",
+      "",
+"## Responsavel",
+      "- Nome: Nicolas Avila",
+   "- Area: ${4:setor}",
+      "",
+      "## Ultima atualizacao",
+      "- Data: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+   "- Autor: Nicolas Avila",
+    "",
+      "## Conteudo",
+      "",
+      "$0"
+    ],
+  "description": "Template README padrao Avila"
+  },
+  
+  "Avila: Relatorio Auditoria": {
+    "prefix": "avila-relatorio",
+    "body": [
+      "# Relatorio de Auditoria - ${1:Nome}",
+    "",
+      "**Data:** ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}",
+      "**Agente:** ${2:Archivus}",
+   "**Setor:** ${3:Biblioteca}",
+      "",
+    "---",
+      "",
+      "## Metricas",
+   "",
+      "| Metrica | Valor |",
+      "|---------|-------|",
+      "| ${4:metrica} | ${5:valor} |",
+      "",
+      "---",
+      "",
+      "## Acoes Executadas",
+  "",
+"$0",
+      "",
+   "---",
+      "",
+      "**Gerado automaticamente por:** ${2:Archivus}",
+      "**Proxima execucao:** ${CURRENT_YEAR}-${CURRENT_MONTH}-$((${CURRENT_DATE} + 1)) 02:00"
+    ],
+    "description": "Template relatorio auditoria Avila"
+  },
+  
+  "Avila: Config YAML": {
+    "prefix": "avila-config",
+    "body": [
+      "name: \"${1:nome_agente}\"",
+      "version: \"1.0.0\"",
+ "type: \"${2|governance_agent,product,service,tool|}\"",
+      "sector: \"${3:setor}\"",
+   "status: \"${4|active,inactive,development|}\"",
+      "",
+   "settings:",
+   "  workspace_root: \"C:\\\\\\\\Users\\\\\\\\nicol\\\\\\\\OneDrive\\\\\\\\Avila\"",
+      "  auto_backup: ${5|true,false|}",
+      "  daily_rotation: ${6|true,false|}",
+   "",
+      "monitored_paths:",
+      "  ${7:path_name}:",
+   "    path: \"${8:path}\"",
+      "    actions:",
+      "      - ${9:action}",
+      "    retention_days: ${10:365}",
+      "",
+      "$0"
+    ],
+    "description": "Template config.yaml para agentes Avila"
+  },
+  
+  "Avila: Git Commit Message": {
+    "prefix": "avila-commit",
+    "body": [
+  "${1|feat,fix,refactor,docs,chore|}: ${2:descricao curta}",
+      "",
+    "${3:descricao detalhada opcional}",
+      "",
+    "Setor: ${4:setor}",
+   "Agente: ${5:agente}",
+ "Arquivos: ${6:lista de arquivos}"
+    ],
+    "description": "Template mensagem commit Avila"
+  },
+  
+  "Avila: Log Entry": {
+    "prefix": "avila-log",
+    "body": [
+ "def log(self, message, level=\"INFO\"):",
+      "    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')",
+      "    log_entry = f'[{timestamp}] [{level}] {message}'",
+      "    print(log_entry)",
+      "    with open(self.log_file, 'a', encoding='utf-8') as f:",
+  "        f.write(log_entry + '\\\\n')",
+      "$0"
+    ],
+"description": "Funcao log padrao Avila"
+  },
+  
+  "Avila: Try Except Block": {
+    "prefix": "avila-try",
+    "body": [
+      "try:",
+      "    ${1:# codigo}",
+      "    self.log('${2:acao} concluida com sucesso')",
+      "except Exception as e:",
+      "    self.log(f'Erro em ${2:acao}: {str(e)}', 'ERROR')",
+  "    ${3:raise}",
+      "$0"
+    ],
+"description": "Try-except com log Avila"
+  }
+}

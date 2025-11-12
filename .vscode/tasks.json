@@ -1,0 +1,105 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Avila: Executar Archivus (Manual)",
+    "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/AvilaOps/Agente Bibliotecario (Archivus)/archivus_main.py"
+      ],
+  "group": "test",
+      "presentation": {
+        "reveal": "always",
+     "panel": "new"
+      },
+    "problemMatcher": []
+    },
+    {
+      "label": "Avila: Setup Ambiente",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+    "-ExecutionPolicy",
+     "Bypass",
+        "-File",
+        "${workspaceFolder}/Setup/setup_env_avila.ps1"
+      ],
+      "group": "none",
+      "presentation": {
+  "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Avila: Verificar Estrutura",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/Scripts/check_structure.py"
+      ],
+  "group": "test",
+  "problemMatcher": []
+    },
+    {
+      "label": "Avila: Gerar Relatorio Diario",
+  "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/AvilaOps/Agente Bibliotecario (Archivus)/archivus_main.py"
+      ],
+      "group": "build"
+    },
+    {
+      "label": "Avila: Backup Scripts",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-Command",
+        "Compress-Archive -Path '${workspaceFolder}/Scripts/*' -DestinationPath '${workspaceFolder}/Shared/backups/scripts_backup_$(Get-Date -Format yyyy-MM-dd_HHmmss).zip'"
+      ],
+    "group": "none"
+    },
+    {
+  "label": "Python: Criar venv",
+    "type": "shell",
+      "command": "python",
+      "args": [
+     "-m",
+     "venv",
+  ".venv"
+      ],
+      "group": "none",
+      "problemMatcher": []
+    },
+    {
+      "label": "Python: Instalar Dependencias",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/pip",
+      "args": [
+      "install",
+    "-r",
+        "requirements.txt"
+      ],
+      "group": "build",
+      "dependsOn": ["Python: Criar venv"]
+    },
+    {
+      "label": "Git: Status",
+      "type": "shell",
+      "command": "git",
+      "args": ["status"],
+      "group": "none",
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+   "label": "Git: Log (ultimos 10)",
+      "type": "shell",
+      "command": "git",
+      "args": ["log", "--oneline", "-10"],
+"group": "none"
+    }
+  ]
+}

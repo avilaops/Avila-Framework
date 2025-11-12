@@ -1,0 +1,12 @@
+﻿# Padrão geral
+__pycache__/
+*.pyc
+*.pyo
+*.env
+.env
+node_modules/
+logs/
+backups/
+.idea/
+.vscode/
+.DS_Store

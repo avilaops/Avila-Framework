@@ -1,0 +1,14 @@
+agent_name: Lex
+area: Jurídico / Compliance
+significado: Lei e padronização
+status: ativo
+model: gpt-4o
+memory_path: ../../data/lex_memory.json
+description: Agente especializado em jurídico / compliance (lei e padronização).
+version: 1.0.0
+permissions:
+  read:
+  - ../../data/knowledge_base
+  write:
+  - ../../logs
+  sync: true

@@ -1,0 +1,7 @@
+Estrutura de backup
+
+Git local + backup incremental com BorgBackup ou Syncthing.
+
+A cada 24h, snapshot automático de Avila/.
+
+Se quiser redundância, sincronize a pasta Shared/backups/ com um S3 privado ou OneDrive empresarial.

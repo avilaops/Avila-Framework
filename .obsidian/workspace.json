@@ -1,0 +1,251 @@
+{
+  "main": {
+    "id": "786fe0ceb93dacf7",
+    "type": "split",
+    "children": [
+      {
+        "id": "1de26b245b2dfaf2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "12456540b6eb70d3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Docs/Modulo 1 - Coleta de dados/1 - Conversas com o ChatGPT/Sem título.md",
+                "followCursor": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de Sem título"
+            }
+          },
+          {
+            "id": "904f70e04d34d4c1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Docs/Relatorios/Relatório Corporativo Executivo Versão Detalhada.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Relatório Corporativo Executivo Versão Detalhada"
+            }
+          }
+        ]
+      },
+      {
+        "id": "0ee051840ec41546",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8d9b061ae73e7e54",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Docs/Modulo 1 - Coleta de dados/1 - Conversas com o ChatGPT/Sem título.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sem título"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "74954429326b860e",
+    "type": "split",
+    "children": [
+      {
+        "id": "6abea74162dbc3be",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b316cfd04dcfff55",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "3185a8d00e69583f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "597d3f65cec64412",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 280.5
+  },
+  "right": {
+    "id": "55b2c557e69fb375",
+    "type": "split",
+    "children": [
+      {
+        "id": "716567f40fb0ec48",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "91f515dabcce7cb7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Shared/assets/README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos para README"
+            }
+          },
+          {
+            "id": "558911b9cbb3451b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Shared/assets/README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para README"
+            }
+          },
+          {
+            "id": "5519d6612358b302",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "6d8e8a0e47154690",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Shared/assets/README.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de README"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": true,
+      "graph:Abrir visualização em gráfico": true,
+      "canvas:Criar novo canvas": true,
+      "daily-notes:Abrir a nota de hoje": true,
+      "templates:Inserir modelo": true,
+      "command-palette:Abrir paleta de comandos": true,
+      "bases:Criar nova base": true
+    }
+  },
+  "active": "8d9b061ae73e7e54",
+  "lastOpenFiles": [
+    "Sem título",
+    "Setup/Inicializar-Git.ps1",
+    "SECURITY.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "Docs/Modulo 1 - Coleta de dados/1 - Conversas com o ChatGPT/Principal.md",
+    "Docs/Modulo 1 - Coleta de dados/1 - Conversas com o ChatGPT/Sem título.md",
+    "Setup/QUICK_REFERENCE_IDE.md",
+    "Setup/FINALIZACAO_CONFIG_IDE.md",
+    "Docs/Instruções/exclusion-filters.ps1",
+    "Docs/Instruções/DocumentDirector.ps1",
+    "Setup/README_IDE_CONFIG.md",
+    "Docs/Instruções/README-Consolidation.md",
+    "Docs/Instruções/consolidation-config.ps1",
+    "Docs/Instruções/Consolidate-Documentation.ps1",
+    "Setup/Validar-ConfiguracaoIDE.ps1",
+    "Setup/IDE_CONFIG_SUMMARY.md",
+    "Setup/CONFIGURACAO_IDES.md",
+    "Docs/Instruções.zip",
+    "Docs/Instruções/RELATÓRIO_CORPORATIVO_CONSOLIDADO.md",
+    "AvilaOps/Agente Bibliotecario (Archivus)/archivus_main.py",
+    "Setup/generate_archivus.py",
+    "Docs/Relatorios/Relatório Corporativo Executivo Versão Detalhada.md",
+    "AvilaOps/Agente Bibliotecario (Archivus)/STATUS.md",
+    "AvilaOps/Agente Bibliotecario (Archivus)/archivus_hotfix.py",
+    "AvilaOps/Agente Bibliotecario (Archivus)/implementar-temp.md",
+    "Docs/Relatorios/Conversas/COMO_SALVAR_ESTA_CONVERSA.md",
+    "AvilaOps/Agente Bibliotecario (Archivus)/RESUMO_EXECUTIVO.md",
+    "AvilaOps/Agente Bibliotecario (Archivus)/QUICKSTART.md",
+    "AvilaOps/Agente Bibliotecario (Archivus)/README.md",
+    "AvilaOps/ai/📚 Agente Bibliotecário (“Archivus”)/Readme.md",
+    "setup_env_avila.ps1.md",
+    "Docs/Relatorios/Conversas/COMO_EXPORTAR.md",
+    "Docs/Relatorios/Conversas/README.md",
+    "Docs/Relatorios/IMPLEMENTACAO_COMPLETA.md",
+    "Docs/Relatorios/GUIA_RAPIDO.md",
+    "Docs/Pasted image 20251110041101.png",
+    "Docs/Pasted image 20251110041001.png",
+    "Docs/Pasted image 20251110040907.png",
+    "Docs/Pasted image 20251110014457.png",
+    "Docs/Pasted image 20251110014428.png"
+  ]
+}

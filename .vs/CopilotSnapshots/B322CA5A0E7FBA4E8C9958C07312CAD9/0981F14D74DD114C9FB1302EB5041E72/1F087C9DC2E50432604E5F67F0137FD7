@@ -1,0 +1,127 @@
+﻿# gitignore - Avila Framework (GitHub Pro/Enterprise)
+# Configuracao completa e profissional
+
+# ========================================
+# AMBIENTES VIRTUAIS
+# ========================================
+.venv/
+venv/
+env/
+ENV/
+node_modules/
+
+# ========================================
+# PYTHON
+# ========================================
+__pycache__/
+*.pyc
+*.pyo
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ========================================
+# JAVASCRIPT / NODE
+# ========================================
+npm-debug.log*
+yarn-error.log*
+.eslintcache
+.cache/
+
+# ========================================
+# DOTNET / C#
+# ========================================
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
+
+# ========================================
+# IDE
+# ========================================
+.idea/
+.DS_Store
+Thumbs.db
+
+# ========================================
+# LOGS E TEMPORARIOS
+# ========================================
+*.log
+*.tmp
+*.temp
+Logs/Daily/*.log
+Logs/Archive/*.log
+
+# ========================================
+# BACKUPS
+# ========================================
+Shared/backups/**/*.zip
+*_backup_*
+*.bak
+
+# ========================================
+# CREDENCIAIS (CRITICO!)
+# ========================================
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.json
+credentials.json
+
+# ========================================
+# DATABASES
+# ========================================
+*.sqlite
+*.db
+
+# ========================================
+# AVILA SPECIFIC
+# ========================================
+
+# Conversas (versionar apenas README e guias)
+Docs/Relatorios/Conversas/*.md
+!Docs/Relatorios/Conversas/README.md
+!Docs/Relatorios/Conversas/COMO_*.md
+
+# Auditorias geradas automaticamente
+Docs/Relatorios/Auditorias/AUDITORIA_*.md
+
+# Manifestos de integridade
+integrity_manifest.json
+
+# Temporarios
+**/TEMP_*.md
+**/DRAFT_*.md
+
+# ========================================
+# VS CODE (manter config, ignorar cache)
+# ========================================
+.vscode/.ropeproject
+.vscode/.history/
+.vscode/settings.json.bak
+
+# ========================================
+# OBSIDIAN
+# ========================================
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/cache
+.trash/
+
+# ========================================
+# SEMPRE INCLUIR
+# ========================================
+!.gitignore
+!.gitattributes
+!README.md
+!LICENSE

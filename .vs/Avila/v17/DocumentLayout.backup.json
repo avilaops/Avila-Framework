@@ -1,0 +1,640 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nicol\\OneDrive\\Avila\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-5aca22b3-7f0e-4eba-8c99-58c07312cad9.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\Run-Archivus.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AvilaOps\\Agente Bibliotecario (Archivus)\\Run-Archivus.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\.github\\copilot-instructions.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.github\\copilot-instructions.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\Conversas\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Docs\\Relatorios\\Conversas\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\Conversas\\COMO_EXPORTAR.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Docs\\Relatorios\\Conversas\\COMO_EXPORTAR.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\Shared\\scripts\\salvar_conversa_copilot.py||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Shared\\scripts\\salvar_conversa_copilot.py||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\ANALISE_PROJETO_AVILA.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ANALISE_PROJETO_AVILA.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\Shared\\scripts\\salvar_analise.py||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Shared\\scripts\\salvar_analise.py||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Docs\\Relatorios\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\Analises\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Docs\\Relatorios\\Analises\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\Shared\\scripts\\Salvar-Analise.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Shared\\scripts\\Salvar-Analise.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\GUIA_RAPIDO.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Docs\\Relatorios\\GUIA_RAPIDO.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\IMPLEMENTACAO_COMPLETA.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Docs\\Relatorios\\IMPLEMENTACAO_COMPLETA.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\config.yaml||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AvilaOps\\Agente Bibliotecario (Archivus)\\config.yaml||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\archivus_main.py||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AvilaOps\\Agente Bibliotecario (Archivus)\\archivus_main.py||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AvilaOps\\Agente Bibliotecario (Archivus)\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\integrity_manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AvilaOps\\Agente Bibliotecario (Archivus)\\integrity_manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\QUICKSTART.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AvilaOps\\Agente Bibliotecario (Archivus)\\QUICKSTART.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\RESUMO_EXECUTIVO.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AvilaOps\\Agente Bibliotecario (Archivus)\\RESUMO_EXECUTIVO.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\Conversas\\COMO_SALVAR_ESTA_CONVERSA.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Docs\\Relatorios\\Conversas\\COMO_SALVAR_ESTA_CONVERSA.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\archivus_hotfix.py||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AvilaOps\\Agente Bibliotecario (Archivus)\\archivus_hotfix.py||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\STATUS.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AvilaOps\\Agente Bibliotecario (Archivus)\\STATUS.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\Setup\\generate_archivus.py||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Setup\\generate_archivus.py||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\avila.code-workspace||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.vscode\\avila.code-workspace||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.vscode\\settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\extensions.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.vscode\\extensions.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\tasks.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.vscode\\tasks.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\launch.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.vscode\\launch.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\avila-snippets.code-snippets||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.vscode\\avila-snippets.code-snippets||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\.visualstudio\\Avila-VS2022-Settings.vssettings||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.visualstudio\\Avila-VS2022-Settings.vssettings||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\.visualstudio\\Avila-VS2022-Components.vsconfig||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.visualstudio\\Avila-VS2022-Components.vsconfig||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\Setup\\CONFIGURACAO_IDES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Setup\\CONFIGURACAO_IDES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\Setup\\IDE_CONFIG_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Setup\\IDE_CONFIG_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\Setup\\Validar-ConfiguracaoIDE.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Setup\\Validar-ConfiguracaoIDE.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicol\\OneDrive\\Avila\\Setup\\README_IDE_CONFIG.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Setup\\README_IDE_CONFIG.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 177,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 19,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cde3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CONFIGURACAO_IDES.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\Setup\\CONFIGURACAO_IDES.md",
+              "RelativeDocumentMoniker": "Setup\\CONFIGURACAO_IDES.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\Setup\\CONFIGURACAO_IDES.md",
+              "RelativeToolTip": "Setup\\CONFIGURACAO_IDES.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-10T20:54:00.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Avila-VS2022-Components.vsconfig",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\.visualstudio\\Avila-VS2022-Components.vsconfig",
+              "RelativeDocumentMoniker": ".visualstudio\\Avila-VS2022-Components.vsconfig",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\.visualstudio\\Avila-VS2022-Components.vsconfig",
+              "RelativeToolTip": ".visualstudio\\Avila-VS2022-Components.vsconfig",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-10T20:53:04.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Avila-VS2022-Settings.vssettings",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\.visualstudio\\Avila-VS2022-Settings.vssettings",
+              "RelativeDocumentMoniker": ".visualstudio\\Avila-VS2022-Settings.vssettings",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\.visualstudio\\Avila-VS2022-Settings.vssettings",
+              "RelativeToolTip": ".visualstudio\\Avila-VS2022-Settings.vssettings",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
+              "WhenOpened": "2025-11-10T20:52:53.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "avila-snippets.code-snippets",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\avila-snippets.code-snippets",
+              "RelativeDocumentMoniker": ".vscode\\avila-snippets.code-snippets",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\avila-snippets.code-snippets",
+              "RelativeToolTip": ".vscode\\avila-snippets.code-snippets",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-10T20:52:31.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "launch.json",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\launch.json",
+              "RelativeDocumentMoniker": ".vscode\\launch.json",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\launch.json",
+              "RelativeToolTip": ".vscode\\launch.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-10T20:51:51.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "tasks.json",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\tasks.json",
+              "RelativeDocumentMoniker": ".vscode\\tasks.json",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\tasks.json",
+              "RelativeToolTip": ".vscode\\tasks.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-10T20:51:29.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "extensions.json",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\extensions.json",
+              "RelativeDocumentMoniker": ".vscode\\extensions.json",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\extensions.json",
+              "RelativeToolTip": ".vscode\\extensions.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-10T20:51:03.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "settings.json",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\settings.json",
+              "RelativeDocumentMoniker": ".vscode\\settings.json",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\settings.json",
+              "RelativeToolTip": ".vscode\\settings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-10T20:50:43.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "avila.code-workspace",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\avila.code-workspace",
+              "RelativeDocumentMoniker": ".vscode\\avila.code-workspace",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\.vscode\\avila.code-workspace",
+              "RelativeToolTip": ".vscode\\avila.code-workspace",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-10T20:50:08.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "COMO_SALVAR_ESTA_CONVERSA.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\Conversas\\COMO_SALVAR_ESTA_CONVERSA.md",
+              "RelativeDocumentMoniker": "Docs\\Relatorios\\Conversas\\COMO_SALVAR_ESTA_CONVERSA.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\Conversas\\COMO_SALVAR_ESTA_CONVERSA.md",
+              "RelativeToolTip": "Docs\\Relatorios\\Conversas\\COMO_SALVAR_ESTA_CONVERSA.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-10T20:05:54.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RESUMO_EXECUTIVO.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\RESUMO_EXECUTIVO.md",
+              "RelativeDocumentMoniker": "AvilaOps\\Agente Bibliotecario (Archivus)\\RESUMO_EXECUTIVO.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\RESUMO_EXECUTIVO.md",
+              "RelativeToolTip": "AvilaOps\\Agente Bibliotecario (Archivus)\\RESUMO_EXECUTIVO.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-10T20:05:30.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "QUICKSTART.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\QUICKSTART.md",
+              "RelativeDocumentMoniker": "AvilaOps\\Agente Bibliotecario (Archivus)\\QUICKSTART.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\QUICKSTART.md",
+              "RelativeToolTip": "AvilaOps\\Agente Bibliotecario (Archivus)\\QUICKSTART.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-10T20:03:58.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "integrity_manifest.json",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\integrity_manifest.json",
+              "RelativeDocumentMoniker": "AvilaOps\\Agente Bibliotecario (Archivus)\\integrity_manifest.json",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\integrity_manifest.json",
+              "RelativeToolTip": "AvilaOps\\Agente Bibliotecario (Archivus)\\integrity_manifest.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-10T20:03:25.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Run-Archivus.ps1",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\Run-Archivus.ps1",
+              "RelativeDocumentMoniker": "AvilaOps\\Agente Bibliotecario (Archivus)\\Run-Archivus.ps1",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\Run-Archivus.ps1",
+              "RelativeToolTip": "AvilaOps\\Agente Bibliotecario (Archivus)\\Run-Archivus.ps1",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAP8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-10T20:03:11.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\README.md",
+              "RelativeDocumentMoniker": "AvilaOps\\Agente Bibliotecario (Archivus)\\README.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\README.md",
+              "RelativeToolTip": "AvilaOps\\Agente Bibliotecario (Archivus)\\README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-10T20:02:25.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "archivus_main.py",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\archivus_main.py",
+              "RelativeDocumentMoniker": "AvilaOps\\Agente Bibliotecario (Archivus)\\archivus_main.py",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\archivus_main.py",
+              "RelativeToolTip": "AvilaOps\\Agente Bibliotecario (Archivus)\\archivus_main.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAL0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-11-10T20:01:43.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "config.yaml",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\config.yaml",
+              "RelativeDocumentMoniker": "AvilaOps\\Agente Bibliotecario (Archivus)\\config.yaml",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\config.yaml",
+              "RelativeToolTip": "AvilaOps\\Agente Bibliotecario (Archivus)\\config.yaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-11-10T20:00:45.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "plan-5aca22b3-7f0e-4eba-8c99-58c07312cad9.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-5aca22b3-7f0e-4eba-8c99-58c07312cad9.md",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-5aca22b3-7f0e-4eba-8c99-58c07312cad9.md",
+              "ToolTip": "C:\\Users\\nicol\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-5aca22b3-7f0e-4eba-8c99-58c07312cad9.md",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-5aca22b3-7f0e-4eba-8c99-58c07312cad9.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-10T19:40:02.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "COMO_EXPORTAR.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\Conversas\\COMO_EXPORTAR.md",
+              "RelativeDocumentMoniker": "Docs\\Relatorios\\Conversas\\COMO_EXPORTAR.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\Conversas\\COMO_EXPORTAR.md",
+              "RelativeToolTip": "Docs\\Relatorios\\Conversas\\COMO_EXPORTAR.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-10T19:31:43.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\Conversas\\README.md",
+              "RelativeDocumentMoniker": "Docs\\Relatorios\\Conversas\\README.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\Conversas\\README.md",
+              "RelativeToolTip": "Docs\\Relatorios\\Conversas\\README.md",
+              "ViewState": "AgIAAO4AAAAAAAAAAAAAAO4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-10T19:31:12.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "salvar_conversa_copilot.py",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\Shared\\scripts\\salvar_conversa_copilot.py",
+              "RelativeDocumentMoniker": "Shared\\scripts\\salvar_conversa_copilot.py",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\Shared\\scripts\\salvar_conversa_copilot.py",
+              "RelativeToolTip": "Shared\\scripts\\salvar_conversa_copilot.py",
+              "ViewState": "AgIAABIBAAAAAAAAAAAQwBsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-11-10T19:30:30.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "copilot-instructions.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\.github\\copilot-instructions.md",
+              "RelativeDocumentMoniker": ".github\\copilot-instructions.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\.github\\copilot-instructions.md",
+              "RelativeToolTip": ".github\\copilot-instructions.md",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAewBIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-10T19:27:09.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IMPLEMENTACAO_COMPLETA.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\IMPLEMENTACAO_COMPLETA.md",
+              "RelativeDocumentMoniker": "Docs\\Relatorios\\IMPLEMENTACAO_COMPLETA.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\IMPLEMENTACAO_COMPLETA.md",
+              "RelativeToolTip": "Docs\\Relatorios\\IMPLEMENTACAO_COMPLETA.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-10T19:14:39.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GUIA_RAPIDO.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\GUIA_RAPIDO.md",
+              "RelativeDocumentMoniker": "Docs\\Relatorios\\GUIA_RAPIDO.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\GUIA_RAPIDO.md",
+              "RelativeToolTip": "Docs\\Relatorios\\GUIA_RAPIDO.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-10T19:14:03.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Salvar-Analise.ps1",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\Shared\\scripts\\Salvar-Analise.ps1",
+              "RelativeDocumentMoniker": "Shared\\scripts\\Salvar-Analise.ps1",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\Shared\\scripts\\Salvar-Analise.ps1",
+              "RelativeToolTip": "Shared\\scripts\\Salvar-Analise.ps1",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-10T19:13:28.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f96a0d64-71fd-316f-b663-924c78154f2a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\Analises\\README.md",
+              "RelativeDocumentMoniker": "Docs\\Relatorios\\Analises\\README.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\Analises\\README.md",
+              "RelativeToolTip": "Docs\\Relatorios\\Analises\\README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-10T19:12:56.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\README.md",
+              "RelativeDocumentMoniker": "Docs\\Relatorios\\README.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\Docs\\Relatorios\\README.md",
+              "RelativeToolTip": "Docs\\Relatorios\\README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-10T19:12:33.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "salvar_analise.py",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\Shared\\scripts\\salvar_analise.py",
+              "RelativeDocumentMoniker": "Shared\\scripts\\salvar_analise.py",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\Shared\\scripts\\salvar_analise.py",
+              "RelativeToolTip": "Shared\\scripts\\salvar_analise.py",
+              "ViewState": "AgIAALMAAAAAAAAAAIBJwLUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-11-10T19:11:03.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ANALISE_PROJETO_AVILA.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\ANALISE_PROJETO_AVILA.md",
+              "RelativeDocumentMoniker": "ANALISE_PROJETO_AVILA.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\ANALISE_PROJETO_AVILA.md",
+              "RelativeToolTip": "ANALISE_PROJETO_AVILA.md",
+              "ViewState": "AgIAAMQBAAAAAAAAAAAAANoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-10T18:19:32.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "README_IDE_CONFIG.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\Setup\\README_IDE_CONFIG.md",
+              "RelativeDocumentMoniker": "Setup\\README_IDE_CONFIG.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\Setup\\README_IDE_CONFIG.md",
+              "RelativeToolTip": "Setup\\README_IDE_CONFIG.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-10T21:02:21.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Validar-ConfiguracaoIDE.ps1",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\Setup\\Validar-ConfiguracaoIDE.ps1",
+              "RelativeDocumentMoniker": "Setup\\Validar-ConfiguracaoIDE.ps1",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\Setup\\Validar-ConfiguracaoIDE.ps1",
+              "RelativeToolTip": "Setup\\Validar-ConfiguracaoIDE.ps1",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-10T20:56:24.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IDE_CONFIG_SUMMARY.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\Setup\\IDE_CONFIG_SUMMARY.md",
+              "RelativeDocumentMoniker": "Setup\\IDE_CONFIG_SUMMARY.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\Setup\\IDE_CONFIG_SUMMARY.md",
+              "RelativeToolTip": "Setup\\IDE_CONFIG_SUMMARY.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAM0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-10T20:55:56.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "generate_archivus.py",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\Setup\\generate_archivus.py",
+              "RelativeDocumentMoniker": "Setup\\generate_archivus.py",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\Setup\\generate_archivus.py",
+              "RelativeToolTip": "Setup\\generate_archivus.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-11-10T20:46:23.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "STATUS.md",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\STATUS.md",
+              "RelativeDocumentMoniker": "AvilaOps\\Agente Bibliotecario (Archivus)\\STATUS.md",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\STATUS.md",
+              "RelativeToolTip": "AvilaOps\\Agente Bibliotecario (Archivus)\\STATUS.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-10T20:34:19.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "archivus_hotfix.py",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\archivus_hotfix.py",
+              "RelativeDocumentMoniker": "AvilaOps\\Agente Bibliotecario (Archivus)\\archivus_hotfix.py",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Avila\\AvilaOps\\Agente Bibliotecario (Archivus)\\archivus_hotfix.py",
+              "RelativeToolTip": "AvilaOps\\Agente Bibliotecario (Archivus)\\archivus_hotfix.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-11-10T20:33:42.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

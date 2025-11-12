@@ -1,0 +1,92 @@
+{
+  "timestamp": "2025-11-12T03:16:53.455725",
+  "insights": [
+    {
+      "source": "Lumen",
+      "product": "ON",
+      "metric": "TTV Médio",
+      "value": 2.5,
+      "unit": "dias",
+      "insight": "Time-to-Value médio é 2.5 dias. ✅ Abaixo da meta (<7 dias)"
+    },
+    {
+      "source": "Lumen",
+      "product": "ON",
+      "metric": "Risco de Churn",
+      "value": 1,
+      "total": 3,
+      "percentage": 33.3,
+      "insight": "1/3 usuários com risco (>2 tickets). Taxa: 33.3%"
+    },
+    {
+      "source": "Lumen",
+      "product": "Geolocation",
+      "metric": "Acurácia GPS",
+      "value": 11.3,
+      "unit": "metros",
+      "insight": "Acurácia média de 11.3m. ⚠️ Requer calibração"
+    },
+    {
+      "source": "Lumen",
+      "product": "Geolocation",
+      "metric": "Compliance LGPD",
+      "value": 3,
+      "total": 3,
+      "percentage": 100.0,
+      "insight": "3/3 amostras com consentimento. Compliance: 100.0%"
+    }
+  ],
+  "strategic_summary": {
+    "timestamp": "2025-11-12T03:16:53.455725",
+    "products": {
+      "ON": {
+        "health_score": 100,
+        "total_metrics": 2,
+        "issues": [],
+        "wins": [
+          "TTV Médio"
+        ]
+      },
+      "Geolocation": {
+        "health_score": 85,
+        "total_metrics": 2,
+        "issues": [
+          "Acurácia GPS"
+        ],
+        "wins": []
+      }
+    },
+    "priorities": [
+      {
+        "product": "Geolocation",
+        "urgency": "medium",
+        "issues": [
+          "Acurácia GPS"
+        ]
+      }
+    ],
+    "kpis": {
+      "TTV Médio": {
+        "value": 2.5,
+        "unit": "dias",
+        "insight": "Time-to-Value médio é 2.5 dias. ✅ Abaixo da meta (<7 dias)"
+      },
+      "Risco de Churn": {
+        "value": 1,
+        "unit": "",
+        "insight": "1/3 usuários com risco (>2 tickets). Taxa: 33.3%"
+      },
+      "Acurácia GPS": {
+        "value": 11.3,
+        "unit": "metros",
+        "insight": "Acurácia média de 11.3m. ⚠️ Requer calibração"
+      },
+      "Compliance LGPD": {
+        "value": 3,
+        "unit": "",
+        "insight": "3/3 amostras com consentimento. Compliance: 100.0%"
+      }
+    }
+  },
+  "email_sent": false
+}

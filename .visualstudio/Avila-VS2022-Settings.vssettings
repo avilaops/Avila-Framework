@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+CONFIGURACOES VISUAL STUDIO 2022 - AVILA FRAMEWORK
+Importar: Tools > Import and Export Settings > Import selected settings
+-->
+<UserSettings>
+  <ApplicationIdentity version="17.0"/>
+  <ToolsOptions>
+    <ToolsOptionsCategory name="Environment">
+      <ToolsOptionsSubCategory name="General">
+   <PropertyValue name="ColorTheme">Dark</PropertyValue>
+      </ToolsOptionsSubCategory>
+      <ToolsOptionsSubCategory name="FontsAndColors">
+        <PropertyValue name="FontFamily">Consolas</PropertyValue>
+      <PropertyValue name="FontSize">10</PropertyValue>
+      </ToolsOptionsSubCategory>
+    </ToolsOptionsCategory>
+    
+    <ToolsOptionsCategory name="TextEditor">
+      <ToolsOptionsSubCategory name="General">
+        <PropertyValue name="TrackChanges">True</PropertyValue>
+   <PropertyValue name="AutoDelimiterHighlighting">True</PropertyValue>
+      </ToolsOptionsSubCategory>
+      
+      <ToolsOptionsSubCategory name="AllLanguages">
+        <PropertyValue name="TabSize">4</PropertyValue>
+        <PropertyValue name="IndentSize">4</PropertyValue>
+   <PropertyValue name="InsertSpaces">True</PropertyValue>
+        <PropertyValue name="WordWrap">False</PropertyValue>
+      </ToolsOptionsSubCategory>
+      
+      <ToolsOptionsSubCategory name="Python">
+        <PropertyValue name="TabSize">4</PropertyValue>
+        <PropertyValue name="IndentSize">4</PropertyValue>
+      </ToolsOptionsSubCategory>
+    </ToolsOptionsCategory>
+    
+    <ToolsOptionsCategory name="Projects">
+      <ToolsOptionsSubCategory name="General">
+        <PropertyValue name="SaveNewProjects">True</PropertyValue>
+        <PropertyValue name="ProjectsLocation">C:\Users\nicol\OneDrive\Avila</PropertyValue>
+      </ToolsOptionsSubCategory>
+    </ToolsOptionsCategory>
+  </ToolsOptions>
+</UserSettings>

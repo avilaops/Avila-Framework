@@ -1,0 +1,37 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "Templates",
+  "templates_pairs": [["", ""]],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": true,
+  "enable_system_commands": true,
+  "shell_path": "pwsh.exe",
+  "user_scripts_folder": "Scripts/templater",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "AvilaInc",
+      "template": "Templates/template-corporativo.md"
+    },
+    {
+      "folder": "AvilaOps",
+      "template": "Templates/template-operacional.md"
+    },
+    {
+      "folder": "Docs/Relatórios",
+      "template": "Templates/template-relatorio.md"
+    }
+  ],
+  "enable_file_templates": true,
+  "file_templates": [
+    {
+      "pattern": "*.md",
+      "template": "Templates/template-documento.md"
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": true,
+  "enabled_templates_hotkeys": [""],
+  "startup_templates": [""],
+  "intellisense_render": 1
+}

@@ -1,0 +1,20 @@
+{
+    "periodo": "04-10 nov 2025",
+    "receita_incremental": 185000.0,
+    "custos_otimizados": 92000.0,
+    "margem_projetada": 28.5,
+    "frt_medio": 3.2,
+    "resolucao_24h": 87.0,
+    "csat": 92,
+    "nps": 65,
+    "execucao_plano": 88,
+    "leads_qualificados": 42,
+    "win_rate": 31.0,
+    "cac": 1780.0,
+    "ltv": 8420.0,
+    "insights": [
+        "Região Sul respondeu por 45% da receita incremental",
+        "Campanha 'aquisicao_consultoria' reduziu CAC em 12% semana/semana",
+        "Produto ON elevou retenção em +5 pontos percentuais"
+    ]
+}

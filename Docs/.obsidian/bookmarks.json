@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "ctime": 1762777215166,
+      "path": "Instruções/Pipeline de Inteligência contínua.md",
+      "title": "Pipeline de Inteligência contínua"
+    },
+    {
+      "type": "folder",
+      "ctime": 1762780207995,
+      "path": "Modulo 1 - Coleta de dados/1 - Conversas com o ChatGPT",
+      "title": "RAW"
+    },
+    {
+      "type": "file",
+      "ctime": 1762780236963,
+      "path": "Modulo 1 - Coleta de dados/1 - Conversas com o ChatGPT/Atlas.md",
+      "title": "RAW"
+    },
+    {
+      "type": "file",
+      "ctime": 1762781427681,
+      "path": "Modulo 1 - Coleta de dados/Orquestra IA Avila.md",
+      "title": "GPT-5-Codex (Preview) • 1x"
+    }
+  ]
+}

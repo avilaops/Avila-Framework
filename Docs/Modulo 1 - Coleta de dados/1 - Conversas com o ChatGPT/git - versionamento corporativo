@@ -1,0 +1,21 @@
+3. Git — versionamento corporativo
+
+Crie um repositório Git único no topo da pasta Avila/:
+
+cd Avila
+git init
+git add .
+git commit -m "Initial Ávila Inc + Ávila Ops structure"
+
+
+Isso garante que todo o ecossistema (Inc, Ops e Shared) tenha histórico único.
+Depois você pode criar submódulos se quiser separar códigos de produtos:
+
+cd AvilaOps/products/opsflow
+git init
+git remote add origin git@github.com:avilaops/opsflow.git
+git add .
+git commit -m "Initial OpsFlow module"
+
+
+Assim, o repositório principal controla a organização geral e cada produto vive isolado como projeto autônomo.

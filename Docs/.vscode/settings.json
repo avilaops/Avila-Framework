@@ -1,0 +1,18 @@
+{
+    "files.autoSave": "onFocusChange",
+    "files.trimTrailingWhitespace": true,
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "editor.tabSize": 2,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "workbench.startupEditor": "none",
+    "workbench.iconTheme": "material-icon-theme",
+    "markdown.preview.breaks": true,
+    "markdown.preview.fontSize": 14,
+    "markdownlint.config": {
+        "MD013": false,
+        "MD033": false
+    },
+    "python.analysis.autoImportCompletions": true,
+    "git.autofetch": true
+}

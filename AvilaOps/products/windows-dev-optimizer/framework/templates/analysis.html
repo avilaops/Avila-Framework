@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page_title }} - Windows Dev Optimizer{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <!-- Page Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h1 class="h2 mb-1">
+                    <i class="bi bi-search text-primary me-2"></i>
+                    {{ page_title }}
+                </h1>
+                <p class="text-muted">Análise completa do sistema Windows para identificar oportunidades de otimização
+                </p>
+            </div>
+            <div>
+                <button class="btn btn-primary btn-lg" id="runAnalysisBtn" hx-post="/api/analysis/system"
+                    hx-target="#analysis-results" hx-swap="innerHTML">
+                    <i class="bi bi-play-circle me-2"></i>
+                    Executar Análise
+                </button>
+            </div>
+        </div>
+
+        <!-- Analysis Options -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body">
+                <h5 class="card-title mb-3">
+                    <i class="bi bi-gear me-2"></i>
+                    Opções de Análise
+                </h5>
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="analyzeSystem" checked>
+                            <label class="form-check-label" for="analyzeSystem">
+                                <i class="bi bi-laptop me-1 text-primary"></i>
+                                Informações do Sistema
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="analyzePrograms" checked>
+                            <label class="form-check-label" for="analyzePrograms">
+                                <i class="bi bi-app-indicator me-1 text-success"></i>
+                                Programas Instalados
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="analyzeEdge" checked>
+                            <label class="form-check-label" for="analyzeEdge">
+                                <i class="bi bi-browser-edge me-1 text-info"></i>
+                                Microsoft Edge
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="analyzeBloatware" checked>
+                            <label class="form-check-label" for="analyzeBloatware">
+                                <i class="bi bi-trash me-1 text-danger"></i>
+                                Detecção de Bloatware
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="row g-3 mb-4">
+            <div class="col-md-4">
+                <button class="btn btn-outline-primary w-100" hx-get="/htmx/analysis/results"
+                    hx-target="#analysis-results" hx-swap="innerHTML">
+                    <i class="bi bi-arrow-clockwise me-2"></i>
+                    Carregar Última Análise
+                </button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-outline-success w-100" hx-get="/api/analysis/recommendations"
+                    hx-target="#recommendations-section" hx-swap="innerHTML">
+                    <i class="bi bi-lightbulb me-2"></i>
+                    Gerar Recomendações
+                </button>
+            </div>
+            <div class="col-md-4">
+                <a href="/export" class="btn btn-outline-warning w-100">
+                    <i class="bi bi-download me-2"></i>
+                    Exportar Relatório
+                </a>
+            </div>
+        </div>
+
+        <!-- Analysis Progress -->
+        <div id="analysis-progress" class="d-none mb-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="spinner-border text-primary me-3" role="status">
+                            <span class="visually-hidden">Analisando...</span>
+                        </div>
+                        <div>
+                            <h6 class="mb-1">Executando análise do sistema...</h6>
+                            <small class="text-muted">Isso pode levar alguns minutos dependendo do sistema.</small>
+                        </div>
+                    </div>
+
+                    <div class="progress mt-3" style="height: 8px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            style="width: 0%" id="analysisProgressBar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analysis Results -->
+        <div id="analysis-results">
+            <div class="text-center py-5">
+                <i class="bi bi-search text-muted" style="font-size: 4rem;"></i>
+                <h4 class="text-muted mt-3">Nenhuma análise executada ainda</h4>
+                <p class="text-muted">Clique em "Executar Análise" para começar a analisar seu sistema.</p>
+            </div>
+        </div>
+
+        <!-- Recommendations Section -->
+        <div id="recommendations-section" class="mt-5">
+            <!-- Recommendations will be loaded here -->
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Progress simulation and UI handling
+    let analysisInterval;
+
+    document.addEventListener('htmx:beforeRequest', function (event) {
+        if (event.detail.elt.id === 'runAnalysisBtn') {
+            showAnalysisProgress();
+            startProgressAnimation();
+        }
+    });
+
+    document.addEventListener('htmx:afterRequest', function (event) {
+        if (event.detail.elt.id === 'runAnalysisBtn') {
+            hideAnalysisProgress();
+            clearInterval(analysisInterval);
+        }
+    });
+
+    document.addEventListener('htmx:responseError', function (event) {
+        if (event.detail.elt.id === 'runAnalysisBtn') {
+            hideAnalysisProgress();
+            clearInterval(analysisInterval);
+            showToast('Erro ao executar análise: ' + event.detail.xhr.status, 'error');
+        }
+    });
+
+    function showAnalysisProgress() {
+        document.getElementById('analysis-progress').classList.remove('d-none');
+        document.getElementById('runAnalysisBtn').disabled = true;
+    }
+
+    function hideAnalysisProgress() {
+        document.getElementById('analysis-progress').classList.add('d-none');
+        document.getElementById('runAnalysisBtn').disabled = false;
+    }
+
+    function startProgressAnimation() {
+        let progress = 0;
+        const progressBar = document.getElementById('analysisProgressBar');
+
+        analysisInterval = setInterval(() => {
+            progress += Math.random() * 15;
+            if (progress > 90) progress = 90; // Never reach 100% until completion
+
+            progressBar.style.width = progress + '%';
+        }, 500);
+    }
+
+    // Handle successful analysis completion
+    document.addEventListener('htmx:afterSwap', function (event) {
+        if (event.target.id === 'analysis-results') {
+            // Complete the progress bar
+            const progressBar = document.getElementById('analysisProgressBar');
+            if (progressBar) {
+                progressBar.style.width = '100%';
+                setTimeout(() => {
+                    hideAnalysisProgress();
+                    clearInterval(analysisInterval);
+                }, 1000);
+            }
+
+            // Show success toast
+            showToast('Análise concluída com sucesso!', 'success');
+
+            // Scroll to results
+            event.target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+
+    // Auto-refresh recommendations when analysis completes
+    document.addEventListener('htmx:afterSwap', function (event) {
+        if (event.target.id === 'analysis-results' &&
+            !event.target.innerHTML.includes('Nenhuma análise')) {
+            // Auto-load recommendations
+            setTimeout(() => {
+                htmx.ajax('GET', '/api/analysis/recommendations', {
+                    target: '#recommendations-section',
+                    swap: 'innerHTML'
+                });
+            }, 2000);
+        }
+    });
+</script>
+{% endblock %}

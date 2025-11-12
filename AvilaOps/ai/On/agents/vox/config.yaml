@@ -1,0 +1,14 @@
+agent_name: Vox
+area: Comercial / CRM
+significado: Voz da empresa
+status: ativo
+model: gpt-4o
+memory_path: ../../data/vox_memory.json
+description: Agente especializado em comercial / crm (voz da empresa).
+version: 1.0.0
+permissions:
+  read:
+  - ../../data/knowledge_base
+  write:
+  - ../../logs
+  sync: true

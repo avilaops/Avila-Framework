@@ -1,0 +1,15 @@
+agent_name: Sigma
+area: Financeiro / Controladoria
+significado: Análise e precisão matemática
+status: ativo
+model: gpt-4o
+memory_path: ../../data/sigma_memory.json
+description: Agente especializado em financeiro / controladoria (análise e precisão
+  matemática).
+version: 1.0.0
+permissions:
+  read:
+  - ../../data/knowledge_base
+  write:
+  - ../../logs
+  sync: true

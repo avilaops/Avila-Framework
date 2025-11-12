@@ -1,0 +1,30 @@
+agent_name: Orchestrator
+area: Inteligência / Orquestração
+significado: Maestro da análise semântica e roteamento inteligente
+status: ativo
+model: gpt-4o
+memory_path: ../../data/orchestrator_memory.json
+description: Agente mestre especializado em análise semântica, classificação de intenções e roteamento inteligente de conversas e tarefas.
+version: 1.0.0
+capabilities:
+  - semantic_analysis
+  - intent_classification
+  - conversation_routing
+  - context_understanding
+  - priority_assessment
+  - delegation_logic
+permissions:
+  read:
+    - ../../data/knowledge_base
+    - ../../data/conversations
+    - ../../data/embeddings
+  write:
+    - ../../logs
+    - ../../data/routing_decisions
+    - ../../data/semantic_analysis
+  sync: true
+semantic_config:
+  embedding_model: text-embedding-3-large
+  classification_threshold: 0.85
+  context_window: 2048
+  max_routing_depth: 5

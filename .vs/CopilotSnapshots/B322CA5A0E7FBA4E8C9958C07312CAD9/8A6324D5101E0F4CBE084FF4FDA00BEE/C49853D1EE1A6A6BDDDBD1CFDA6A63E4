@@ -1,0 +1,141 @@
+﻿# -*- coding: utf-8 -*-
+"""
+Script para salvar conversas do GitHub Copilot Chat
+Uso: python salvar_conversa_copilot.py <arquivo_exportado.json>
+"""
+
+import json
+import sys
+from pathlib import Path
+from datetime import datetime
+
+# Configurações
+WORKSPACE_ROOT = Path(__file__).resolve().parents[2]
+PASTA_CONVERSAS = WORKSPACE_ROOT / "Docs" / "Relatorios" / "Conversas"
+
+# Criar estrutura se não existir
+PASTA_CONVERSAS.mkdir(parents=True, exist_ok=True)
+
+
+def converter_json_para_markdown(json_path: Path) -> str:
+    """Converte JSON do Copilot Chat para Markdown legível"""
+    
+    with open(json_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    
+    # Header
+    markdown = f"""# 💬 Conversa GitHub Copilot
+
+**Data:** {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+**Origem:** {json_path.name}
+**Workspace:** Projeto Ávila
+
+---
+
+"""
+    
+    # Processar mensagens
+    messages = data.get('messages', [])
+    
+ for i, msg in enumerate(messages, 1):
+role = msg.get('role', 'unknown')
+    content = msg.get('content', '')
+   timestamp = msg.get('timestamp', '')
+        
+        # Ícone baseado no role
+      icon = "👤" if role == "user" else "🤖" if role == "assistant" else "⚙️"
+        
+     markdown += f"## {icon} Mensagem {i} ({role.capitalize()})\n\n"
+        
+        if timestamp:
+          markdown += f"*{timestamp}*\n\n"
+        
+        markdown += f"{content}\n\n"
+ markdown += "---\n\n"
+    
+    # Footer
+    markdown += f"""
+---
+
+**Total de mensagens:** {len(messages)}
+**Gerado automaticamente por:** `Shared/scripts/salvar_conversa_copilot.py`
+"""
+    
+    return markdown
+
+
+def salvar_conversa(arquivo_origem: Path):
+  """Salva conversa na pasta padrão"""
+    
+    if not arquivo_origem.exists():
+ print(f"❌ Erro: Arquivo não encontrado: {arquivo_origem}")
+     return False
+    
+    # Detectar formato
+    extensao = arquivo_origem.suffix.lower()
+  
+    if extensao == '.json':
+        # Converter JSON para Markdown
+        markdown_content = converter_json_para_markdown(arquivo_origem)
+        extensao_destino = '.md'
+    elif extensao == '.md':
+        # Já é Markdown, apenas copiar
+with open(arquivo_origem, 'r', encoding='utf-8') as f:
+            markdown_content = f.read()
+     extensao_destino = '.md'
+    else:
+ print(f"⚠️  Formato não suportado: {extensao}")
+        return False
+    
+    # Nome padronizado
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
+    nome_destino = f"CONVERSA_COPILOT_v{timestamp}{extensao_destino}"
+    caminho_destino = PASTA_CONVERSAS / nome_destino
+    
+    # Salvar
+    try:
+        with open(caminho_destino, 'w', encoding='utf-8') as f:
+     f.write(markdown_content)
+        
+        tamanho_kb = caminho_destino.stat().st_size / 1024
+     caminho_relativo = caminho_destino.relative_to(WORKSPACE_ROOT)
+     
+        print(f"✅ Conversa salva com sucesso!")
+      print(f"📁 Local: {caminho_relativo}")
+        print(f"📊 Tamanho: {tamanho_kb:.2f} KB")
+      
+     return True
+
+    except Exception as e:
+   print(f"❌ Erro ao salvar: {e}")
+        return False
+
+
+def main():
+    """Função principal"""
+    
+    print("""
+========================================
+  ÁVILA - SALVAR CONVERSA COPILOT
+========================================
+    """)
+    
+ if len(sys.argv) < 2:
+        print("📋 Uso:")
+        print("  python salvar_conversa_copilot.py <arquivo_exportado.json|md>")
+        print()
+        print("📁 Pasta de destino:")
+        print(f"  {PASTA_CONVERSAS.relative_to(WORKSPACE_ROOT)}")
+ print()
+   print("💡 Passos:")
+   print("  1. No Copilot Chat, clique em ⋮ (três pontos)")
+        print("  2. Selecione 'Export Chat' → JSON ou Markdown")
+        print("  3. Execute este script com o arquivo exportado")
+ return
+    
+    arquivo = Path(sys.argv[1])
+    salvar_conversa(arquivo)
+
+
+if __name__ == "__main__":
+    main()

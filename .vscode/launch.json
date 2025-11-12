@@ -1,0 +1,60 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+   "name": "Python: Arquivo Atual",
+   "type": "python",
+   "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+  "cwd": "${fileDirname}"
+    },
+  {
+      "name": "Python: Archivus Main",
+ "type": "python",
+"request": "launch",
+      "program": "${workspaceFolder}/AvilaOps/Agente Bibliotecario (Archivus)/archivus_main.py",
+  "console": "integratedTerminal",
+   "cwd": "${workspaceFolder}/AvilaOps/Agente Bibliotecario (Archivus)"
+ },
+    {
+      "name": "Python: Script em Scripts/",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/Scripts/${input:scriptName}",
+ "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/Scripts"
+    },
+    {
+      "name": "PowerShell: Script Atual",
+   "type": "PowerShell",
+      "request": "launch",
+   "script": "${file}",
+      "cwd": "${fileDirname}"
+    },
+    {
+  "name": "PowerShell: Setup Ambiente",
+  "type": "PowerShell",
+      "request": "launch",
+      "script": "${workspaceFolder}/Setup/setup_env_avila.ps1",
+    "cwd": "${workspaceFolder}/Setup"
+    },
+    {
+      "name": "PowerShell: Run Archivus",
+   "type": "PowerShell",
+      "request": "launch",
+      "script": "${workspaceFolder}/AvilaOps/Agente Bibliotecario (Archivus)/Run-Archivus.ps1",
+   "args": ["-RunNow"],
+      "cwd": "${workspaceFolder}/AvilaOps/Agente Bibliotecario (Archivus)"
+    }
+  ],
+  "inputs": [
+    {
+   "id": "scriptName",
+      "type": "promptString",
+   "description": "Nome do script em Scripts/",
+      "default": "script.py"
+  }
+  ]
+}

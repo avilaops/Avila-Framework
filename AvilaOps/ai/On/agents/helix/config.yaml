@@ -1,0 +1,14 @@
+agent_name: Helix
+area: Engenharia / DevOps
+significado: DNA técnico e automação
+status: ativo
+model: gpt-4o
+memory_path: ../../data/helix_memory.json
+description: Agente especializado em engenharia / devops (dna técnico e automação).
+version: 1.0.0
+permissions:
+  read:
+  - ../../data/knowledge_base
+  write:
+  - ../../logs
+  sync: true

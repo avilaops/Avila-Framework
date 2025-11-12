@@ -1,0 +1,91 @@
+name: Validacao Estrutura Avila
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-structure:
+    name: Validar Estrutura de Pastas
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+ - name: Setup Python
+      uses: actions/setup-python@v5
+   with:
+        python-version: '3.13'
+        
+    - name: Verificar Estrutura Oficial
+ run: |
+     echo "Validando estrutura de diretorios..."
+      
+        # Diretorios obrigatorios
+    required_dirs=("AvilaInc" "AvilaOps" "Docs" "Logs" "Scripts" "Setup" "Shared" ".github")
+        
+        for dir in "${required_dirs[@]}"; do
+          if [ ! -d "$dir" ]; then
+       echo "ERROR: Diretorio obrigatorio faltando: $dir"
+            exit 1
+      fi
+echo "OK: $dir"
+        done
+        
+    - name: Verificar Arquivos Obrigatorios
+  run: |
+      echo "Verificando arquivos essenciais..."
+   
+     required_files=(
+   "README.md"
+       ".gitignore"
+      ".gitattributes"
+          ".editorconfig"
+          ".github/copilot-instructions.md"
+        )
+        
+        for file in "${required_files[@]}"; do
+       if [ ! -f "$file" ]; then
+      echo "ERROR: Arquivo obrigatorio faltando: $file"
+            exit 1
+          fi
+      echo "OK: $file"
+        done
+        
+    - name: Verificar .gitignore
+ run: |
+        echo "Validando .gitignore..."
+   
+        # Verificar se contem exclusoes criticas
+        if ! grep -q ".env" .gitignore; then
+          echo "ERROR: .gitignore nao protege .env"
+        exit 1
+        fi
+        
+        if ! grep -q "*.log" .gitignore; then
+          echo "WARNING: .gitignore nao exclui logs"
+        fi
+        
+        echo "OK: .gitignore valido"
+        
+    - name: Verificar Encoding UTF-8
+      run: |
+        echo "Verificando encoding de arquivos Python..."
+  
+        # Buscar arquivos sem UTF-8
+  find . -name "*.py" -type f ! -path "*/.venv/*" ! -path "*/node_modules/*" | while read file; do
+        if file "$file" | grep -qv "UTF-8"; then
+            echo "WARNING: $file pode nao ser UTF-8"
+      fi
+        done
+      
+        echo "OK: Encoding verificado"
+      
+    - name: Resultado
+      run: |
+        echo "================================"
+        echo "VALIDACAO CONCLUIDA COM SUCESSO"
+      echo "================================"

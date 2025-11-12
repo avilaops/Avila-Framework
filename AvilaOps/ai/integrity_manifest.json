@@ -1,0 +1,10 @@
+{
+  "generated_at": "2025-11-10T00:00:00",
+  "version": "1.0.0",
+  "files": {},
+  "notes": [
+    "Este manifesto será gerado automaticamente na primeira execução do Archivus",
+    "Contém hash SHA256 de todos os scripts Python no diretório Scripts/",
+    "Usado para verificação de integridade e detecção de modificações não autorizadas"
+  ]
+}
