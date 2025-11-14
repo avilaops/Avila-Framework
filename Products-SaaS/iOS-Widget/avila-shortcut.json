@@ -1,0 +1,21 @@
+{
+  "name": "Ávila Quick Access",
+  "description": "Acesso rápido aos produtos Ávila",
+  "actions": [
+    {
+      "type": "open_url",
+      "url": "https://avila.inc",
+      "title": "Abrir Site Ávila"
+    },
+    {
+      "type": "open_url",
+      "url": "https://avilaops.com",
+      "title": "Abrir Ávila Ops"
+    },
+    {
+      "type": "run_shortcut",
+      "shortcut": "Check Ávila Status",
+      "title": "Verificar Status"
+    }
+  ]
+}

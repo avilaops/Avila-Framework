@@ -1,0 +1,230 @@
+{
+  "version": "1.0.0",
+  "name": "Ávila iOS Ecosystem",
+  "description": "Configuração centralizada do ecossistema iOS do Ávila",
+  "author": "Ávila Inc",
+  "lastUpdated": "2025-01-13",
+  "api": {
+    "baseUrl": "https://avila.inc/api",
+    "endpoints": {
+      "status": "/products/status",
+      "health": "/system/health",
+      "metrics": "/analytics/metrics",
+      "notifications": "/system/notifications",
+      "shortcuts": "/automation/shortcuts"
+    },
+    "timeout": 10000,
+    "retries": 3,
+    "headers": {
+      "User-Agent": "Avila-iOS/1.0.0",
+      "Content-Type": "application/json"
+    }
+  },
+  "theme": {
+    "colors": {
+      "primary": "#667eea",
+      "secondary": "#764ba2",
+      "success": "#00ff88",
+      "warning": "#ffa500",
+      "error": "#ff6b6b",
+      "info": "#00d4ff",
+      "background": "#000000",
+      "surface": "#1a1a1a",
+      "text": "#ffffff",
+      "textSecondary": "#cccccc"
+    },
+    "fonts": {
+      "primary": "SF Pro Display",
+      "secondary": "SF Pro Text",
+      "mono": "SF Mono",
+      "size": {
+        "small": 12,
+        "medium": 16,
+        "large": 20,
+        "xlarge": 24
+      }
+    },
+    "spacing": {
+      "small": 8,
+      "medium": 16,
+      "large": 24,
+      "xlarge": 32
+    },
+    "borderRadius": {
+      "small": 4,
+      "medium": 8,
+      "large": 12,
+      "xlarge": 16
+    }
+  },
+  "components": {
+    "statusWidget": {
+      "enabled": true,
+      "updateInterval": 300,
+      "maxProducts": 19,
+      "showOfflineOnly": false,
+      "animations": true,
+      "vibration": true
+    },
+    "notifications": {
+      "enabled": true,
+      "soundEnabled": true,
+      "vibrationEnabled": true,
+      "quietHours": {
+        "enabled": true,
+        "start": "22:00",
+        "end": "08:00"
+      },
+      "types": {
+        "system": {
+          "enabled": true,
+          "sound": "default",
+          "priority": "high"
+        },
+        "maintenance": {
+          "enabled": true,
+          "sound": "maintenance",
+          "priority": "medium"
+        },
+        "updates": {
+          "enabled": false,
+          "sound": "update",
+          "priority": "low"
+        }
+      }
+    },
+    "shortcuts": {
+      "enabled": true,
+      "autoUpdate": true,
+      "backupEnabled": true,
+      "categories": [
+        "produtos",
+        "sistema",
+        "automacao",
+        "relatorios"
+      ]
+    },
+    "dashboard": {
+      "enabled": false,
+      "metrics": [
+        "uptime",
+        "response_time",
+        "error_rate",
+        "user_satisfaction"
+      ],
+      "refreshInterval": 60
+    }
+  },
+  "performance": {
+    "batteryOptimization": {
+      "lowPowerMode": {
+        "enabled": true,
+        "updateInterval": 600,
+        "disableAnimations": true,
+        "reduceNotifications": true
+      },
+      "backgroundRefresh": {
+        "enabled": true,
+        "interval": 300
+      }
+    },
+    "networkOptimization": {
+      "compression": true,
+      "caching": true,
+      "prefetch": false
+    },
+    "memoryManagement": {
+      "maxCacheSize": 50,
+      "autoCleanup": true,
+      "cleanupInterval": 3600
+    }
+  },
+  "privacy": {
+    "analytics": {
+      "enabled": true,
+      "anonymized": true,
+      "metrics": [
+        "usage_time",
+        "error_count",
+        "feature_usage"
+      ]
+    },
+    "dataRetention": {
+      "logs": 30,
+      "metrics": 90,
+      "cache": 7
+    },
+    "permissions": {
+      "notifications": true,
+      "location": false,
+      "health": false,
+      "background": true
+    }
+  },
+  "debug": {
+    "enabled": false,
+    "logLevel": "info",
+    "consoleOutput": true,
+    "fileLogging": false,
+    "performanceMonitoring": true
+  },
+  "localization": {
+    "defaultLanguage": "pt-BR",
+    "supportedLanguages": [
+      "pt-BR",
+      "en-US",
+      "es-ES"
+    ],
+    "dateFormat": "DD/MM/YYYY",
+    "timeFormat": "HH:mm"
+  },
+  "integrations": {
+    "appleHealth": {
+      "enabled": false,
+      "permissions": [
+        "read",
+        "write"
+      ],
+      "metrics": [
+        "steps",
+        "heart_rate",
+        "sleep"
+      ]
+    },
+    "appleWatch": {
+      "enabled": false,
+      "complications": [
+        "status",
+        "metrics"
+      ],
+      "notifications": true
+    },
+    "siri": {
+      "enabled": true,
+      "intents": [
+        "check_status",
+        "run_shortcut",
+        "get_metrics"
+      ]
+    }
+  },
+  "updates": {
+    "autoCheck": true,
+    "autoDownload": false,
+    "autoInstall": false,
+    "checkInterval": 86400,
+    "betaChannel": false
+  },
+  "support": {
+    "contact": {
+      "email": "ios@avila.inc",
+      "phone": "+55 11 9999-9999",
+      "discord": "https://discord.gg/avila-ios"
+    },
+    "documentation": "https://docs.avila.inc/ios",
+    "faq": "https://docs.avila.inc/ios/faq",
+    "changelog": "https://docs.avila.inc/ios/changelog"
+  },
+  "lastInstalled": "2025-11-13T19:52:37.647892",
+  "installPath": "C:\\Users\\nicol\\OneDrive\\Avila\\Products-SaaS\\iOS-Widget"
+}

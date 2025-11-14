@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darwin - Self-Healing Python Library | Avila Inc</title>
+    <meta name="description"
+        content="Biblioteca Python que aprende com seus erros e corrige automaticamente. Aumente sua produtividade em até 300% com auto-healing inteligente.">
+    <meta name="keywords" content="python, self-healing, auto-fix, machine learning, productivity, automation">
+    <meta name="author" content="Avila Inc">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Darwin - Self-Healing Python Library">
+    <meta property="og:description" content="Biblioteca Python que aprende com seus erros e corrige automaticamente">
+    <meta property="og:image" content="https://darwin.avila.inc/og-image.png">
+    <meta property="og:url" content="https://darwin.avila.inc">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Darwin - Self-Healing Python Library">
+    <meta name="twitter:description" content="Biblioteca Python que aprende com seus erros e corrige automaticamente">
+    <meta name="twitter:image" content="https://darwin.avila.inc/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div
+                            class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">🧬</span>
+                        </div>
+                        <span class="ml-2 text-xl font-bold text-gray-900">Darwin</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900 transition-colors">Recursos</a>
+                    <a href="#how-it-works" class="text-gray-600 hover:text-gray-900 transition-colors">Como
+                        Funciona</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-gray-900 transition-colors">Preços</a>
+                    <a href="#docs" class="text-gray-600 hover:text-gray-900 transition-colors">Documentação</a>
+                    <a href="https://github.com/avilaops/darwin"
+                        class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                        <span class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </span>
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button text-gray-600 hover:text-gray-900">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="mb-8">
+                    <span
+                        class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                        🚀 Open Source & Freemium
+                    </span>
+                </div>
+
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                    Seu Código se
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        Auto-Corrige
+                    </span>
+                </h1>
+
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    Darwin é uma biblioteca Python que aprende com seus erros e os corrige automaticamente.
+                    Pare de perder tempo debugando - deixe a IA fazer isso por você.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <button
+                        class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg">
+                        Instalar Gratuitamente
+                    </button>
+                    <button
+                        class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-gray-400 hover:bg-gray-50 transition-colors">
+                        Ver Demo
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
+                    <div class="font-mono text-sm bg-gray-900 text-green-400 p-4 rounded">
+                        <div class="text-gray-400"># Instale em 30 segundos</div>
+                        <div class="text-white">pip install darwin-selfhealing</div>
+                        <br>
+                        <div class="text-gray-400"># Adicione 2 linhas no seu código</div>
+                        <div class="text-white">from darwin import auto_fix</div>
+                        <div class="text-white">@auto_fix</div>
+                        <div class="text-white">def my_function():</div>
+                        <div class="text-white"> # Se der erro, Darwin corrige sozinho!</div>
+                        <div class="text-white"> pass</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Por que Desenvolvedores Adoram Darwin
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Tecnologia de ponta que transforma erros em oportunidades de aprendizado
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-6">
+                        <span class="text-white text-2xl">🧠</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Aprendizado Contínuo</h3>
+                    <p class="text-gray-600">
+                        Cada erro é uma lição. Darwin cataloga padrões de falha e evolui constantemente,
+                        ficando mais inteligente a cada execução.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-6">
+                        <span class="text-white text-2xl">⚡</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Correção Automática</h3>
+                    <p class="text-gray-600">
+                        Não apenas detecta problemas - executa correções automaticamente.
+                        De portas ocupadas a dependências faltando.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-6">
+                        <span class="text-white text-2xl">🔒</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">100% Privado & Local</h3>
+                    <p class="text-gray-600">
+                        Seus dados nunca saem da sua máquina. Zero dependência de APIs externas.
+                        Segurança enterprise sem compromissos.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-6">
+                        <span class="text-white text-2xl">📊</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Analytics Inteligente</h3>
+                    <p class="text-gray-600">
+                        Dashboard completo com métricas de erro, tempo economizado e padrões
+                        de falha mais comuns no seu projeto.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-6">
+                        <span class="text-white text-2xl">🔧</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">12 Padrões Catalogados</h3>
+                    <p class="text-gray-600">
+                        Do ModuleNotFoundError ao OSError, Darwin já conhece os erros mais comuns
+                        e suas soluções testadas.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center mb-6">
+                        <span class="text-white text-2xl">🚀</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Setup em 30 Segundos</h3>
+                    <p class="text-gray-600">
+                        Instale, importe e comece a economizar tempo imediatamente.
+                        Sem configuração complexa ou dependências pesadas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Como Darwin Funciona
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Processo inteligente de detecção, análise e correção automática
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Detecta o Erro</h3>
+                    <p class="text-gray-600">
+                        Monitora execuções e identifica quando algo dá errado,
+                        desde exceptions até timeouts.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Analisa o Contexto</h3>
+                    <p class="text-gray-600">
+                        Examina variáveis de ambiente, dependências instaladas
+                        e histórico de erros similares.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Corrige Automaticamente</h3>
+                    <p class="text-gray-600">
+                        Aplica a correção mais provável e registra o aprendizado
+                        para melhorar no futuro.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Code Example -->
+            <div class="mt-16 bg-white rounded-lg shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-center mb-8">Exemplo Prático</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-red-600">❌ Código Problemático</h4>
+                        <pre class="bg-red-50 p-4 rounded-lg text-sm overflow-x-auto"><code class="language-python">import requests
+
+def fetch_data():
+    # Erro comum: requests não instalado
+    response = requests.get('https://api.example.com/data')
+    return response.json()
+
+fetch_data()</code></pre>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-green-600">✅ Com Darwin</h4>
+                        <pre class="bg-green-50 p-4 rounded-lg text-sm overflow-x-auto"><code class="language-python">from darwin import auto_fix
+import requests
+
+@auto_fix
+def fetch_data():
+    # Darwin detecta ModuleNotFoundError
+    # Instala requests automaticamente
+    # E tenta novamente
+    response = requests.get('https://api.example.com/data')
+    return response.json()
+
+fetch_data()  # Funciona na primeira vez!</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Escolha Seu Plano
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comece grátis e evolua conforme seu projeto cresce
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Free Plan -->
+                <div class="bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-gray-300 transition-colors">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Free</h3>
+                        <div class="text-4xl font-bold text-gray-900 mb-4">R$ 0</div>
+                        <p class="text-gray-600 mb-6">Perfeito para testar</p>
+
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                Até 100 erros/mês
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                5 padrões de correção
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                Suporte comunitário
+                            </li>
+                        </ul>
+
+                        <button
+                            class="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+                            Começar Grátis
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pro Plan -->
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-purple-50 border-2 border-blue-200 rounded-xl p-8 relative transform scale-105">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span
+                            class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                            Mais Popular
+                        </span>
+                    </div>
+
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Pro</h3>
+                        <div class="text-4xl font-bold text-gray-900 mb-4">
+                            R$ 97<span class="text-lg text-gray-600">/mês</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">Para projetos sérios</p>
+
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                Erros ilimitados
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                50+ padrões de correção
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                Dashboard analytics
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                Suporte prioritário
+                            </li>
+                        </ul>
+
+                        <button
+                            class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-colors">
+                            Começar Pro
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-gray-300 transition-colors">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                        <div class="text-4xl font-bold text-gray-900 mb-4">
+                            R$ 2.997<span class="text-lg text-gray-600">/mês</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">Para equipes grandes</p>
+
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                Tudo do Pro
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                Self-hosted
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                Padrões customizados
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                SLA 99.9%
+                            </li>
+                        </ul>
+
+                        <button
+                            class="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+                            Falar com Vendas
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Pronto para Automatizar Seus Erros?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8">
+                Junte-se a milhares de desenvolvedores que já economizam horas por semana
+                com correção automática de erros.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                    class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors transform hover:scale-105 shadow-lg">
+                    Instalar Darwin Agora
+                </button>
+                <button
+                    class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                    Agendar Demo
+                </button>
+            </div>
+
+            <p class="text-blue-200 text-sm mt-6">
+                ⚡ Setup em 30 segundos • 🔒 100% Seguro • 🚀 Funciona imediatamente
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">🧬</span>
+                        </div>
+                        <span class="ml-2 text-xl font-bold">Darwin</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Self-healing Python library que aprende com seus erros
+                        e evolui constantemente.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Produto</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#features" class="hover:text-white transition-colors">Recursos</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition-colors">Preços</a></li>
+                        <li><a href="#docs" class="hover:text-white transition-colors">Documentação</a></li>
+                        <li><a href="https://github.com/avilaops/darwin"
+                                class="hover:text-white transition-colors">GitHub</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Empresa</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://avila.inc" class="hover:text-white transition-colors">Sobre</a></li>
+                        <li><a href="https://avilaops.com" class="hover:text-white transition-colors">Avila Ops</a></li>
+                        <li><a href="https://support.avila.inc" class="hover:text-white transition-colors">Suporte</a>
+                        </li>
+                        <li><a href="https://linkedin.com/company/avila-devops"
+                                class="hover:text-white transition-colors">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Comunidade</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Discord</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Avila Inc. Todos os direitos reservados. | Feito com ❤️ no Brasil</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Analytics tracking
+        function trackEvent(eventName, params = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, params);
+            }
+        }
+
+        // Track button clicks
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', () => {
+                trackEvent('button_click', {
+                    button_text: button.textContent.trim(),
+                    page_location: window.location.pathname
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

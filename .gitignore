@@ -1,0 +1,333 @@
+# ÁVILA INC - Git Ignore
+# Arquivos e diretórios a serem ignorados pelo Git
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.Python
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment variables e secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+Docs/GA4/.env
+Scripts/.env
+Scripts/Seed_Vault.py
+
+# Arquivos grandes (>100MB) - GitHub limit
+*.zip
+*.tar.gz
+*.tar.bz2
+*.7z
+*.rar
+node_modules/**/*.node
+**/@next/swc-*/*.node
+Docs.zip
+Docs/Modulo*/*.tar.gz
+AvilaOps/products/MarcosConstrutora/Frontend/node_modules/
+
+# Logs
+*.log
+logs/
+Scripts/Logs/
+Data/logs/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+Data/databases/
+
+# Secrets and Keys
+.env
+.env.local
+.env.production
+.env.staging
+Scripts/avila-vault.enc
+Scripts/avila-vault.json
+Shared/secrets/
+*.key
+*.pem
+*.crt
+
+# AI Models and Training Data
+AI/models/
+AI/training_data/
+*.h5
+*.pb
+*.pkl
+*.joblib
+
+# Temporary Files
+Shared/temp/
+temp/
+tmp/
+*.tmp
+*.temp
+
+# Backups
+Shared/backups/
+*.bak
+*.backup
+
+# Cache
+.cache/
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+coverage.xml
+*.cover
+
+# Documentation
+docs/_build/
+docs/build/
+
+# Node.js (se usado)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker
+.dockerignore
+
+# Kubernetes
+*.yaml.bak
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfvars
+
+# Cloud
+.aws/
+.gcp/
+.azure/
+
+# SSH
+.ssh/
+
+# GPG
+.gnupg/
+
+# Passwords and Tokens
+passwords.txt
+tokens.txt
+secrets.txt
+
+# Screenshots and Media
+screenshots/
+media/
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Executables
+*.exe
+*.msi
+*.dmg
+*.pkg
+
+# System Files
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Azure Functions
+bin
+obj
+appsettings.json
+local.settings.json
+
+# .NET
+bin/
+obj/
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# KDE
+.directory
+.Trash-*
+
+# GNOME
+.Trash
+
+# XFCE
+Thumbs.db
+
+# Custom Ávila
+Scripts/Knowledge/actions-reactions.json
+Scripts/Knowledge/learned-fixes.json
+Scripts/Knowledge/failure-patterns.json
+Scripts/diagnostics.json
+Scripts/avila-manager-state.json
+
+# User data
+user_data/
+personal/
+private/
+
+# Vercel
+.vercel</content>
+<parameter name="oldString">.vercel

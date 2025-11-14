@@ -1,0 +1,23 @@
+{
+  "configurations": {
+    "darwin-landing": {
+      "appLocation": ".",
+      "outputLocation": ".",
+      "appBuildCommand": "echo 'Static HTML - no build needed'",
+      "appDevserverCommand": "python -m http.server 3000",
+      "run": "npm run build",
+      "appName": "darwin-selfhealing-landing",
+      "resourceGroup": "avila-products-rg",
+      "subscription": "3b49f371-dd88-46c7-ba30-aeb54bd5c2f6",
+      "tenant": "0e53f641-197a-48b2-83a4-f822f5d48c0",
+      "appLocation": "/",
+      "apiLocation": "api",
+      "outputLocation": ".",
+      "login": {
+        "subscription": "3b49f371-dd88-46c7-ba30-aeb54bd5c2f6",
+        "resourceGroup": "avila-products-rg",
+        "tenant": "0e53f641-197a-48b2-83a4-f822f5d48c0"
+      }
+    }
+  }
+}

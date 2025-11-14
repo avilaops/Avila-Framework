@@ -1,0 +1,30 @@
+{
+  "name": "darwin-selfhealing-landing",
+  "version": "1.0.0",
+  "description": "Landing page for Darwin Self-Healing Python Library",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 3000",
+    "build": "echo 'Static HTML - no build needed'",
+    "deploy": "swa deploy --config swa-cli.config.json",
+    "preview": "swa start --config swa-cli.config.json"
+  },
+  "keywords": [
+    "darwin",
+    "self-healing",
+    "python",
+    "automation",
+    "ai",
+    "landing-page"
+  ],
+  "author": "Avila Inc",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avilaops/darwin-landing.git"
+  },
+  "homepage": "https://darwin.avila.inc",
+  "devDependencies": {
+    "@azure/static-web-apps-cli": "^1.1.6"
+  }
+}

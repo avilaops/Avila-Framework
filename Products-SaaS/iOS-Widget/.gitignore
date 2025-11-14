@@ -1,0 +1,76 @@
+# Arquivos temporários
+*.tmp
+*.temp
+*.log
+*.cache
+
+# Backups
+backups/
+*.bak
+*.backup
+
+# Ambiente Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+# Ambiente Node.js (se usado no futuro)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Sistema operacional
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs de instalação
+install.log
+setup.log
+
+# Configurações locais
+config.local.json
+.env
+.env.local
+
+# Arquivos de teste
+test_*.js
+test_*.py
+*_test.js
+*_test.py
+
+# Documentação temporária
+temp_docs/
+draft_*.md

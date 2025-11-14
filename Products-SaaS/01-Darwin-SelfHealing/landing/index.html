@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darwin - Self-Healing Python Library</title>
+    <meta name="description"
+        content="Sua aplicação Python que aprende com os próprios erros e se auto-corrige automaticamente">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">🧬 Darwin</div>
+                <nav>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="../../02-AgentHub/landing/index.html" style="color: #f59e0b;">🎯 AgentHub</a>
+                    <a href="#docs">Docs</a>
+                    <a href="https://github.com/avila/darwin" target="_blank">GitHub</a>
+                    <a href="#download" class="btn-primary">Get Started</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>O <span class="gradient">Profeta</span> do seu Código</h1>
+                <p class="hero-subtitle">Darwin é mais que auto-correção. É o professor silencioso que ensina seus
+                    sistemas a evoluírem. Nascido no Framework BATUTA, onde agentes como Archivus, Pulse e Helix
+                    aprenderam a curar suas próprias feridas — Darwin agora compartilha esse dom com o mundo.</p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">aprendizado contínuo</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">128k+</div>
+                        <div class="stat-label">arquivos curados</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">7</div>
+                        <div class="stat-label">agentes evoluídos</div>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#download" class="btn-cta">
+                        <span>pip install darwin-healing</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 3v14m0 0l-5-5m5 5l5-5" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </a>
+                    <a href="#demo" class="btn-secondary">Ver Demo →</a>
+                </div>
+            </div>
+
+            <div class="hero-code">
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="code-title">app.py</div>
+                    </div>
+                    <pre><code class="language-python">from darwin import heal
+
+@heal
+def processar_dados():
+    import requests  # Darwin instala automaticamente
+    response = requests.get('https://api.exemplo.com')
+    return response.json()
+
+# Se der erro, Darwin:
+# 1. Detecta o problema (ModuleNotFoundError)
+# 2. Aplica correção (pip install requests)
+# 3. Tenta novamente ✅
+# 4. Salva aprendizado para próxima vez</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="problem">
+        <div class="container">
+            <h2>A Jornada da Dor</h2>
+            <p class="section-subtitle">Antes de Darwin ensinar nossos agentes a se curarem...</p>
+
+            <div class="problem-grid">
+                <div class="problem-item">
+                    <div class="problem-icon">❌</div>
+                    <div class="problem-error">ModuleNotFoundError: No module named 'requests'</div>
+                    <div class="problem-action">Você: <code>pip install requests</code></div>
+                    <div class="problem-time">⏱️ 5 minutos perdidos</div>
+                </div>
+
+                <div class="problem-item">
+                    <div class="problem-icon">❌</div>
+                    <div class="problem-error">Port 8000 already in use</div>
+                    <div class="problem-action">Você: <code>kill -9 $(lsof -t -i:8000)</code></div>
+                    <div class="problem-time">⏱️ 10 minutos perdidos</div>
+                </div>
+
+                <div class="problem-item">
+                    <div class="problem-icon">❌</div>
+                    <div class="problem-error">Permission denied: '/var/log/app.log'</div>
+                    <div class="problem-action">Você: <code>sudo chmod 777 /var/log/app.log</code></div>
+                    <div class="problem-time">⏱️ 15 minutos perdidos</div>
+                </div>
+            </div>
+
+            <div class="problem-total">
+                <strong>30+ minutos perdidos por dia</strong> corrigindo os mesmos erros repetidamente
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="solution">
+        <div class="container">
+            <h2>A Revolução Silenciosa</h2>
+            <p class="section-subtitle">Como Archivus, nosso bibliotecário incansável, aprendeu a se auto-curar</p>
+
+            <div class="solution-demo">
+                <div class="demo-before">
+                    <h3>❌ Archivus Antes de Aprender</h3>
+                    <div class="demo-terminal">
+                        <div class="terminal-line error">[Archivus] FALHA: 128.974 arquivos não catalogados</div>
+                        <div class="terminal-line error">ModuleNotFoundError: No module named 'faiss'</div>
+                        <div class="terminal-line">🚨 Sistema parado. Aguardando intervenção humana...</div>
+                        <div class="terminal-line">👨‍💻 Engenheiro acordado às 3AM</div>
+                        <div class="terminal-line">$ pip install faiss-cpu</div>
+                        <div class="terminal-line success">✓ Archivus ressuscitado manualmente</div>
+                        <div class="demo-time">⏱️ 47 minutos de downtime</div>
+                    </div>
+                </div>
+
+                <div class="demo-arrow">→</div>
+
+                <div class="demo-after">
+                    <h3>✅ Archivus com Darwin</h3>
+                    <div class="demo-terminal">
+                        <div class="terminal-line">[Archivus] Iniciando catalogação...</div>
+                        <div class="terminal-line warning">⚠️ [Darwin] Detectei: ModuleNotFoundError: faiss</div>
+                        <div class="terminal-line info">🧬 [Darwin] Consultando learned-fixes.json...</div>
+                        <div class="terminal-line info">💡 [Darwin] Encontrei! Pulse já resolveu isso 3x antes</div>
+                        <div class="terminal-line info">🛠️ [Darwin] pip install faiss-cpu --quiet</div>
+                        <div class="terminal-line success">✓ [Archivus] Auto-curado. 128.974 arquivos indexados</div>
+                        <div class="demo-time">⏱️ 8 segundos · Zero humanos acordados</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>A Sabedoria de 7 Agentes</h2>
+            <p class="section-subtitle" style="max-width: 700px; margin: 0 auto 40px; color: #94a3b8;">
+                Cada padrão abaixo foi aprendido na dor. Archivus perdendo FAISS. Pulse com portas travadas. Helix com
+                permissões negadas.
+                <strong>Darwin documentou cada cicatriz e transformou em sabedoria.</strong>
+            </p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>ModuleNotFoundError</h3>
+                    <p><code>pip install &lt;module&gt;</code></p>
+                    <small style="color: #64748b; font-size: 0.85rem; margin-top: 8px; display: block;">Aprendido com
+                        Archivus · 47 ocorrências curadas</small>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔌</div>
+                    <h3>Port Already in Use</h3>
+                    <p>Troca porta ou mata processo</p>
+                    <small style="color: #64748b; font-size: 0.85rem; margin-top: 8px; display: block;">Aprendido com
+                        Pulse · 23 ocorrências curadas</small>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Permission Denied</h3>
+                    <p><code>chmod</code> ou solicita sudo</p>
+                    <small style="color: #64748b; font-size: 0.85rem; margin-top: 8px; display: block;">Aprendido com
+                        Helix · 31 ocorrências curadas</small>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Connection Timeout</h3>
+                    <p>Retry com backoff</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3>File Not Found</h3>
+                    <p>Cria arquivo/diretório</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h3>Disk Space Full</h3>
+                    <p>Limpa arquivos temporários</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Memory Error</h3>
+                    <p>Libera memória não usada</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Import Error</h3>
+                    <p>Instala dependências</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🗄️</div>
+                    <h3>Database Locked</h3>
+                    <p>Retry com wait</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>SSL Certificate Error</h3>
+                    <p>Atualiza certificados</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>DNS Resolution Failed</h3>
+                    <p>Tenta DNS alternativo</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Rate Limit Exceeded</h3>
+                    <p>Aplica throttling</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>Como Funciona</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Detecta Erro</h3>
+                        <p>Darwin intercepta exceções e analisa o padrão</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Busca Solução</h3>
+                        <p>Verifica se já aprendeu a correção ou usa padrão built-in</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Aplica Correção</h3>
+                        <p>Executa a correção automaticamente</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Salva Aprendizado</h3>
+                        <p>Grava erro + solução para próximas ocorrências</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Pricing</h2>
+            <p class="section-subtitle">Escolha o plano ideal para você</p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Open Source</h3>
+                        <div class="price">Grátis</div>
+                        <p>Para sempre</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✅ 12 padrões built-in</li>
+                        <li>✅ Aprendizado contínuo</li>
+                        <li>✅ 100% privado (local)</li>
+                        <li>✅ Código open-source</li>
+                        <li>✅ Community support</li>
+                        <li>❌ Patterns customizados</li>
+                        <li>❌ Analytics dashboard</li>
+                        <li>❌ Integrações</li>
+                    </ul>
+                    <a href="#download" class="pricing-btn">Download</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Popular</div>
+                    <div class="pricing-header">
+                        <h3>Darwin Pro</h3>
+                        <div class="price">R$ 97<span>/mês</span></div>
+                        <p>ou R$ 970/ano (20% off)</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✅ Tudo do Open Source</li>
+                        <li>✅ 50+ padrões avançados</li>
+                        <li>✅ Analytics dashboard</li>
+                        <li>✅ Slack/Discord integration</li>
+                        <li>✅ API para custom patterns</li>
+                        <li>✅ Suporte prioritário</li>
+                        <li>✅ Multi-workspace</li>
+                        <li>✅ Rollback automático</li>
+                    </ul>
+                    <a href="#" class="pricing-btn primary">Começar Trial 14 dias</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Darwin Enterprise</h3>
+                        <div class="price">R$ 2.997<span>/mês</span></div>
+                        <p>Customizado</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✅ Tudo do Pro</li>
+                        <li>✅ Self-hosted</li>
+                        <li>✅ SSO/SAML</li>
+                        <li>✅ SLA 99.9%</li>
+                        <li>✅ Consultoria 8h/mês</li>
+                        <li>✅ Custom patterns ilimitados</li>
+                        <li>✅ Team collaboration</li>
+                        <li>✅ Audit logs</li>
+                    </ul>
+                    <a href="#" class="pricing-btn">Falar com Vendas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="download" class="cta">
+        <div class="container">
+            <h2>Pronto para começar?</h2>
+            <p>Instale Darwin agora e pare de perder tempo com erros repetitivos</p>
+
+            <div class="install-command">
+                <code>pip install darwin-healing</code>
+                <button class="copy-btn" onclick="copyInstall()">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                            d="M5 5V3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-2m-6 4H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2z"
+                            stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="quick-start">
+                <h3>Quick Start</h3>
+                <pre><code class="language-python">from darwin import heal
+
+@heal
+def minha_funcao():
+    # Seu código aqui
+    # Darwin cuida dos erros
+    pass</code></pre>
+            </div>
+
+            <div class="cta-links">
+                <a href="https://github.com/avila/darwin" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                    GitHub
+                </a>
+                <a href="#">
+                    📖 Documentation
+                </a>
+                <a href="#">
+                    💬 Discord
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ecosystem Integration -->
+    <section class="ecosystem">
+        <div class="container">
+            <h2 class="section-title">Mais Poderoso em Conjunto</h2>
+            <p class="section-subtitle">Darwin + AgentHub = Ecossistema Completo de Auto-Healing</p>
+
+            <div class="ecosystem-card">
+                <div class="ecosystem-left">
+                    <h3>🧬 Darwin</h3>
+                    <p>Auto-corrige erros individuais</p>
+                    <ul>
+                        <li>Aprende com cada erro</li>
+                        <li>800+ padrões acumulados</li>
+                        <li>Self-healing local</li>
+                    </ul>
+                </div>
+
+                <div class="ecosystem-connector">
+                    <span class="plus">+</span>
+                </div>
+
+                <div class="ecosystem-right">
+                    <h3>🎯 <a href="../../02-AgentHub/landing/index.html">AgentHub</a></h3>
+                    <p>Orquestra múltiplos agents</p>
+                    <ul>
+                        <li>Visibilidade total de 7+ agents</li>
+                        <li>Compartilha fixes via message bus</li>
+                        <li>Auto-scaling inteligente</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ecosystem-result">
+                <h4>= Sistema que Evolui Coletivamente</h4>
+                <p>Quando um agent aprende algo com Darwin, AgentHub distribui o conhecimento para todos os outros.
+                    <strong>Inteligência coletiva real.</strong>
+                </p>
+                <a href="../../02-AgentHub/landing/index.html" class="btn-primary">Ver AgentHub →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">🧬 Darwin</div>
+                    <p>Self-healing Python library</p>
+                    <p class="footer-company">Built by <a href="https://avila.inc" target="_blank">Ávila Inc</a></p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#">Changelog</a>
+                        <a href="#">Roadmap</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <a href="#">Documentation</a>
+                        <a href="#">API Reference</a>
+                        <a href="#">Examples</a>
+                        <a href="#">Blog</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Ecossistema Avila</h4>
+                        <a href="../../02-AgentHub/landing/index.html" style="color: #f59e0b; font-weight: 600;">🎯
+                            AgentHub</a>
+                        <a href="#">Framework BATUTA</a>
+                        <a href="#">ON Platform</a>
+                        <a href="#">Avila AI Engine</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Community</h4>
+                        <a href="https://github.com/avila/darwin" target="_blank">GitHub</a>
+                        <a href="#">Discord</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Stack Overflow</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="https://avila.inc" target="_blank">About</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ávila Inc. Licensed under MIT.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

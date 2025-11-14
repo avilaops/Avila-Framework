@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentHub - Command Center for AI Agent Teams</title>
+    <meta name="description"
+        content="Orquestre times de AI agents com visibilidade total. Monitore saúde, gerencie comunicação, escale automaticamente. Nascido do Framework BATUTA.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">🎯</span>
+                <span class="logo-text">AgentHub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#architecture">Arquitetura</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="../../01-Darwin-SelfHealing/landing/index.html" style="color: #10b981;">🧬 Darwin</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#install" class="btn-nav">Começar Grátis</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-tag">Nascido do Framework BATUTA</div>
+                <h1 class="hero-title">
+                    O Command Center<br>
+                    <span class="gradient-text">dos seus AI Agents</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Você tem 3 agentes. 7 agentes. 20 agentes.<br>
+                    Mas você <strong>realmente sabe</strong> o que eles estão fazendo agora?
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">7</div>
+                        <div class="stat-label">Agentes BATUTA</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">99.7%</div>
+                        <div class="stat-label">Uptime Médio</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Observabilidade</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">3AM Alerts</div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#install" class="btn btn-primary">
+                        <span>pip install agenthub</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="#demo" class="btn btn-secondary">Ver Demo ao Vivo</a>
+                </div>
+                <p class="hero-note">✨ Open Source · Self-hosted · Zero vendor lock-in</p>
+            </div>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <section class="problem">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">A Dor da Orquestração Cega</h2>
+                <p class="section-subtitle">Gerenciar múltiplos AI agents sem visibilidade é navegar no escuro.</p>
+            </div>
+
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">❓</div>
+                    <h3>Agents Invisíveis</h3>
+                    <p>"Archivus está rodando? Pulse respondeu ao job? Helix falhou de novo?"</p>
+                    <div class="problem-impact">3h/dia perdidas caçando status</div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon">💥</div>
+                    <h3>Falhas Silenciosas</h3>
+                    <p>Agente travou há 2h mas você só descobre quando o cliente reclama.</p>
+                    <div class="problem-impact">R$ 50k/mês em SLA breach</div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon">🔥</div>
+                    <h3>Comunicação Caótica</h3>
+                    <p>7 agents tentando falar entre si via Slack, webhooks, arquivos JSON...</p>
+                    <div class="problem-impact">Race conditions diários</div>
+                </div>
+            </div>
+
+            <div class="story-box">
+                <h3>📖 Como Perdemos 47 Noites</h3>
+                <p>
+                    Framework BATUTA tinha 7 agents rodando: <strong>Archivus</strong> catalogando,
+                    <strong>Pulse</strong> monitorando, <strong>Helix</strong> deployando...
+                </p>
+                <p style="margin-top: 15px;">
+                    <strong>3:47 AM, Nov 12, 2023:</strong> Archivus falhou. Pulse não sabia. Helix fez deploy quebrado.
+                    Atlas tentou rollback mas Sigma já tinha corrupted o banco.
+                </p>
+                <p style="margin-top: 15px; color: #10b981; font-weight: 600;">
+                    ⚡ Solução: ON Platform + AgentHub. Todos os agents agora falam uma língua só.
+                    Falha em 1 agent → notifica todos em 200ms.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="solution" id="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">A Torre de Controle</h2>
+                <p class="section-subtitle">Visibilidade total, comunicação instantânea, auto-healing nativo.</p>
+            </div>
+
+            <div class="demo-container">
+                <div class="demo-terminal">
+                    <div class="terminal-header">
+                        <span class="terminal-title">🎯 AgentHub Dashboard</span>
+                        <span class="terminal-status">Live · 16:45:32</span>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="agent-row healthy">
+                            <span class="agent-name">🗂️ Archivus</span>
+                            <span class="agent-status">HEALTHY</span>
+                            <span class="agent-metric">128,974 docs · 8ms latency</span>
+                        </div>
+                        <div class="agent-row healthy">
+                            <span class="agent-name">💓 Pulse</span>
+                            <span class="agent-status">HEALTHY</span>
+                            <span class="agent-metric">19 services · 100% uptime</span>
+                        </div>
+                        <div class="agent-row warning">
+                            <span class="agent-name">🧬 Helix</span>
+                            <span class="agent-status">DEGRADED</span>
+                            <span class="agent-metric">Deploy #847 · retry 2/3</span>
+                        </div>
+                        <div class="agent-row healthy">
+                            <span class="agent-name">🏛️ Atlas</span>
+                            <span class="agent-status">HEALTHY</span>
+                            <span class="agent-metric">Strategy active · 0 alerts</span>
+                        </div>
+
+                        <div class="message-bus">
+                            <div class="bus-header">📡 Message Bus (last 10s)</div>
+                            <div class="bus-message">
+                                <span class="msg-time">16:45:28</span>
+                                <span class="msg-from">Helix</span>
+                                <span class="msg-type">WARN</span>
+                                <span class="msg-content">Deploy retry 2/3 · ETA 15s</span>
+                            </div>
+                            <div class="bus-message">
+                                <span class="msg-time">16:45:30</span>
+                                <span class="msg-from">AgentHub</span>
+                                <span class="msg-type">INFO</span>
+                                <span class="msg-content">Auto-scaling: +1 worker for Helix</span>
+                            </div>
+                            <div class="bus-message success">
+                                <span class="msg-time">16:45:32</span>
+                                <span class="msg-from">Helix</span>
+                                <span class="msg-type">SUCCESS</span>
+                                <span class="msg-content">Deploy #847 ✓ · 14.2s total</span>
+                            </div>
+                        </div>
+
+                        <div class="metrics-summary">
+                            <div class="metric-item">
+                                <span class="metric-label">Total Messages</span>
+                                <span class="metric-value">1,247/min</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">Avg Latency</span>
+                                <span class="metric-value">12ms</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">Active Agents</span>
+                                <span class="metric-value">7/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-benefits">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">👁️</span>
+                        <div>
+                            <h4>Visibilidade Total</h4>
+                            <p>Status de cada agent em tempo real. Health checks automáticos a cada 5s.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">📡</span>
+                        <div>
+                            <h4>Message Bus Unificado</h4>
+                            <p>Todos os agents falam via AgentHub. Zero race conditions.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">⚡</span>
+                        <div>
+                            <h4>Auto-Scaling Inteligente</h4>
+                            <p>Agent sobrecarregado? AgentHub escala workers automaticamente.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🩺</span>
+                        <div>
+                            <h4>Self-Healing Nativo</h4>
+                            <p>Integração com Darwin: falhas detectadas → corrigidas → aprendidas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">A Sabedoria de 2 Anos Orquestrando Agents</h2>
+                <p class="section-subtitle">Cada feature nasceu de uma dor real do Framework BATUTA.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Agent Registry</h3>
+                    <p>Registro central de todos os agents. Capabilities, dependencies, SLA targets.</p>
+                    <div class="feature-learned">Aprendido com Archivus · 47 dependency conflicts resolvidos</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🩺</div>
+                    <h3>Health Dashboard</h3>
+                    <p>Status em tempo real. CPU, memória, latency, error rate, uptime por agent.</p>
+                    <div class="feature-learned">Aprendido com Pulse · 23 incidents prevenidos via early warning</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📡</div>
+                    <h3>Message Bus</h3>
+                    <p>Pub/Sub assíncrono. Agents publicam eventos, outros agents reagem automaticamente.</p>
+                    <div class="feature-learned">Aprendido com ON Platform · 31 race conditions eliminadas</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Auto-Scaling</h3>
+                    <p>Agent sobrecarregado? AgentHub spawna workers adicionais dinamicamente.</p>
+                    <div class="feature-learned">Aprendido com Helix · 12 deploy queues que travavam</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Distributed Tracing</h3>
+                    <p>Trace completo de requests cross-agent. Veja o caminho de cada operação.</p>
+                    <div class="feature-learned">Aprendido com Atlas · 8 bottlenecks identificados</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Circuit Breaker</h3>
+                    <p>Agent falhando? Circuit breaker interrompe calls até ele se recuperar.</p>
+                    <div class="feature-learned">Aprendido com Sigma · 19 cascading failures evitadas</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Metrics & Logs</h3>
+                    <p>Métricas Prometheus-compatible. Logs centralizados. Dashboards Grafana prontos.</p>
+                    <div class="feature-learned">Aprendido com Vox · 100% visibilidade em vendas</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Auth & Access Control</h3>
+                    <p>RBAC granular. Cada agent só acessa o que precisa. Audit logs completos.</p>
+                    <div class="feature-learned">Aprendido com Lumen · Zero-trust security model</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🧬</div>
+                    <h3>Darwin Integration</h3>
+                    <p>Self-healing automático. Erros detectados → Darwin aprende → nunca mais acontece.</p>
+                    <div class="feature-learned">800+ correções compartilhadas entre todos os agents</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="architecture" id="architecture">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Filosofia da Orquestração</h2>
+                <p class="section-subtitle">Como AgentHub transforma caos em sinfonia.</p>
+            </div>
+
+            <div class="architecture-flow">
+                <div class="flow-step">
+                    <div class="step-number">1</div>
+                    <h3>Registro</h3>
+                    <p>Agent se registra no AgentHub com suas capabilities, dependencies, health check endpoint.</p>
+                    <div class="code-snippet">
+                        agent = AgentHub.register(
+                        name="Archivus",
+                        capabilities=["catalog", "search"],
+                        health_url="/health"
+                        )
+                    </div>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div class="step-number">2</div>
+                    <h3>Heartbeat</h3>
+                    <p>AgentHub faz health checks a cada 5s. Agent não responde? Auto-restart ou failover.</p>
+                    <div class="code-snippet">
+                        # AgentHub auto-managed
+                        if not agent.health():
+                        agent.restart()
+                        notify_team(agent)
+                    </div>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div class="step-number">3</div>
+                    <h3>Comunicação</h3>
+                    <p>Agents publicam eventos no Message Bus. Outros agents subscrevem e reagem.</p>
+                    <div class="code-snippet">
+                        # Agent A publica
+                        bus.publish("deploy.completed", data)
+
+                        # Agent B reage automaticamente
+                        @bus.subscribe("deploy.completed")
+                        def on_deploy(data):
+                        update_catalog(data)
+                    </div>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div class="step-number">4</div>
+                    <h3>Evolução</h3>
+                    <p>Darwin detecta falhas, aprende correções, compartilha via AgentHub. Todos os agents evoluem
+                        juntos.</p>
+                    <div class="code-snippet">
+                        # Auto-learning
+                        if error in agent:
+                        fix = darwin.heal(error)
+                        bus.publish("fix.learned", fix)
+                        # Todos agents recebem
+                    </div>
+                </div>
+            </div>
+
+            <div class="dna-box">
+                <h3>🧬 DNA Evolutivo</h3>
+                <p>
+                    <strong>2 anos gerenciando BATUTA:</strong><br>
+                    800+ correções aprendidas · 99.7% uptime alcançado · 47 noites de sono recuperadas
+                </p>
+                <p style="margin-top: 15px;">
+                    AgentHub não é só orquestração. É <strong>consciência coletiva</strong> para seus agents.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pricing Transparente</h2>
+                <p class="section-subtitle">Do open source ao enterprise. Você escolhe o fit.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-tag">Para Experimentar</div>
+                    <h3>Open Source</h3>
+                    <div class="pricing-price">
+                        <span class="price-amount">R$ 0</span>
+                        <span class="price-period">forever</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✅ Agent Registry ilimitado</li>
+                        <li>✅ Health checks automáticos</li>
+                        <li>✅ Message Bus local</li>
+                        <li>✅ Logs & metrics básicos</li>
+                        <li>✅ Community support</li>
+                        <li>❌ Dashboard web</li>
+                        <li>❌ Auto-scaling</li>
+                        <li>❌ Distributed tracing</li>
+                    </ul>
+                    <a href="#install" class="btn btn-outline">pip install agenthub</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Mais Popular</div>
+                    <div class="pricing-tag">Para Startups</div>
+                    <h3>AgentHub Pro</h3>
+                    <div class="pricing-price">
+                        <span class="price-amount">R$ 197</span>
+                        <span class="price-period">/mês</span>
+                    </div>
+                    <div class="pricing-save">ou R$ 1.970/ano (2 meses grátis)</div>
+                    <ul class="pricing-features">
+                        <li>✅ Tudo do Open Source +</li>
+                        <li>✅ Dashboard web completo</li>
+                        <li>✅ Auto-scaling inteligente</li>
+                        <li>✅ Distributed tracing</li>
+                        <li>✅ Slack/Teams integration</li>
+                        <li>✅ 99.5% SLA</li>
+                        <li>✅ Email support</li>
+                        <li>✅ Até 20 agents</li>
+                    </ul>
+                    <a href="#install" class="btn btn-primary">Começar Trial 14 dias</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-tag">Para Scale-ups</div>
+                    <h3>Enterprise</h3>
+                    <div class="pricing-price">
+                        <span class="price-amount">R$ 4.997</span>
+                        <span class="price-period">/mês</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✅ Tudo do Pro +</li>
+                        <li>✅ Self-hosted option</li>
+                        <li>✅ Agents ilimitados</li>
+                        <li>✅ SSO & RBAC avançado</li>
+                        <li>✅ 99.9% SLA</li>
+                        <li>✅ Dedicated support 8h/dia</li>
+                        <li>✅ Custom integrations</li>
+                        <li>✅ Architecture review mensal</li>
+                    </ul>
+                    <a href="#install" class="btn btn-outline">Falar com Sales</a>
+                </div>
+            </div>
+
+            <div class="pricing-note">
+                💡 <strong>ARR Potencial:</strong> R$ 500k - 1.2M (Ano 1) · Target: 200-400 teams rodando multi-agent
+                systems
+            </div>
+        </div>
+    </section>
+
+    <section class="install" id="install">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Comece em 2 Minutos</h2>
+                <p class="section-subtitle">De zero a agents orquestrados em minutos. Não em dias.</p>
+            </div>
+
+            <div class="install-steps">
+                <div class="install-step">
+                    <div class="step-number">1</div>
+                    <h3>Instale AgentHub</h3>
+                    <div class="code-block">
+                        <code>pip install agenthub</code>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                </div>
+
+                <div class="install-step">
+                    <div class="step-number">2</div>
+                    <h3>Registre seus Agents</h3>
+                    <div class="code-block">
+                        <pre><code>from agenthub import AgentHub
+
+hub = AgentHub()
+
+# Registra Agent 1
+archivus = hub.register(
+    name="Archivus",
+    capabilities=["catalog", "search"],
+    health_url="http://localhost:8001/health"
+)
+
+# Registra Agent 2
+pulse = hub.register(
+    name="Pulse",
+    capabilities=["monitor", "alert"],
+    health_url="http://localhost:8002/health"
+)
+
+# Start orchestration
+hub.start()  # Dashboard em http://localhost:8080</code></pre>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                </div>
+
+                <div class="install-step">
+                    <div class="step-number">3</div>
+                    <h3>Comunique via Message Bus</h3>
+                    <div class="code-block">
+                        <pre><code># Agent A publica evento
+hub.bus.publish("task.completed", {
+    "task_id": "T-123",
+    "status": "success"
+})
+
+# Agent B reage automaticamente
+@hub.bus.subscribe("task.completed")
+def on_task_done(event):
+    print(f"Task {event['task_id']} done!")
+    update_dashboard(event)</code></pre>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-box">
+                <h3>🚀 Pronto para Orquestrar?</h3>
+                <p>Junte-se aos times que já gerenciam centenas de agents com AgentHub.</p>
+                <div class="cta-buttons">
+                    <a href="https://github.com/avilainc/agenthub" class="btn btn-primary">
+                        <span>Começar Grátis</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="mailto:dev@avila.inc" class="btn btn-outline">Falar com Time</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ecosystem Integration -->
+    <section class="ecosystem-integration">
+        <div class="container">
+            <h2 class="section-title">Turbinado com Darwin</h2>
+            <p class="section-subtitle">AgentHub + Darwin = Auto-Healing Distribuído</p>
+
+            <div class="integration-flow">
+                <div class="flow-card">
+                    <div class="flow-number">1</div>
+                    <h4>Agent Falha</h4>
+                    <p>Helix encontra PermissionError durante deploy</p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-card">
+                    <div class="flow-number">2</div>
+                    <h4><a href="../../01-Darwin-SelfHealing/landing/index.html">Darwin</a> Aprende</h4>
+                    <p>Auto-corrige e salva fix em learned-fixes.json</p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-card">
+                    <div class="flow-number">3</div>
+                    <h4>AgentHub Distribui</h4>
+                    <p>Publica "fix.learned" no message bus</p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-card">
+                    <div class="flow-number">4</div>
+                    <h4>Todos Evoluem</h4>
+                    <p>Archivus, Pulse, Atlas recebem o fix automaticamente</p>
+                </div>
+            </div>
+
+            <div class="integration-code">
+                <h4>Integração em 2 Linhas</h4>
+                <pre><code>hub = AgentHub()
+hub.enable_darwin(darwin_instance)  # ✨ Pronto!
+
+# Agora todos agents compartilham conhecimento via Darwin</code></pre>
+            </div>
+
+            <div class="integration-cta">
+                <p><strong>Resultado:</strong> Quando 1 agent aprende, todos aprendem. <strong>Inteligência coletiva
+                        real.</strong></p>
+                <a href="../../01-Darwin-SelfHealing/landing/index.html" class="btn btn-outline">🧬 Conheça Darwin →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>AgentHub</h4>
+                    <p>Command Center for AI Agent Teams</p>
+                    <p style="margin-top: 15px; color: #64748b;">
+                        "O maestro não toca instrumentos.<br>Ele garante que a orquestra toque em harmonia."
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Produto</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#install">Quick Start</a></li>
+                        <li><a href="https://github.com/avilainc/agenthub">GitHub</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Ecossistema</h4>
+                    <ul>
+                        <li><a href="../../01-Darwin-SelfHealing/landing/index.html"
+                                style="color: #10b981; font-weight: 600;">🧬 Darwin Self-Healing</a></li>
+                        <li><a href="#">Framework BATUTA</a></li>
+                        <li><a href="#">ON Platform</a></li>
+                        <li><a href="#">Avila AI Engine</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="mailto:dev@avila.inc">dev@avila.inc</a></li>
+                        <li><a href="https://avila.inc">avila.inc</a></li>
+                        <li><a href="#">Framework BATUTA</a></li>
+                        <li><a href="#">Built in Brasil 🇧🇷</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p><strong>🎯 AgentHub</strong> · O Maestro do Framework BATUTA · Forjado na coordenação de 7 agents,
+                    128k arquivos, 800+ auto-correções</p>
+                <p style="margin-top: 10px; color: #64748b;">
+                    "We didn't build AgentHub. We needed it to survive." — Framework BATUTA Team
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
